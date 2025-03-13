@@ -42,8 +42,8 @@ def generar_reporte(proyecto):
                 total = json_response['total']
                 
                 # Guardar los datos JSON en un archivo
-                with open(f"data/issues_{proyecto}.json", "a") as json_file:
-                    json.dump(json_response, json_file, indent=4)  # Escribe la respuesta JSON de manera legible
+                # with open(f"data/issues_{proyecto}.json", "a") as json_file:
+                #     json.dump(json_response, json_file, indent=4)  # Escribe la respuesta JSON de manera legible
                 
                 # Escribir los datos en el archivo CSV
                 with open(f"data/issues_{proyecto}.csv", mode='a', newline='', encoding='utf-8') as file:
