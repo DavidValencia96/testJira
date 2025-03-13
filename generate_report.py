@@ -41,14 +41,15 @@ def generar_reporte(proyecto):
             }
             
             try:
-                response = requests.get(url, headers=headers)
+                # Se añade el parámetro timeout=180 para esperar hasta 3 minutos
+                response = requests.get(url, headers=headers, timeout=300)  # Timeout de 3 minutos
                 response.raise_for_status()  # Si la respuesta tiene un error, levantará una excepción
                 json_response = response.json()
                 total = json_response['total']
                 
                 # # Guardar los datos JSON en un archivo
-                with open(f"data/issues_{proyecto}.json", "a") as json_file:
-                    json.dump(json_response, json_file, indent=4)  # Escribe la respuesta JSON de manera legible
+                # with open(f"data/issues_{proyecto}.json", "a") as json_file:
+                #     json.dump(json_response, json_file, indent=4)  # Escribe la respuesta JSON de manera legible
                 
                 # Escribir los datos en el archivo CSV
                 with open(f"data/issues_{proyecto}.csv", mode='a', newline='', encoding='utf-8') as file:
