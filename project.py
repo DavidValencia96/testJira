@@ -1,5 +1,6 @@
 import requests
 from requests.auth import HTTPBasicAuth
+import time
 
 # Datos de autenticación y configuración
 email = "pablo.munoz@bebolder.co"
@@ -50,6 +51,10 @@ def obtener_proyectos():
         
         # Aumentamos el valor de 'startAt' para la siguiente página
         params['startAt'] += params['maxResults']
+        
+        # Pausa de 1 segundo entre solicitudes
+        time.sleep(1)
+        
         print(f"Proyectos obtenidos hasta ahora: {len(proyectos)} de {total_proyectos}")
 
     print(f"Total de proyectos obtenidos: {len(proyectos)} de {total_proyectos}")
