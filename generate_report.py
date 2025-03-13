@@ -2,9 +2,9 @@ import requests
 import base64
 import time
 import os
-import csv  # Importamos la librería csv
-import json  # Asegúrate de importar json
-from flask import jsonify, request
+import csv
+import json
+from flask import jsonify, request, send_from_directory
 
 # Función para generar el reporte
 def generar_reporte(proyecto):
@@ -92,10 +92,10 @@ def generar_reporte(proyecto):
     end_time = time.time()
     execution_time = end_time - start_time
 
-    # Devolver la ruta del archivo y el tiempo de ejecución
-    return {"archivo": f"data/issues_{proyecto}.csv", "tiempo": execution_time}
+    # Devolver la URL pública del archivo y el tiempo de ejecución
+    return {"archivo": f"https://testjira.onrender.com/data/issues_{proyecto}.csv", "tiempo": execution_time}
 
-# Ruta para manejar la generación del reporte
+# Ruta para manejar la generación del reporte y servir el archivo
 def generar_reporte_route(app):
     @app.route('/generar_reporte', methods=['POST'])
     def reporte_route():
@@ -105,5 +105,12 @@ def generar_reporte_route(app):
         # Llamamos a la función generar_reporte de generate_report.py
         resultado = generar_reporte(proyecto)
 
-        # Devolver la ruta del archivo y el tiempo de ejecución
+        # Devolver la URL pública del archivo y el tiempo de ejecución
         return jsonify(resultado)
+
+    # Ruta para servir los archivos CSV desde la carpeta 'data'
+    @app.route('/data/<path:filename>')
+    def serve_file(filename):
+        # Sirve el archivo CSV desde la carpeta 'data' sin forzar la descarga
+        return send_from_directory(os.path.join(app.root_path, 'data'), filename, as_attachment=False)
+
