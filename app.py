@@ -1,13 +1,26 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, send_from_directory
 from generate_report import generar_reporte_route  # Importar la función para la ruta de reporte
 from project import obtener_proyectos  # Importar la función desde jira_utils.py
+import os, json 
 
 app = Flask(__name__)
 
-# Ruta para servir el archivo HTML (index.html)
+# Ruta para servir el archivo JSON desde la carpeta 'data'
+@app.route('/data/<filename>')
+def download_file(filename):
+    return send_from_directory(os.path.join(app.root_path, 'data'), filename)
+
+# Ruta para la página principal
 @app.route('/')
 def index():
-    proyectos = obtener_proyectos()  # Obtener los proyectos desde Jira
+    # Obtenemos los proyectos solo si no han sido obtenidos aún
+    if not os.path.exists('data/projects.json'):
+        obtener_proyectos()  # Obtener los proyectos desde Jira
+
+    # Cargar los proyectos desde el archivo JSON
+    with open('data/projects.json', 'r') as file:
+        proyectos = json.load(file)
+
     return render_template('index.html', proyectos=proyectos)
 
 # Llamamos a la función generar_reporte_route para registrar la ruta

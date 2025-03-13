@@ -53,6 +53,36 @@
         }
     </style>
     <script>
+        // Función para cargar los proyectos desde el archivo JSON
+        function cargarProyectos() {
+            fetch('./data/projects.json')  // Asegúrate de que la ruta sea la correcta
+                .then(response => response.json())
+                .then(proyectos => {
+                    const select = document.getElementById("proyecto");
+
+                    // Limpiamos las opciones existentes (si las hay)
+                    select.innerHTML = '';
+
+                    // Agregamos una opción por defecto
+                    const option = document.createElement("option");
+                    option.value = '';
+                    option.text = 'Selecciona un Proyecto';
+                    select.appendChild(option);
+
+                    // Iteramos sobre los proyectos y creamos un option para cada uno
+                    proyectos.forEach(project => {
+                        const option = document.createElement("option");
+                        option.value = project.key; // Usamos la clave del proyecto
+                        option.text = `${project.name} (${project.key})`; // Nombre del proyecto y clave
+                        select.appendChild(option);
+                    });
+                })
+                .catch(error => {
+                    console.error('Error cargando el archivo JSON:', error);
+                    alert('Hubo un error al cargar los proyectos.');
+                });
+        }
+
         // Función para manejar el formulario y enviar los datos dinámicamente
         function generarReporte() {
             var proyecto = document.getElementById("proyecto").value;
@@ -101,6 +131,9 @@
                 alert("Hubo un error al generar el reporte.");
             });
         }
+
+        // Llamamos a la función para cargar los proyectos al cargar la página
+        window.onload = cargarProyectos;
     </script>
 </head>
 <body>
@@ -108,9 +141,7 @@
     <form id="formulario">
         <label for="proyecto">Selecciona el Proyecto:</label>
         <select id="proyecto" name="proyecto" required>
-            {% for nombre, siglas in proyectos %}
-                <option value="{{ siglas }}">{{ nombre }} ({{ siglas }})</option>
-            {% endfor %}
+            <!-- Las opciones se cargarán aquí mediante JavaScript -->
         </select><br><br>
 
         <button type="button" onclick="generarReporte()">Generar Reporte</button>
