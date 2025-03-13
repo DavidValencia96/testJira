@@ -42,38 +42,66 @@ def generar_reporte(proyecto):
                 total = json_response['total']
                 
                 # Guardar los datos JSON en un archivo
-                # with open(f"data/issues_{proyecto}.json", "a") as json_file:
-                #     json.dump(json_response, json_file, indent=4)  # Escribe la respuesta JSON de manera legible
+                with open(f"data/issues_{proyecto}.json", "w") as json_file:
+                    json.dump(json_response, json_file, indent=4)  # Escribe la respuesta JSON de manera legible
                 
                 # Escribir los datos en el archivo CSV
-                with open(f"data/issues_{proyecto}.csv", mode='a', newline='', encoding='utf-8') as file:
+                with open(f"data/issues_{proyecto}.csv", mode='w', newline='', encoding='utf-8') as file:
                     writer = csv.writer(file)
                     
                     # Escribir solo los encabezados una vez
                     if start_at == 0:
-                        writer.writerow(["Clave", "Resumen", "Estado", "Asignado a", "Creado", "story point", "HU padre", "issuetype"])
+                        writer.writerow(["Proyecto", "Clave/ID", "Tipo issue", "Prioridad", "Informador", "Creada", "Titulo", "Estado", "Responsable", "Actualizada", "Sprint", "Definición de hecho", "Puntos de historia", "Puntos estimados", "Puntos ejecutados", "Sumatoria tiempo empleado", "Seguimiento de tiempo HH/MM", "Codigo externo"])
 
                     for issue in json_response['issues']:
+                        project = issue['fields']['project']['name']
                         key = issue['key']
-                        summary = issue['fields']['summary']
-                        status = issue['fields']['status']['name']
-                        
-                        # Verificamos si el campo 'assignee' está presente y no es None
-                        assignee = issue['fields'].get('assignee')
-                        assignee_name = assignee['displayName'] if assignee else "No asignado"
-                        created = issue['fields']['created']
-                        storyP = issue['fields'].get('customfield_10016', None) 
-                        if not storyP: 
-                            storyP = "N/A"
-                        parent = issue['fields']['priority'].get('name', None) 
-                        if not parent: 
-                            parent = "N/A"
                         issuetype = issue['fields']['issuetype'].get('name', None) 
                         if not issuetype: 
                             issuetype = "N/A"
-                        
+                        priority = issue['fields']['priority'].get('name', None) 
+                        if not priority: 
+                            priority = "N/A"
+                        reporter = issue['fields']['reporter'].get('displayName', None) 
+                        if not reporter: 
+                            reporter = "N/A"
+                        created = issue['fields']['created']
+                        summary = issue['fields']['summary']
+                        status = issue['fields']['status']['name']
+                        assignee_name = issue['fields']['assignee'].get('displayName', None) 
+                        if not assignee_name: 
+                            assignee_name = "No asignado"
+                        update = issue['fields'].get('update', None) 
+                        if not update: 
+                            update = "No ha tenido actualización"
+                        sprint = issue['fields'].get('customfield_10020', None) 
+                        if not sprint: 
+                            sprint = "N/A"
+                        definitionOfFact = issue['fields'].get('customfield_10048', None) 
+                        if not definitionOfFact: 
+                            definitionOfFact = "N/A"
+                        storyPoint = issue['fields'].get('customfield_10033', None) 
+                        if not storyPoint: 
+                            storyPoint = "N/A"
+                        storyPointEstimated = issue['fields'].get('customfield_10016', None) 
+                        if not storyPointEstimated: 
+                            storyPointEstimated = "N/A"
+                        storyPointExecuted = issue['fields'].get('customfield_10046', None) 
+                        if not storyPointExecuted: 
+                            storyPointExecuted = "N/A"
+                        aggregatetimespent = issue['fields'].get('aggregatetimespent', None) 
+                        if not aggregatetimespent: 
+                            aggregatetimespent = "N/A"
+                            
+                        seguimientotiempo = issue['fields'].get('aggregatetimespent', None) 
+                        if not seguimientotiempo: 
+                            seguimientotiempo = "N/A"
+                        externalCode = issue['fields'].get('customfield_10057', None) 
+                        if not externalCode: 
+                            externalCode = "N/A"
+
                         # Añadimos la fila con los datos
-                        writer.writerow([key, summary, status, assignee_name, created, storyP, parent, issuetype])
+                        writer.writerow([project, key, issuetype, priority, reporter, created, summary, status, assignee_name, update, sprint, definitionOfFact, storyPoint, storyPointEstimated, storyPointExecuted, aggregatetimespent, seguimientotiempo, externalCode])
                 
                 start_at += max_results
 
