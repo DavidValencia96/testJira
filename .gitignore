@@ -1,0 +1,53 @@
+# Archivos de compilación de Python
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+
+# Entornos virtuales
+env/
+venv/
+.venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Archivos de configuración de IDE
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# Archivos de configuración de editor (EditorConfig, etc.)
+*.editorconfig
+
+# Archivos de logs
+*.log
+
+# Archivos de sistema
+.DS_Store  # macOS
+Thumbs.db  # Windows
+
+# Archivos de distribución
+*.egg
+*.egg-info/
+dist/
+build/
+*.tar.gz
+*.whl
+
+# Archivos de pruebas
+nosetests.xml
+coverage.xml
+*.cover
+*.tox/
+*.nox/
+*.hypothesis/
+
+# Archivos de base de datos locales
+*.sqlite3
+*.db
+
+# Archivos específicos del sistema operativo
+*.bak  # Archivos de respaldo
+*.swp  # Archivos de intercambio (Vim, Emacs, etc.)
