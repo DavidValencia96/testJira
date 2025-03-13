@@ -24,6 +24,11 @@ def generar_reporte(proyecto):
 
     # Definir el JQL query
     jql_query = f"project={proyecto}"
+    
+    # Eliminar el archivo CSV existente si existe
+    archivo_csv = f"data/issues_{proyecto}.csv"
+    if os.path.exists(archivo_csv):
+        os.remove(archivo_csv)  # Eliminar el archivo CSV
 
     # Función para obtener los issues
     def obtener_issues_jira():
@@ -41,12 +46,12 @@ def generar_reporte(proyecto):
                 json_response = response.json()
                 total = json_response['total']
                 
-                # Guardar los datos JSON en un archivo
-                with open(f"data/issues_{proyecto}.json", "w") as json_file:
+                # # Guardar los datos JSON en un archivo
+                with open(f"data/issues_{proyecto}.json", "a") as json_file:
                     json.dump(json_response, json_file, indent=4)  # Escribe la respuesta JSON de manera legible
                 
                 # Escribir los datos en el archivo CSV
-                with open(f"data/issues_{proyecto}.csv", mode='w', newline='', encoding='utf-8') as file:
+                with open(f"data/issues_{proyecto}.csv", mode='a', newline='', encoding='utf-8') as file:
                     writer = csv.writer(file)
                     
                     # Escribir solo los encabezados una vez
@@ -68,12 +73,14 @@ def generar_reporte(proyecto):
                         created = issue['fields']['created']
                         summary = issue['fields']['summary']
                         status = issue['fields']['status']['name']
-                        assignee_name = issue['fields']['assignee'].get('displayName', None) 
-                        if not assignee_name: 
+                        assignee_name = issue['fields'].get('assignee', None)
+                        if assignee_name:
+                            assignee_name = assignee_name.get('displayName', 'No asignado')
+                        else:
                             assignee_name = "No asignado"
                         update = issue['fields'].get('update', None) 
                         if not update: 
-                            update = "No ha tenido actualización"
+                            update = "Sin actualizar"
                         sprint = issue['fields'].get('customfield_10020', None) 
                         if not sprint: 
                             sprint = "N/A"
@@ -92,10 +99,13 @@ def generar_reporte(proyecto):
                         aggregatetimespent = issue['fields'].get('aggregatetimespent', None) 
                         if not aggregatetimespent: 
                             aggregatetimespent = "N/A"
-                            
                         seguimientotiempo = issue['fields'].get('aggregatetimespent', None) 
                         if not seguimientotiempo: 
                             seguimientotiempo = "N/A"
+                        else: 
+                            hours = seguimientotiempo // 3600
+                            minutes = (seguimientotiempo % 3600) // 60
+                            seguimientotiempo = F"{hours}H {minutes}M"
                         externalCode = issue['fields'].get('customfield_10057', None) 
                         if not externalCode: 
                             externalCode = "N/A"
