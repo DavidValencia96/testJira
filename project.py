@@ -21,6 +21,7 @@ params = {
 # Función para obtener los proyectos
 def obtener_proyectos():
     proyectos = []
+    total_proyectos = None
 
     while True:
         response = requests.get(url, auth=auth, params=params, headers={"Accept": "application/json"})
@@ -39,14 +40,19 @@ def obtener_proyectos():
                 project_key = project['key']    # Siglas del proyecto
                 proyectos.append((project_name, project_key))
 
+        # Verificamos si es la primera vez que obtenemos el total
+        if total_proyectos is None:
+            total_proyectos = data['total']
+        
         # Verificamos si hemos obtenido todos los proyectos
-        if data['startAt'] + len(data['values']) >= data['total']:
+        if data['startAt'] + len(data['values']) >= total_proyectos:
             break  # Si hemos llegado al final, salir del bucle
         
         # Aumentamos el valor de 'startAt' para la siguiente página
         params['startAt'] += params['maxResults']
+        print(f"Proyectos obtenidos hasta ahora: {len(proyectos)} de {total_proyectos}")
 
-    print(proyectos)  # Verificar los proyectos obtenidos
+    print(f"Total de proyectos obtenidos: {len(proyectos)} de {total_proyectos}")
     return proyectos
 
 # Llamamos a la función
