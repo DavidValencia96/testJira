@@ -22,28 +22,32 @@ params = {
 def obtener_proyectos():
     proyectos = []
 
-    # Realizamos la petición y obtenemos los proyectos
     while True:
         response = requests.get(url, auth=auth, params=params, headers={"Accept": "application/json"})
         
+        # Comprobar el estado de la respuesta
         if response.status_code != 200:
             print(f"Error al obtener los proyectos: {response.status_code} - {response.text}")
             break
         
         data = response.json()
-        
-        # Procesamos los proyectos obtenidos
-        for project in data['values']:
-            project_name = project['name']  # Nombre del proyecto
-            project_key = project['key']    # Siglas del proyecto
-            proyectos.append((project_name, project_key))
-        
-        # Si no hay más proyectos, terminamos
+
+        # Verificamos si la respuesta contiene proyectos
+        if 'values' in data:
+            for project in data['values']:
+                project_name = project['name']  # Nombre del proyecto
+                project_key = project['key']    # Siglas del proyecto
+                proyectos.append((project_name, project_key))
+
+        # Verificamos si hemos obtenido todos los proyectos
         if data['startAt'] + len(data['values']) >= data['total']:
-            break
+            break  # Si hemos llegado al final, salir del bucle
         
-        # Si aún hay más proyectos, ajustamos el offset
+        # Aumentamos el valor de 'startAt' para la siguiente página
         params['startAt'] += params['maxResults']
 
-    print(proyectos)  # Agregar esta línea para verificar los proyectos
+    print(proyectos)  # Verificar los proyectos obtenidos
     return proyectos
+
+# Llamamos a la función
+obtener_proyectos()
