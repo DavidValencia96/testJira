@@ -1,0 +1,10 @@
+services:
+- type: web
+  name: testJira
+  runtime: python
+  repo: https://github.com/DavidValencia96/testJira
+  plan: free
+  region: oregon
+  buildCommand: pip install -r requirements.txt
+  startCommand: gunicorn -w 4 -b 0.0.0.0:8000 --timeout 500 app:app
+version: "1"
