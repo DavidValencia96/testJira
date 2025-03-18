@@ -19,22 +19,16 @@ def generar_reporte(proyecto, issue_types=None):
     max_results = 100
     total = 0
 
-    print(f"Datos recibidos en el backend: proyecto={proyecto}, issue_types={issue_types}")
     jql_query = f"project={proyecto}"
     if issue_types:
         issue_types_query = ', '.join([f'"{issue_type}"' for issue_type in issue_types]) 
         jql_query += f" AND issuetype IN ({issue_types_query})"
-    print(f"Consulta JQL construida: {jql_query}")
 
-    
-    print(f"Consulta JQL construida: {jql_query}")
     
     archivo_csv = f"data/issues_{proyecto}.csv"
     if os.path.exists(archivo_csv):
         os.remove(archivo_csv)
         
-    print(f"Tipos de issue seleccionados: {issue_types}")
-    print(f"Consulta JQL construida: {jql_query}")
     
     def obtener_issues_jira():
         nonlocal start_at, total
