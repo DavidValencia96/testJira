@@ -116,7 +116,7 @@ def generar_reporte(proyecto, issue_types=None):
                             aggregatetimespent = "0.0"
                         timeTracking = issue['fields'].get('aggregatetimespent', None) 
                         if not timeTracking: 
-                            timeTracking = "0.0"
+                            timeTracking = "0H 0M"
                         else: 
                             hours = timeTracking // 3600
                             minutes = (timeTracking % 3600) // 60
