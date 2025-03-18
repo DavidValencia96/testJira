@@ -104,19 +104,19 @@ def generar_reporte(proyecto, issue_types=None):
                             definitionOfFact = "N/A"
                         storyPoint = issue['fields'].get('customfield_10033', None) 
                         if not storyPoint: 
-                            storyPoint = "0"
+                            storyPoint = "0.0"
                         storyPointEstimated = issue['fields'].get('customfield_10016', None) 
                         if not storyPointEstimated: 
-                            storyPointEstimated = "0"
+                            storyPointEstimated = "0.0"
                         storyPointExecuted = issue['fields'].get('customfield_10046', None) 
                         if not storyPointExecuted: 
-                            storyPointExecuted = "0"
+                            storyPointExecuted = "0.0"
                         aggregatetimespent = issue['fields'].get('aggregatetimespent', None) 
                         if not aggregatetimespent: 
-                            aggregatetimespent = "0"
+                            aggregatetimespent = "0.0"
                         timeTracking = issue['fields'].get('aggregatetimespent', None) 
                         if not timeTracking: 
-                            timeTracking = "0"
+                            timeTracking = "0.0"
                         else: 
                             hours = timeTracking // 3600
                             minutes = (timeTracking % 3600) // 60
