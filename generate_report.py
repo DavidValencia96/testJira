@@ -50,7 +50,6 @@ def generar_reporte(proyecto, issue_types=None):
                 response.raise_for_status()
                 json_response = response.json()
                 total = json_response['total']
-                print(f"Respuesta de Jira: {json_response}")
                 
                 with open(f"data/issues_{proyecto}.json", "a") as json_file:
                     json.dump(json_response, json_file, indent=4)
