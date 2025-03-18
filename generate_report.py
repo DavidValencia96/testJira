@@ -78,9 +78,14 @@ def generar_reporte(proyecto, issue_types=None):
                             assignee_name = assignee_name.get('displayName', 'No asignado')
                         else:
                             assignee_name = "No asignado"
-                        update = issue['fields'].get('update', None) 
-                        if not update: 
-                            update = "Sin actualizar"
+
+                        updated = issue['fields']['updated']
+                        try:
+                            updated_datetime = datetime.strptime(updated, "%Y-%m-%dT%H:%M:%S.%f%z")
+                            updated_date = updated_datetime.strftime("%Y-%m-%d")
+                        except ValueError as e:
+                            updated_date = "Sin actualizar"
+
                         amountSprint = issue['fields'].get('customfield_10020', None) 
                         if amountSprint is None or len(amountSprint) == 0:
                             amountSprint = "Sin sprint"
@@ -120,7 +125,7 @@ def generar_reporte(proyecto, issue_types=None):
                         if not externalCode: 
                             externalCode = "N/A"
 
-                        writer.writerow([project, key, issuetype, priority, reporter, created_date, summary, status, assignee_name, update, amountSprint, sprint, definitionOfFact, storyPoint, storyPointEstimated, storyPointExecuted, aggregatetimespent, timeTracking, externalCode])
+                        writer.writerow([project, key, issuetype, priority, reporter, created_date, summary, status, assignee_name, updated_date, amountSprint, sprint, definitionOfFact, storyPoint, storyPointEstimated, storyPointExecuted, aggregatetimespent, timeTracking, externalCode])
 
                 start_at += max_results
 
@@ -143,15 +148,9 @@ def generar_reporte_route(app):
     @app.route('/generar_reporte', methods=['POST'])
     def reporte_route():
         data = request.get_json()
-        print(f"Datos recibidos: {data}")  # Agrega esta línea para depurar los datos recibidos
         proyecto = data['proyecto']
         issue_types = data.get('issueTypes', [])
-        
-        print(f"Proyecto: {proyecto}")
-        print(f"Tipos de issue seleccionados: {issue_types}")
-        
         resultado = generar_reporte(proyecto, issue_types)
-
         return jsonify(resultado)
 
     @app.route('/data/<path:filename>')
