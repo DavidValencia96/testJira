@@ -106,28 +106,28 @@ def generar_reporte(proyecto, issue_types=None):
                             definitionOfFact = "N/A"
                         storyPoint = issue['fields'].get('customfield_10033', None) 
                         if not storyPoint: 
-                            storyPoint = "N/A"
+                            storyPoint = "0"
                         storyPointEstimated = issue['fields'].get('customfield_10016', None) 
                         if not storyPointEstimated: 
-                            storyPointEstimated = "N/A"
+                            storyPointEstimated = "0"
                         storyPointExecuted = issue['fields'].get('customfield_10046', None) 
                         if not storyPointExecuted: 
-                            storyPointExecuted = "N/A"
+                            storyPointExecuted = "0"
                         aggregatetimespent = issue['fields'].get('aggregatetimespent', None) 
                         if not aggregatetimespent: 
-                            aggregatetimespent = "N/A"
-                        seguimientotiempo = issue['fields'].get('aggregatetimespent', None) 
-                        if not seguimientotiempo: 
-                            seguimientotiempo = "N/A"
+                            aggregatetimespent = "0"
+                        timeTracking = issue['fields'].get('aggregatetimespent', None) 
+                        if not timeTracking: 
+                            timeTracking = "0"
                         else: 
-                            hours = seguimientotiempo // 3600
-                            minutes = (seguimientotiempo % 3600) // 60
-                            seguimientotiempo = F"{hours}H {minutes}M"
+                            hours = timeTracking // 3600
+                            minutes = (timeTracking % 3600) // 60
+                            timeTracking = F"{hours}H {minutes}M"
                         externalCode = issue['fields'].get('customfield_10057', None) 
                         if not externalCode: 
                             externalCode = "N/A"
 
-                        writer.writerow([project, key, issuetype, priority, reporter, created_date, summary, status, assignee_name, update, amountSprint, sprint, definitionOfFact, storyPoint, storyPointEstimated, storyPointExecuted, aggregatetimespent, seguimientotiempo, externalCode])
+                        writer.writerow([project, key, issuetype, priority, reporter, created_date, summary, status, assignee_name, update, amountSprint, sprint, definitionOfFact, storyPoint, storyPointEstimated, storyPointExecuted, aggregatetimespent, timeTracking, externalCode])
 
                 start_at += max_results
 
