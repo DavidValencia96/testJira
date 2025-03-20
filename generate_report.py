@@ -112,7 +112,6 @@ def generar_reporte(proyecto, issue_types=None):
                                 # Extraemos solo startDate y endDate de cada sprint
                                 filtered_sprints.append({
                                     "startDate": sprint.get("startDate"),
-                                    "endDate": sprint.get("endDate")
                                 })
                         else:
                             filtered_sprints = 'N/A'
