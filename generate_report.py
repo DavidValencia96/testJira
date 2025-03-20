@@ -105,27 +105,17 @@ def generar_reporte(proyecto, issue_types=None):
 
                         dateSprint = issue['fields'].get('customfield_10020', None)
 
-                        # Verificamos si dateSprint no es None ni vacío
-                        # Verificamos si dateSprint no es None ni vacío
-                        if dateSprint:
-                            # Creamos una nueva lista para almacenar solo startDate y endDate vacíos
-                            sprint_dates = []
-                            
-                            # Iteramos sobre los sprints
+                        if dateSprint is not None:
+                            # Filtramos solo los objetos que tienen startDate y endDate
+                            filtered_sprints = []
                             for sprint in dateSprint:
-                                start_date = sprint.get("startDate", "").strip()  # Obtener startDate
-                                end_date = sprint.get("endDate", "").strip()  # Obtener endDate
-                                
-                                # Comprobamos si ambos campos están vacíos
-                                if not start_date and not end_date:
-                                    # Solo almacenamos los campos startDate y endDate
-                                    sprint_dates.append({
-                                        "startDate": start_date,
-                                        "endDate": end_date
-                                    })
+                                # Extraemos solo startDate y endDate de cada sprint
+                                filtered_sprints.append({
+                                    "startDate": sprint.get("startDate"),
+                                    "endDate": sprint.get("endDate")
+                                })
                         else:
-                            sprint_dates = []
-
+                            filtered_sprints = 'N/A'
 
                         definitionOfFact = issue['fields'].get('customfield_10048', None)
                         if isinstance(definitionOfFact, dict) and 'value' in definitionOfFact:
@@ -155,7 +145,7 @@ def generar_reporte(proyecto, issue_types=None):
                         if not externalCode: 
                             externalCode = "N/A"
 
-                        writer.writerow([project, key, issuetype, priority, reporter, created_date, summary, status, assignee_name, updated_date, amountSprint, SpritnCurrent, sprint, dateSprint, definitionOfFact, storyPoint, storyPointEstimated, storyPointExecuted, aggregatetimespent, timeTracking, externalCode])
+                        writer.writerow([project, key, issuetype, priority, reporter, created_date, summary, status, assignee_name, updated_date, amountSprint, SpritnCurrent, sprint, filtered_sprints, definitionOfFact, storyPoint, storyPointEstimated, storyPointExecuted, aggregatetimespent, timeTracking, externalCode])
                 start_at += max_results
             except requests.exceptions.RequestException as e:
                 return jsonify({"error": f"Error en la extracción de datos: {e}"}), 500
