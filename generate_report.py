@@ -52,7 +52,7 @@ def generar_reporte(proyecto, issue_types=None):
                     writer = csv.writer(file)
 
                     if start_at == 0:
-                        writer.writerow(["Proyecto", "Clave/ID", "Tipo issue", "Prioridad", "Informador", "Creada", "Titulo", "Estado", "Responsable", "Actualizada", "Cantidad de sprint",  "Sprint actual", "Historia sprint", "Definición de hecho", "Puntos de historia", "Puntos estimados", "Puntos ejecutados", "Sumatoria tiempo empleado", "Seguimiento de tiempo HH/MM", "Codigo externo"])
+                        writer.writerow(["Proyecto", "Clave/ID", "Tipo issue", "Prioridad", "Informador", "Creada", "Titulo", "Estado", "Responsable", "Actualizada", "Cantidad de sprint",  "Sprint actual", "Historia sprint", "Fechas de sprint", "Definición de hecho", "Puntos de historia", "Puntos estimados", "Puntos ejecutados", "Sumatoria tiempo empleado", "Seguimiento de tiempo HH/MM", "Codigo externo"])
 
                     for issue in json_response['issues']:
                         project = issue['fields']['project']['name']
@@ -103,6 +103,30 @@ def generar_reporte(proyecto, issue_types=None):
                         else:
                             SpritnCurrent = "N/A"
 
+                        dateSprint = issue['fields'].get('customfield_10020', None)
+
+                        # Verificamos si dateSprint no es None ni vacío
+                        # Verificamos si dateSprint no es None ni vacío
+                        if dateSprint:
+                            # Creamos una nueva lista para almacenar solo startDate y endDate vacíos
+                            sprint_dates = []
+                            
+                            # Iteramos sobre los sprints
+                            for sprint in dateSprint:
+                                start_date = sprint.get("startDate", "").strip()  # Obtener startDate
+                                end_date = sprint.get("endDate", "").strip()  # Obtener endDate
+                                
+                                # Comprobamos si ambos campos están vacíos
+                                if not start_date and not end_date:
+                                    # Solo almacenamos los campos startDate y endDate
+                                    sprint_dates.append({
+                                        "startDate": start_date,
+                                        "endDate": end_date
+                                    })
+                        else:
+                            sprint_dates = []
+
+
                         definitionOfFact = issue['fields'].get('customfield_10048', None)
                         if isinstance(definitionOfFact, dict) and 'value' in definitionOfFact:
                             definitionOfFact = definitionOfFact['value']
@@ -131,7 +155,7 @@ def generar_reporte(proyecto, issue_types=None):
                         if not externalCode: 
                             externalCode = "N/A"
 
-                        writer.writerow([project, key, issuetype, priority, reporter, created_date, summary, status, assignee_name, updated_date, amountSprint, SpritnCurrent, sprint, definitionOfFact, storyPoint, storyPointEstimated, storyPointExecuted, aggregatetimespent, timeTracking, externalCode])
+                        writer.writerow([project, key, issuetype, priority, reporter, created_date, summary, status, assignee_name, updated_date, amountSprint, SpritnCurrent, sprint, dateSprint, definitionOfFact, storyPoint, storyPointEstimated, storyPointExecuted, aggregatetimespent, timeTracking, externalCode])
                 start_at += max_results
             except requests.exceptions.RequestException as e:
                 return jsonify({"error": f"Error en la extracción de datos: {e}"}), 500
