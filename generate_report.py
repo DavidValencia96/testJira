@@ -57,13 +57,17 @@ def generar_reporte(proyecto, issue_types=None):
 
                     for issue in json_response['issues']:
                         project = issue['fields']['project']['name']
+
                         key = issue['key']
+
                         issuetype = issue['fields']['issuetype'].get('name', None) 
                         if not issuetype: 
                             issuetype = "N/A"
+
                         priority = issue['fields']['priority'].get('name', None) 
                         if not priority: 
                             priority = "N/A"
+
                         reporter = issue['fields']['reporter'].get('displayName', None) 
                         if not reporter: 
                             reporter = "N/A"
