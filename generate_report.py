@@ -4,6 +4,7 @@ import time
 import os
 import csv
 import json
+import unicodedata
 from datetime import datetime
 from flask import jsonify, request, send_from_directory
 
@@ -52,7 +53,7 @@ def generar_reporte(proyecto, issue_types=None):
                     writer = csv.writer(file)
 
                     if start_at == 0:
-                        writer.writerow(["Proyecto", "Clave/ID", "Tipo issue", "Prioridad", "Informador", "Creada", "Titulo", "Estado", "Responsable", "Actualizada", "Cantidad de sprint",  "Sprint actual", "Historia sprint", "Fechas de sprint", "Definición de hecho", "Puntos de historia", "Puntos estimados", "Puntos ejecutados", "Sumatoria tiempo empleado", "Seguimiento de tiempo HH/MM", "Codigo externo"])
+                        writer.writerow(["Proyecto", "Clave/ID", "Tipo issue", "Prioridad", "Informador", "Creada", "Titulo", "Estado", "Responsable", "Actualizada", "Cantidad de sprint",  "Sprint actual", "Fechas de sprint", "Definición de hecho", "Puntos de historia", "Puntos estimados", "Puntos ejecutados", "Sumatoria tiempo empleado", "Seguimiento de tiempo HH/MM", "Codigo externo"])
 
                     for issue in json_response['issues']:
                         project = issue['fields']['project']['name']
@@ -82,36 +83,31 @@ def generar_reporte(proyecto, issue_types=None):
                             updated_date = updated_datetime.strftime("%Y-%m-%d")
                         except ValueError as e:
                             updated_date = "Sin actualizar"
+                            
                         amountSprint = issue['fields'].get('customfield_10020', None) 
                         if amountSprint is None or len(amountSprint) == 0:
                             amountSprint = "Sin sprint"
                         else:
                             amountSprint = f"{len(amountSprint)} Sprints"
-                        sprint = issue['fields'].get('customfield_10020', None)
-                        if sprint is None or len(sprint) == 0:
-                            sprint = "Sin sprint"
-                        else:
-                            sprint_names = [item['name'] for item in sprint if 'name' in item]
-                            sprint = ", ".join(sprint_names)
-                            
-                        # Capturamos el valor de customfield_10020
-                        currentSprint = issue['fields'].get('customfield_10020', None)
 
-                        # Verificar si currentSprint es None o vacío antes de usarlo
+                        currentSprint = issue['fields'].get('customfield_10020', None)
                         if currentSprint:
                             SpritnCurrent = next((sprint.get("name", "N/A") for sprint in currentSprint if sprint.get("state") == "active"), "N/A")
                         else:
                             SpritnCurrent = "N/A"
 
                         dateSprint = issue['fields'].get('customfield_10020', None)
-
                         if dateSprint is not None:
-                            # Filtramos solo los objetos que tienen startDate y endDate
                             filtered_sprints = []
                             for sprint in dateSprint:
-                                # Extraemos solo startDate y endDate de cada sprint
+                                # Convertir startDate a un objeto datetime y luego formatearlo como YYYY-MM-DD
+                                start_date = sprint.get("startDate")
+
+                                if start_date:
+                                    start_date = datetime.strptime(start_date, "%Y-%m-%dT%H:%M:%S.%fZ").strftime("%Y-%m-%d")
+
                                 filtered_sprints.append({
-                                    "startDate": sprint.get("startDate"),
+                                    "InicioSprint": start_date,
                                 })
                         else:
                             filtered_sprints = 'N/A'
@@ -144,7 +140,7 @@ def generar_reporte(proyecto, issue_types=None):
                         if not externalCode: 
                             externalCode = "N/A"
 
-                        writer.writerow([project, key, issuetype, priority, reporter, created_date, summary, status, assignee_name, updated_date, amountSprint, SpritnCurrent, sprint, filtered_sprints, definitionOfFact, storyPoint, storyPointEstimated, storyPointExecuted, aggregatetimespent, timeTracking, externalCode])
+                        writer.writerow([project, key, issuetype, priority, reporter, created_date, summary, status, assignee_name, updated_date, amountSprint, SpritnCurrent, filtered_sprints, definitionOfFact, storyPoint, storyPointEstimated, storyPointExecuted, aggregatetimespent, timeTracking, externalCode])
                 start_at += max_results
             except requests.exceptions.RequestException as e:
                 return jsonify({"error": f"Error en la extracción de datos: {e}"}), 500
