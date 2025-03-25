@@ -106,12 +106,9 @@ def generar_reporte(proyecto, issue_types=None):
                         if dateSprint is not None:
                             filtered_sprints = []
                             for sprint in dateSprint:
-                                # Convertir startDate a un objeto datetime y luego formatearlo como YYYY-MM-DD
                                 start_date = sprint.get("startDate")
-
                                 if start_date:
                                     start_date = datetime.strptime(start_date, "%Y-%m-%dT%H:%M:%S.%fZ").strftime("%Y-%m-%d")
-
                                 filtered_sprints.append({
                                     "InicioSprint": start_date,
                                 })
@@ -150,25 +147,20 @@ def generar_reporte(proyecto, issue_types=None):
                 start_at += max_results
             except requests.exceptions.RequestException as e:
                 return jsonify({"error": f"Error en la extracción de datos: {e}"}), 500
-        print(f"Datos extraídos exitosamente para el proyecto {proyecto}")
 
     start_time = time.time()
     obtener_issues_jira()
     end_time = time.time()
     execution_time = end_time - start_time
-    return {"archivo": f"http://127.0.0.1:5000/data/issues_{proyecto}.csv", "tiempo": execution_time}
-
+    return {"archivo": f"https://testjira.onrender.com/data/issues_{proyecto}.csv", "tiempo": execution_time}
 
 def generar_reporte_route(app):
     @app.route('/generar_reporte', methods=['POST'])
     def reporte_route():
         data = request.get_json()
-        print('Datos recibidos:', data) 
         proyecto = data['proyecto']
-        issue_types = data.get('issueTypes', [])  # Aquí se obtiene la lista de tipos de issue seleccionados
-        print("Tipos de issues seleccionados back:", issue_types)  # Añadir esta línea para ver los datos
-
-        resultado = generar_reporte(proyecto, issue_types)  # Se pasa la lista de issueTypes a la función
+        issue_types = data.get('issueTypes', [])  
+        resultado = generar_reporte(proyecto, issue_types)
         return jsonify(resultado)
 
     @app.route('/data/<path:filename>')
