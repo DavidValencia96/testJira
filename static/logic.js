@@ -42,7 +42,6 @@ function generarReporte() {
         issueTypes.push(checkbox.value); // Guardar los tipos seleccionados
     });
     // Verificar en la consola del navegador
-    console.log('Tipos de issue seleccionados front:', issueTypes); 
 
     // Si no se selecciona ningún tipo de issue, se muestra una alerta
     if (issueTypes.length === 0) {
