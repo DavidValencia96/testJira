@@ -1,15 +1,109 @@
-/* Estilos para el loader */
-#loader {
+/* Estilo general del body */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f7fc;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative; /* Para permitir la posición absoluta del logo */
+}
+
+/* Contenedor principal */
+.container {
+    background-color: white;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 600px;
+    text-align: center;
+}
+
+/* Estilo para el logo */
+.logo-container {
+    position: absolute; /* Hacer que el logo se posicione de manera absoluta */
+    top: 20px;
+    left: 20px;
+}
+
+.logo {
+    width: 150px;
+    height: auto;
+}
+
+/* Estilo del título */
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 28px;
+}
+
+/* Estilos de etiquetas */
+.form-label {
+    font-size: 16px;
+    font-weight: bold;
+    color: #555;
+    display: block;
+    margin-top: 10px;
+}
+
+/* Estilos del select */
+.form-select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    outline: none;
+}
+
+.form-select:focus {
+    border-color: #7B9DFF;
+}
+
+/* Estilos para los checkboxes */
+.checkbox-group {
+    margin-top: 15px;
+    text-align: left;
+}
+
+.checkbox {
+    margin-right: 10px;
+}
+
+/* Botón */
+.btn {
+    background-color: #6c5ce7;
+    color: white;
+    padding: 12px 25px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #5a4cc6;
+}
+
+/* Loader */
+.loader {
     display: none;
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     border: 16px solid #f3f3f3;
-    border-top: 16px solid rgb(255, 0, 0);
+    border-top: 16px solid #3498db;
     border-radius: 50%;
-    width: 120px;
-    height: 120px;
+    width: 100px;
+    height: 100px;
     animation: spin 2s linear infinite;
 }
 
@@ -18,11 +112,12 @@
     100% { transform: rotate(360deg); }
 }
 
-/* Estilo para mostrar el tiempo de ejecución */
+/* Estilo para el mensaje de tiempo de ejecución */
 #execution-time {
     margin-top: 20px;
     font-size: 18px;
     font-weight: bold;
+    color: #333;
 }
 
 /* Estilo para el mensaje de archivo listo */

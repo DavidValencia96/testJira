@@ -3,47 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BeBolder - Grafa & Jira</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta property="og:title" content="BeBolder">
+    <meta property="og:image" content="https://www.bebolder.co/generic/uploads/2022/03/logo-Bebolder.svg">
+    <meta property="og:description" content="Jira, BeBolder">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#E36205">
+    <meta name="keywords" content="Jira, BeBolder">
+    <meta name="author" content="Juan David Valencia, Pablo Muñoz Vaca">
+    <link rel="icon" href="https://www.bebolder.co/generic/uploads/2022/03/logo-Bebolder.svg" type="image/x-icon">
+    <link rel="canonical" href="https://testjira.onrender.com/">
+
+
+
+
+    <meta name="description" content="Servicio para descargar issues de jira">
+
+    <title>BeBolder - Grafana & Jira</title>
 
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     <script src="{{ url_for('static', filename='logic.js') }}"></script>
 </head>
 <body>
-    <h1>Generar Reporte de Issues de Jira</h1>
-    <form id="formulario">
-        <label for="proyecto">Selecciona el Proyecto:</label>
-        <select id="proyecto" name="proyecto" required>
-            <!-- Las opciones se cargarán aquí mediante JavaScript -->
-        </select><br><br>
+    <!-- Contenedor para el logo -->
+    <div class="logo-container">
+        <img src="https://www.bebolder.co/generic/uploads/2022/03/logo-Bebolder.svg" alt="Logo BeBolder" class="logo">
+    </div>
+
+    <div class="container">
+        <h1>Generar reporte de issues de jira BeBolder</h1>
+        
+        <form id="formulario">
+            <label for="proyecto" class="form-label">Seleccione el proyecto:</label>
+            <select id="proyecto" name="proyecto" class="form-select" required>
+                <!-- Las opciones se cargarán aquí mediante JavaScript -->
+            </select><br><br>
+        
+            <label class="form-label">Selecciona los tipos de Issues:</label><br>
+            <div class="checkbox-group">
+                <input type="checkbox" id="Epic" name="issueTypes" value="Epic" class="checkbox"> Epica<br>
+                <input type="checkbox" id="Error" name="issueTypes" value="Bug" class="checkbox" checked> Error<br>
+                <input type="checkbox" id="EjecucionScriptsBD" name="issueTypes" value="Ejecución Scripts BD" class="checkbox"> Ejecución Scripts BD<br>
+                <input type="checkbox" id="Gestion" name="issueTypes" value="Gestión" class="checkbox"> Gestión<br>
+                <input type="checkbox" id="Riesgo" name="issueTypes" value="Riesgo" class="checkbox"> Riesgo<br>
+                <input type="checkbox" id="Historia" name="issueTypes" value="Story" class="checkbox" checked> Historia<br>
+                <input type="checkbox" id="Merge" name="issueTypes" value="Merge Request" class="checkbox"> Merge Request<br>
+                <input type="checkbox" id="Mejora" name="issueTypes" value="Mejora" class="checkbox"> Mejora<br>
+                <input type="checkbox" id="NoError" name="issueTypes" value="No Error" class="checkbox"> No Error<br>
+                <input type="checkbox" id="Subtarea" name="issueTypes" value="Sub-task" class="checkbox"> Subtarea<br>
+                <input type="checkbox" id="Tarea" name="issueTypes" value="Task" class="checkbox"> Tarea<br>
+            </div>
     
-        <label>Selecciona los tipos de Issues:</label><br>
-        <input type="checkbox" id="Epic" name="issueTypes" value="Epic"> Epica<br>
-        <input type="checkbox" id="Error" name="issueTypes" value="Bug" checked> Error<br>
-        <input type="checkbox" id="EjecucionScriptsBD" name="issueTypes" value="Ejecución Scripts BD"> Ejecución Scripts BD<br>
-        <input type="checkbox" id="Gestion" name="issueTypes" value="Gestión"> Gestión<br>
-        <input type="checkbox" id="Riesgo" name="issueTypes" value="Riesgo"> Riesgo<br>
-        <input type="checkbox" id="Historia" name="issueTypes" value="Story" checked> Historia<br>
-        <input type="checkbox" id="Merge" name="issueTypes" value="Merge Request"> Merge Request<br>
-        <input type="checkbox" id="Mejora" name="issueTypes" value="Mejora"> Mejora<br>
-        <input type="checkbox" id="NoError" name="issueTypes" value="No Error"> No Error<br>
-        <input type="checkbox" id="Subtarea" name="issueTypes" value="Sub-task"> Subtarea<br>
-        <input type="checkbox" id="Tarea" name="issueTypes" value="Task"> Tarea<br>
+            <button type="button" class="btn" onclick="generarReporte()">Generar Reporte</button>
+        </form>
 
-    
-        <button type="button" onclick="generarReporte()">Generar Reporte</button>
-    </form>
+        <!-- Loader de carga -->
+        <div id="loader" class="loader"></div>
 
+        <!-- Texto de carga debajo del loader -->
+        <div id="loader-text" class="loader-text" style="display:none;">Estamos descargando la información, no cierres la ventana.</div>
 
-    <!-- Loader de carga -->
-    <div id="loader"></div>
+        <!-- Mostrar el tiempo de ejecución -->
+        <div id="execution-time" style="display:none;"></div>
 
-    <!-- Texto de carga debajo del loader -->
-    <div id="loader-text" style="display:none;">Estamos descargando la información, no cierres la ventana.</div>
-
-    <!-- Mostrar el tiempo de ejecución -->
-    <div id="execution-time" style="display:none;"></div>
-
-    <!-- Enlace para el archivo generado -->
-    <div id="file-link" style="display:none;"></div>
+        <!-- Enlace para el archivo generado -->
+        <div id="file-link" style="display:none;"></div>
+    </div>
 </body>
 </html>
