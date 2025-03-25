@@ -23,7 +23,9 @@ def generar_reporte(proyecto, issue_types=None):
     jql_query = f"project={proyecto}"
     if issue_types:
         issue_types_query = ', '.join([f'"{issue_type}"' for issue_type in issue_types]) 
-        jql_query += f" AND issuetype IN ({issue_types_query})"
+        jql_query += f" AND type IN ({issue_types_query})"
+        print(f"Consulta JQL back: {jql_query}")
+
 
     
     archivo_csv = f"data/issues_{proyecto}.csv"
@@ -154,16 +156,19 @@ def generar_reporte(proyecto, issue_types=None):
     obtener_issues_jira()
     end_time = time.time()
     execution_time = end_time - start_time
-    return {"archivo": f"https://testjira.onrender.com/data/issues_{proyecto}.csv", "tiempo": execution_time}
+    return {"archivo": f"http://127.0.0.1:5000/data/issues_{proyecto}.csv", "tiempo": execution_time}
 
 
 def generar_reporte_route(app):
     @app.route('/generar_reporte', methods=['POST'])
     def reporte_route():
         data = request.get_json()
+        print('Datos recibidos:', data) 
         proyecto = data['proyecto']
-        issue_types = data.get('issueTypes', [])
-        resultado = generar_reporte(proyecto, issue_types)
+        issue_types = data.get('issueTypes', [])  # Aquí se obtiene la lista de tipos de issue seleccionados
+        print("Tipos de issues seleccionados back:", issue_types)  # Añadir esta línea para ver los datos
+
+        resultado = generar_reporte(proyecto, issue_types)  # Se pasa la lista de issueTypes a la función
         return jsonify(resultado)
 
     @app.route('/data/<path:filename>')

@@ -3,154 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Generar Reporte Jira</title>
-    <style>
-        /* Estilos para el loader */
-        #loader {
-            display: none;
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            border: 16px solid #f3f3f3;
-            border-top: 16px solid rgb(255, 0, 0);
-            border-radius: 50%;
-            width: 120px;
-            height: 120px;
-            animation: spin 2s linear infinite;
-        }
+    <title>BeBolder - Grafa & Jira</title>
 
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-
-        /* Estilo para mostrar el tiempo de ejecución */
-        #execution-time {
-            margin-top: 20px;
-            font-size: 18px;
-            font-weight: bold;
-        }
-
-        /* Estilo para el mensaje de archivo listo */
-        #file-link {
-            margin-top: 20px;
-            font-size: 16px;
-            font-weight: bold;
-        }
-
-        #file-link a {
-            color: green;
-            text-decoration: none;
-        }
-
-        /* Estilos para el texto de información debajo del loader */
-        #loader-text {
-            margin-top: 10px;
-            font-size: 16px;
-            color: #333;
-            text-align: center;
-        }
-    </style>
-    <script>
-        // Función para cargar los proyectos desde el archivo JSON
-        function cargarProyectos() {
-            fetch('./data/projects.json')  // Asegúrate de que la ruta sea la correcta
-                .then(response => response.json())
-                .then(proyectos => {
-                    const select = document.getElementById("proyecto");
-
-                    // Limpiamos las opciones existentes (si las hay)
-                    select.innerHTML = '';
-
-                    // Agregamos una opción por defecto
-                    const option = document.createElement("option");
-                    option.value = '';
-                    option.text = 'Selecciona un Proyecto';
-                    select.appendChild(option);
-
-                    // Iteramos sobre los proyectos y creamos un option para cada uno
-                    proyectos.forEach(project => {
-                        const option = document.createElement("option");
-                        option.value = project.key; // Usamos la clave del proyecto
-                        option.text = `${project.name} (${project.key})`; // Nombre del proyecto y clave
-                        select.appendChild(option);
-                    });
-                })
-                .catch(error => {
-                    console.error('Error cargando el archivo JSON:', error);
-                    alert('Hubo un error al cargar los proyectos.');
-                });
-        }
-
-        function generarReporte() {
-            var proyecto = document.getElementById("proyecto").value;
-            if (!proyecto) {
-                alert("Por favor ingresa el nombre del proyecto.");
-                return;
-            }
-        
-            // Recoger los tipos de issue seleccionados
-            var issueTypes = [];
-            var checkboxes = document.querySelectorAll('input[name="issueTypes"]:checked');
-            checkboxes.forEach((checkbox) => {
-                issueTypes.push(checkbox.value);
-            });
-
-            console.log("Tipos de issue seleccionados:", issueTypes);
-            console.log('Checkboxes seleccionados:', checkboxes);
-
-        
-            // Si no se selecciona ningún tipo de issue, se muestra una alerta
-            if (issueTypes.length === 0) {
-                alert("Por favor selecciona al menos un tipo de issue.");
-                return;
-            }
-        
-            // Construir el nombre del archivo basado en el nombre del proyecto
-            var archivo = "issues_" + proyecto + "_jira.xlsx";
-        
-            // Mostrar el loader mientras se realiza la solicitud
-            document.getElementById("loader").style.display = "block";
-        
-            // Hacer la solicitud al servidor Flask para generar el reporte
-            fetch('/generar_reporte', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({
-                    proyecto: proyecto,
-                    issue_types: issueTypes,  // Enviar los tipos de issue seleccionados
-                    archivo: archivo
-                })
-            })
-            .then(response => response.json())
-            .then(data => {
-                // Ocultar el loader
-                document.getElementById("loader").style.display = "none";
-        
-                // Mostrar el archivo generado y el tiempo de ejecución
-                alert("Reporte generado correctamente: " + data.archivo);
-                document.getElementById("execution-time").textContent = "Tiempo de ejecución: " + data.tiempo.toFixed(2) + " segundos.";
-                document.getElementById("execution-time").style.display = "block"; // Mostrar el tiempo de ejecución
-        
-                // Mostrar el enlace para descargar el archivo
-                var fileLink = document.getElementById("file-link");
-                fileLink.innerHTML = `Tus datos están listos, puedes revisarlos dando clic <a href="${data.archivo}" target="_blank">aquí</a>.`;
-                fileLink.style.display = "block"; // Mostrar el enlace
-            })
-            .catch(error => {
-                // Ocultar el loader en caso de error
-                document.getElementById("loader").style.display = "none";
-                alert("Hubo un error al generar el reporte.");
-            });
-        }
-        
-
-        // Llamamos a la función para cargar los proyectos al cargar la página
-        window.onload = cargarProyectos;
-    </script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="{{ url_for('static', filename='logic.js') }}"></script>
 </head>
 <body>
     <h1>Generar Reporte de Issues de Jira</h1>
@@ -161,27 +17,28 @@
         </select><br><br>
     
         <label>Selecciona los tipos de Issues:</label><br>
-        <input type="checkbox" id="Merge" name="issueTypes" value="Merge"> Merge<br>
-        <input type="checkbox" id="Request" name="issueTypes" value="Request"> Request<br>
+        <input type="checkbox" id="Epic" name="issueTypes" value="Epic"> Epica<br>
+        <input type="checkbox" id="Error" name="issueTypes" value="Bug"> Error<br>
         <input type="checkbox" id="EjecucionScriptsBD" name="issueTypes" value="Ejecución Scripts BD"> Ejecución Scripts BD<br>
-        <input type="checkbox" id="Subtarea" name="issueTypes" value="Subtarea"> Subtarea<br>
-        <input type="checkbox" id="Tarea" name="issueTypes" value="Tarea"> Tarea<br>
-        <input type="checkbox" id="Historia" name="issueTypes" value="Historia"> Historia<br>
-        <input type="checkbox" id="Error" name="issueTypes" value="Error"> Error<br>
+        <input type="checkbox" id="GestionRiesgo" name="issueTypes" value="Gestión"> Gestión<br>
+        <input type="checkbox" id="GestionRiesgo" name="issueTypes" value="Riesgo"> Riesgo<br>
+        <input type="checkbox" id="Historia" name="issueTypes" value="Story"> Historia<br>
+        <input type="checkbox" id="Merge" name="issueTypes" value="Merge Request"> Merge Request<br>
         <input type="checkbox" id="Mejora" name="issueTypes" value="Mejora"> Mejora<br>
         <input type="checkbox" id="NoError" name="issueTypes" value="No Error"> No Error<br>
-        <input type="checkbox" id="Epic" name="issueTypes" value="Epic"> Epic<br>
-        <input type="checkbox" id="GestionRiesgo" name="issueTypes" value="GestiónRiesgo"> GestiónRiesgo<br><br>
+        <input type="checkbox" id="Subtarea" name="issueTypes" value="Sub-task"> Subtarea<br>
+        <input type="checkbox" id="Tarea" name="issueTypes" value="Task"> Tarea<br>
+
     
         <button type="button" onclick="generarReporte()">Generar Reporte</button>
     </form>
-    
+
 
     <!-- Loader de carga -->
     <div id="loader"></div>
 
     <!-- Texto de carga debajo del loader -->
-    <div id="loader-text" style="display:none;">Estamos obteniendo la información, por favor no cerrar la ventana.</div>
+    <div id="loader-text" style="display:none;">Estamos descargando la información, no cierres la ventana.</div>
 
     <!-- Mostrar el tiempo de ejecución -->
     <div id="execution-time" style="display:none;"></div>
