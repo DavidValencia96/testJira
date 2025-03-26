@@ -55,7 +55,7 @@ def generar_reporte(proyecto, issue_types=None):
                     writer = csv.writer(file)
 
                     if start_at == 0:
-                        writer.writerow(["Proyecto", "Clave/ID", "Tipo issue", "Prioridad", "Informador", "Creada", "Titulo", "Estado", "Responsable", "Actualizada", "Cantidad de sprint",  "Sprint actual", "Fechas de sprint", "Nombres Sprint" "Definición de hecho", "Puntos de historia", "Puntos estimados", "Puntos ejecutados", "Sumatoria tiempo empleado", "Seguimiento de tiempo HH/MM", "Codigo externo"])
+                        writer.writerow(["Proyecto", "Clave/ID", "Tipo issue", "Prioridad", "Informador", "Creada", "Titulo", "Estado", "Responsable", "Actualizada", "Cantidad de sprint",  "Sprint actual", "Fechas de sprint", "Nombres Sprint", "Definición de hecho", "Puntos de historia", "Puntos estimados", "Puntos ejecutados", "Sumatoria tiempo empleado", "Seguimiento de tiempo HH/MM", "Codigo externo"])
 
                     for issue in json_response['issues']:
                         project = issue['fields']['project']['name']
