@@ -55,7 +55,7 @@ def generar_reporte(proyecto, issue_types=None):
                     writer = csv.writer(file)
 
                     if start_at == 0:
-                        writer.writerow(["Proyecto", "Clave/ID", "Tipo issue", "Prioridad", "Informador", "Creada", "Titulo", "Estado", "Responsable", "Actualizada", "Cantidad de sprint",  "Sprint actual", "Fechas de sprint", "Definición de hecho", "Puntos de historia", "Puntos estimados", "Puntos ejecutados", "Sumatoria tiempo empleado", "Seguimiento de tiempo HH/MM", "Codigo externo"])
+                        writer.writerow(["Proyecto", "Clave/ID", "Tipo issue", "Prioridad", "Informador", "Creada", "Titulo", "Estado", "Responsable", "Actualizada", "Cantidad de sprint",  "Sprint actual", "Fechas de sprint", "Nombres Sprint" "Definición de hecho", "Puntos de historia", "Puntos estimados", "Puntos ejecutados", "Sumatoria tiempo empleado", "Seguimiento de tiempo HH/MM", "Codigo externo"])
 
                     for issue in json_response['issues']:
                         project = issue['fields']['project']['name']
@@ -115,6 +115,18 @@ def generar_reporte(proyecto, issue_types=None):
                         else:
                             filtered_sprints = 'N/A'
 
+                        NameSprint = issue['fields'].get('customfield_10020', None)
+
+                        if NameSprint is not None:
+                            filtered_name_sprints = []
+                            for sprint in NameSprint:
+                                name_sprint = sprint.get("name")  # Aquí estamos obteniendo solo el valor de 'name'
+                                filtered_name_sprints.append(name_sprint)  # Añadimos solo el valor, no el objeto completo
+                        else:
+                            filtered_name_sprints = 'N/A'
+
+
+
                         definitionOfFact = issue['fields'].get('customfield_10048', None)
                         if isinstance(definitionOfFact, dict) and 'value' in definitionOfFact:
                             definitionOfFact = definitionOfFact['value']
@@ -143,7 +155,7 @@ def generar_reporte(proyecto, issue_types=None):
                         if not externalCode: 
                             externalCode = "N/A"
 
-                        writer.writerow([project, key, issuetype, priority, reporter, created_date, summary, status, assignee_name, updated_date, amountSprint, SpritnCurrent, filtered_sprints, definitionOfFact, storyPoint, storyPointEstimated, storyPointExecuted, aggregatetimespent, timeTracking, externalCode])
+                        writer.writerow([project, key, issuetype, priority, reporter, created_date, summary, status, assignee_name, updated_date, amountSprint, SpritnCurrent, filtered_sprints, filtered_name_sprints, definitionOfFact, storyPoint, storyPointEstimated, storyPointExecuted, aggregatetimespent, timeTracking, externalCode])
                 start_at += max_results
             except requests.exceptions.RequestException as e:
                 return jsonify({"error": f"Error en la extracción de datos: {e}"}), 500
