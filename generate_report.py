@@ -9,8 +9,8 @@ from datetime import datetime
 from flask import jsonify, request, send_from_directory
 
 def generar_reporte(proyecto, issue_types=None):
-    email = "pablo.munoz@bebolder.co"
-    api_token = "ATATT3xFfGF0UrsshZ9JZEMG-0eZQbBJ_GgT5-mSghYU8ustURw07LprkdngoC1iO8Y198B4b8nIePIekKQNhL4uQAQsVeIXhpWRY3GjtN_O-j9zOS_ZixxwZPdzcqdVsw_SKfox8okJwcj_57XIu3ZM0C7iwDFD3E-vnkLo6TQpfL-i_3mV6jM=07B92C26"
+    email = "laura.posada@bebolder.co"
+    api_token = "ATATT3xFfGF0nx6u8HCstRopYyDoMyzgMnGglqiQhuq9ZXhByNr5I4Gi1ig4aljXZz-akQ2fCrAephGKZfs9zqH0YMvtorSwxd7ZwXMomYoLPDNLRmxFNIi40a8ZtcvrhMNPBdeXyYbkg4VPp-wXR2HZM_vr4XHocTnyAE_dROKA8Z8Ype0Fk6w=5AE222EF"
     jira_domain = "https://bebolder.atlassian.net"
 
     auth_string = f"{email}:{api_token}"

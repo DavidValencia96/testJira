@@ -1,6 +1,7 @@
-from flask import Flask, render_template, send_from_directory
-from generate_report import generar_reporte_route  # Importar la función para la ruta de reporte
-from project import obtener_proyectos  # Importar la función desde jira_utils.py
+from flask import Flask, render_template, send_from_directory, jsonify, request
+from generate_report import generar_reporte_route
+from project import obtener_proyectos
+from issuesSprint import obtener_hus_de_sprint
 import os, json
 from config import Config
 
@@ -27,6 +28,16 @@ def index():
 
 # Llamamos a la función generar_reporte_route para registrar la ruta
 generar_reporte_route(app)
+
+# Ruta para obtener los HUs del Sprint (recibe los parámetros proyecto_id y sprint_id)
+@app.route('/obtener_hus', methods=['POST'])
+def obtener_hus():
+    data = request.get_json()  # Recibir datos JSON de la solicitud
+    proyecto_id = data.get('proyecto_id')
+    sprint_id = data.get('sprint_id')
+
+    # Llamar a la función obtener_hus_de_sprint con los valores dinámicos
+    return obtener_hus_de_sprint(proyecto_id, sprint_id)
 
 if __name__ == '__main__':
     app.run(debug=True)
