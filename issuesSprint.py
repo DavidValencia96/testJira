@@ -40,7 +40,7 @@ def obtener_hus_de_sprint(proyecto_id, sprint_id):
     added_during_sprint = data["contents"].get("issueKeysAddedDuringSprint", {})
 
     for issue in data["contents"].get("completedIssues", []):
-        if issue.get("typeName") in ["Historia", "Bug"]:
+        if issue.get("typeName") in ["Historia", "Error"]:
             added_during_sprint_value = added_during_sprint.get(issue.get("key"), False)
             updated_at = datetime.utcfromtimestamp(issue.get("updatedAt", 0) / 1000).strftime('%Y-%m-%d %H:%M:%S')  # Convertir timestamp
             rows.append([
@@ -58,7 +58,7 @@ def obtener_hus_de_sprint(proyecto_id, sprint_id):
             ])
 
     for issue in data["contents"].get("issuesNotCompletedInCurrentSprint", []):
-        if issue.get("typeName") in ["Historia", "Bug"]:
+        if issue.get("typeName") in ["Historia", "Error"]:
             added_during_sprint_value = added_during_sprint.get(issue.get("key"), False)
             updated_at = datetime.utcfromtimestamp(issue.get("updatedAt", 0) / 1000).strftime('%Y-%m-%d %H:%M:%S')
             rows.append([
@@ -76,7 +76,7 @@ def obtener_hus_de_sprint(proyecto_id, sprint_id):
             ])
 
     for issue in data["contents"].get("puntedIssues", []):
-        if issue.get("typeName") in ["Historia", "Bug"]:
+        if issue.get("typeName") in ["Historia", "Error"]:
             added_during_sprint_value = added_during_sprint.get(issue.get("key"), False)
             updated_at = datetime.utcfromtimestamp(issue.get("updatedAt", 0) / 1000).strftime('%Y-%m-%d %H:%M:%S')
             rows.append([
