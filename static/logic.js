@@ -1,8 +1,15 @@
 // Función para cargar los proyectos desde el archivo JSON
 function cargarProyectos() {
-    fetch('./data/projects.json')  // Asegúrate de que la ruta sea la correcta
-        .then(response => response.json())
+    fetch('/data/projects.json')  // Cambia la ruta a /data/projects.json
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Error al cargar el archivo JSON');
+            }
+            return response.json();
+        })
         .then(proyectos => {
+            console.log('Proyectos cargados:', proyectos);  // Imprime los proyectos cargados para depuración
+
             const select = document.getElementById("proyecto");
 
             // Limpiamos las opciones existentes (si las hay)

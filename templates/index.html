@@ -21,6 +21,7 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     <script src="{{ url_for('static', filename='logic.js') }}"></script>
     <script src="{{ url_for('static', filename='change.js') }}"></script>
+    <script src="{{ url_for('static', filename='uploadSprint.js') }}"></script>
     <script src="{{ url_for('static', filename='reportIssue.js') }}"></script>
     <script src="{{ url_for('static', filename='img.js') }}"></script>
 
@@ -76,17 +77,46 @@
                     <input type="number" id="proyecto2" name="proyecto2" class="form-input" placeholder="Digita aquí el ID del proyecto" required>
                     <a href="#" class="guide-link" onclick="mostrarImagen('proyecto')">Imagen de guía del proyecto</a>
                 </div>
-                
+
+                <!-- Botón para consultar el sprint por ID -->
+                <div class="form-group">
+                    <button type="button" onclick="consultarSprint()">Consultar Sprint</button>
+                </div>
+
                 <!-- Sección Sprint -->
                 <div class="form-group">
-                    <label for="sprint2" class="form-label">Seleccione el ID del sprint:</label>
-                    <input type="number" id="sprint2" name="sprint2" class="form-input" placeholder="Digita aquí el ID del sprint" required>
-                    <a href="#" class="guide-link" onclick="mostrarImagen('sprint')">Imagen de guía del sprint</a>
+                    <label for="sprintSelect" class="form-label">Seleccione el sprint:</label>
+                    <select id="sprintSelect" name="sprintSelect" class="form-select" onchange="actualizarCamposSprint()" required>
+                        <option value="">Seleccione un sprint</option>
+                        <!-- Las opciones serán llenadas dinámicamente con JavaScript -->
+                    </select>
                 </div>
-                
+
+                <!-- Campos adicionales que muestran información de los sprints -->
+                <div class="form-group">
+                    <label for="sprintId" class="form-label">ID del Sprint:</label>
+                    <input type="text" id="sprintId" class="form-input" disabled placeholder="ID del sprint">
+                </div>
+
+                <div class="form-group">
+                    <label for="sprintName" class="form-label">Nombre del Sprint:</label>
+                    <input type="text" id="sprintName" class="form-input" disabled placeholder="Nombre del sprint">
+                </div>
+
+                <div class="form-group">
+                    <label for="sprintState" class="form-label">Estado del Sprint:</label>
+                    <input type="text" id="sprintState" class="form-input" disabled placeholder="Estado del sprint">
+                </div>
+
+                <div class="form-group">
+                    <label for="sprintGoal" class="form-label">Objetivo del Sprint:</label>
+                    <input type="text" id="sprintGoal" class="form-input" disabled placeholder="Objetivo del sprint">
+                </div>
+
                 <button type="button" class="btn" onclick="generarReporte2()">Generar Reporte</button>
             </form>
         </div>
+
 
         <!-- Modal para mostrar la imagen -->
         <div id="modalImagen" class="modal">

@@ -24,8 +24,6 @@ def generar_reporte(proyecto, issue_types=None):
     if issue_types:
         issue_types_query = ', '.join([f'"{issue_type}"' for issue_type in issue_types]) 
         jql_query += f" AND type IN ({issue_types_query})"
-        print(f"Consulta JQL back: {jql_query}")
-
 
     
     archivo_csv = f"data/issues_{proyecto}.csv"
@@ -120,12 +118,10 @@ def generar_reporte(proyecto, issue_types=None):
                         if NameSprint is not None:
                             filtered_name_sprints = []
                             for sprint in NameSprint:
-                                name_sprint = sprint.get("name")  # Aquí estamos obteniendo solo el valor de 'name'
-                                filtered_name_sprints.append(name_sprint)  # Añadimos solo el valor, no el objeto completo
+                                name_sprint = sprint.get("name") 
+                                filtered_name_sprints.append(name_sprint)
                         else:
                             filtered_name_sprints = 'N/A'
-
-
 
                         definitionOfFact = issue['fields'].get('customfield_10048', None)
                         if isinstance(definitionOfFact, dict) and 'value' in definitionOfFact:

@@ -1,7 +1,7 @@
 from flask import Flask, render_template, send_from_directory, jsonify, request
 from generate_report import generar_reporte_route
 from project import obtener_proyectos
-from issuesSprint import obtener_hus_de_sprint
+from issuesSprint import obtener_hus_de_sprint, obtener_sprints_jira  # Asegúrate de importar ambas funciones
 import os, json
 from config import Config
 
@@ -24,13 +24,31 @@ def index():
 
 generar_reporte_route(app)
 
+@app.route('/actualizar_sprints', methods=['POST'])
+def actualizar_sprints():
+    proyecto_id = request.json.get('proyecto_id')
+    if not proyecto_id:
+        return jsonify({"error": "Se requiere el ID del proyecto"}), 400
+
+    try:
+        sprints_data = obtener_sprints_jira(proyecto_id)
+        return jsonify({"message": "Sprints actualizados correctamente", "data": sprints_data}), 200
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+
 @app.route('/obtener_hus', methods=['POST'])
 def obtener_hus():
-    data = request.get_json() 
-    proyecto_id = data.get('proyecto_id')
-    sprint_id = data.get('sprint_id')
+    try:
+        data = request.get_json() 
+        proyecto_id = data.get('proyecto_id')
+        sprint_id = data.get('sprint_id')
 
-    return obtener_hus_de_sprint(proyecto_id, sprint_id)
+        if not proyecto_id or not sprint_id:
+            return jsonify({"error": "Faltan parámetros requeridos: proyecto_id o sprint_id"}), 400
+
+        return obtener_hus_de_sprint(proyecto_id, sprint_id)
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
 
 if __name__ == '__main__':
     app.run(debug=True)
