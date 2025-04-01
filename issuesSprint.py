@@ -29,7 +29,7 @@ def obtener_hus_de_sprint(proyecto_id, sprint_id):
         return {"error": f"🚨 Error en la petición: Código {response.status_code}", "details": response.text}, response.status_code
 
     data = response.json()
-    
+
     json_file_path = f'data/issues_sprint_{proyecto_id}_{sprint_id}.json'
 
     with open(json_file_path, 'w', encoding='utf-8') as json_file:
@@ -38,79 +38,74 @@ def obtener_hus_de_sprint(proyecto_id, sprint_id):
     rows = [] 
 
     added_during_sprint = data["contents"].get("issueKeysAddedDuringSprint", {})
+
+    for issue in data["contents"].get("completedIssues", []):
+        if issue.get("typeName") in ["Historia", "Bug"]:
+            added_during_sprint_value = added_during_sprint.get(issue.get("key"), False)
+            updated_at = datetime.utcfromtimestamp(issue.get("updatedAt", 0) / 1000).strftime('%Y-%m-%d %H:%M:%S')  # Convertir timestamp
+            rows.append([
+                issue.get("key"),
+                issue.get("typeName"),
+                issue.get("summary"),
+                issue.get("priorityName"),
+                issue.get("done"),
+                issue.get("assigneeName"),
+                issue.get("statusName"),
+                issue.get("projectId"),
+                updated_at,
+                "completedIssues", 
+                added_during_sprint_value 
+            ])
+
+    for issue in data["contents"].get("issuesNotCompletedInCurrentSprint", []):
+        if issue.get("typeName") in ["Historia", "Bug"]:
+            added_during_sprint_value = added_during_sprint.get(issue.get("key"), False)
+            updated_at = datetime.utcfromtimestamp(issue.get("updatedAt", 0) / 1000).strftime('%Y-%m-%d %H:%M:%S')
+            rows.append([
+                issue.get("key"),
+                issue.get("typeName"),
+                issue.get("summary"),
+                issue.get("priorityName"),
+                issue.get("done"),
+                issue.get("assigneeName"),
+                issue.get("statusName"),
+                issue.get("projectId"),
+                updated_at,
+                "issuesNotCompletedInCurrentSprint",
+                added_during_sprint_value 
+            ])
+
+    for issue in data["contents"].get("puntedIssues", []):
+        if issue.get("typeName") in ["Historia", "Bug"]:
+            added_during_sprint_value = added_during_sprint.get(issue.get("key"), False)
+            updated_at = datetime.utcfromtimestamp(issue.get("updatedAt", 0) / 1000).strftime('%Y-%m-%d %H:%M:%S')
+            rows.append([
+                issue.get("key"),
+                issue.get("typeName"),
+                issue.get("summary"),
+                issue.get("priorityName"),
+                issue.get("done"),
+                issue.get("assigneeName"),
+                issue.get("statusName"),
+                issue.get("projectId"),
+                updated_at,
+                "puntedIssues",
+                added_during_sprint_value 
+            ])
     
-    if "completedIssues" in data["contents"]:
-        for issue in data["contents"]["completedIssues"]:
-            # Filtramos solo Story o Bug
-            if issue.get("typeName") in ["Story", "Bug"]:
-                # Verificamos si la key está en 'added_during_sprint'
-                added_during_sprint_value = added_during_sprint.get(issue.get("key"), False)
-                rows.append([
-                    issue.get("key"),
-                    issue.get("typeName"),
-                    issue.get("summary"),
-                    issue.get("priorityName"),
-                    issue.get("done"),
-                    issue.get("assigneeName"),
-                    issue.get("statusName"),
-                    issue.get("projectId"),
-                    issue.get("updatedAt"),
-                    "completedIssues",  # Columna para identificar el tipo de issue
-                    added_during_sprint_value  # Aquí se marca 'True' o 'False' dependiendo de si la key está en 'issueKeysAddedDuringSprint'
-                ])
-
-    if "issuesNotCompletedInCurrentSprint" in data["contents"]:
-        for issue in data["contents"]["issuesNotCompletedInCurrentSprint"]:
-            # Filtramos solo Story o Bug
-            if issue.get("typeName") in ["Story", "Bug"]:
-                # Verificamos si la key está en 'added_during_sprint'
-                added_during_sprint_value = added_during_sprint.get(issue.get("key"), False)
-                rows.append([
-                    issue.get("key"),
-                    issue.get("typeName"),
-                    issue.get("summary"),
-                    issue.get("priorityName"),
-                    issue.get("done"),
-                    issue.get("assigneeName"),
-                    issue.get("statusName"),
-                    issue.get("projectId"),
-                    issue.get("updatedAt"),
-                    "issuesNotCompletedInCurrentSprint",
-                    added_during_sprint_value  # Aquí se marca 'True' o 'False' dependiendo de si la key está en 'issueKeysAddedDuringSprint'
-                ])
-
-    if "puntedIssues" in data["contents"]:
-        for issue in data["contents"]["puntedIssues"]:
-            # Filtramos solo Story o Bug
-            if issue.get("typeName") in ["Story", "Bug"]:
-                # Verificamos si la key está en 'added_during_sprint'
-                added_during_sprint_value = added_during_sprint.get(issue.get("key"), False)
-                rows.append([
-                    issue.get("key"),
-                    issue.get("typeName"),
-                    issue.get("summary"),
-                    issue.get("priorityName"),
-                    issue.get("done"),
-                    issue.get("assigneeName"),
-                    issue.get("statusName"),
-                    issue.get("projectId"),
-                    issue.get("updatedAt"),
-                    "puntedIssues",
-                    added_during_sprint_value  # Aquí se marca 'True' o 'False' dependiendo de si la key está en 'issueKeysAddedDuringSprint'
-                ])
-
     file_path = f'data/issues_sprint_{proyecto_id}_{sprint_id}.csv'
-    
+
+    if rows:
+        with open(file_path, 'w', newline='', encoding='utf-8') as csv_file:
+            csv_writer = csv.writer(csv_file)
+            csv_writer.writerow([
+                "key", "typeName", "summary", "priorityName", "done", "assigneeName", 
+                "statusName", "projectId", "updatedAt", "Category", "AddedDuringSprint"
+            ])
+            csv_writer.writerows(rows)
+
     if not os.path.exists('data'):
         os.makedirs('data')
-
-    with open(file_path, 'w', newline='', encoding='utf-8') as csv_file:
-        csv_writer = csv.writer(csv_file)
-        csv_writer.writerow([
-            "key", "typeName", "summary", "priorityName", "done", "assigneeName", 
-            "statusName", "projectId", "updatedAt", "Category", "AddedDuringSprint"
-        ])
-        csv_writer.writerows(rows)
 
     end_time = time.time()
     execution_time = end_time - start_time  
