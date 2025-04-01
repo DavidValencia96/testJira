@@ -1,4 +1,3 @@
-// Función para generar el reporte desde el formulario 2
 function generarReporte2() {
     var proyecto = document.getElementById("proyecto2").value;
     var sprint = document.getElementById("sprint2").value;  // Obtener el ID del sprint
@@ -15,8 +14,6 @@ function generarReporte2() {
     checkboxes.forEach((checkbox) => {
         issueTypes.push(checkbox.value); // Guardar los tipos seleccionados
     });
-
-    
 
     // Mostrar el loader y el texto de carga mientras se realiza la solicitud
     document.getElementById("loader").style.display = "block";

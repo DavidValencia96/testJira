@@ -1,0 +1,3656 @@
+{
+    "contents": {
+        "completedIssues": [
+            {
+                "id": 18894,
+                "key": "BPI-2392",
+                "hidden": false,
+                "typeName": "Historia",
+                "typeId": "10011",
+                "typeHierarchyLevel": 0,
+                "summary": "Trámite - Divulgación de fechas importantes: Cumpleaños y aniversarios",
+                "typeUrl": "https://bebolder.atlassian.net/rest/api/2/universal_avatar/view/type/issuetype/avatar/10315?size=medium",
+                "priorityUrl": "https://bebolder.atlassian.net/images/icons/priorities/medium.svg",
+                "priorityName": "Medium",
+                "priorityId": "3",
+                "done": false,
+                "assignee": "62f6aa8dc1b3a10ac3ad1cf4",
+                "assigneeKey": "62f6aa8dc1b3a10ac3ad1cf4",
+                "assigneeAccountId": "62f6aa8dc1b3a10ac3ad1cf4",
+                "assigneeName": "Diana Sepúlveda Mejía",
+                "avatarUrl": "https://secure.gravatar.com/avatar/5d6e584b00c4f015d008bcbc756aefe5?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FDM-4.png",
+                "hasCustomUserAvatar": false,
+                "color": "#22a06b",
+                "flagged": false,
+                "labels": [],
+                "columnStatistic": {
+                    "statFieldId": "issueCount",
+                    "statFieldValue": {
+                        "value": 1.0,
+                        "text": "1.0"
+                    }
+                },
+                "currentEstimateStatistic": {
+                    "statFieldId": "customfield_10033",
+                    "statFieldValue": {
+                        "value": 3.0
+                    }
+                },
+                "estimateStatisticRequired": false,
+                "estimateStatistic": {
+                    "statFieldId": "customfield_10033",
+                    "statFieldValue": {
+                        "value": 3.0
+                    }
+                },
+                "statusId": "10019",
+                "statusName": "HU en producción",
+                "statusUrl": "https://bebolder.atlassian.net/images/icons/statuses/generic.png",
+                "status": {
+                    "id": "10019",
+                    "name": "HU en producción",
+                    "description": "",
+                    "iconUrl": "https://bebolder.atlassian.net/images/icons/statuses/generic.png",
+                    "statusCategory": {
+                        "id": "3",
+                        "key": "done",
+                        "colorName": "green"
+                    }
+                },
+                "fixVersions": [
+                    10086
+                ],
+                "projectId": 10014,
+                "linkedPagesCount": 0,
+                "sprintIds": [
+                    809,
+                    1007
+                ],
+                "updatedAt": 1741895840714
+            },
+            {
+                "id": 19589,
+                "key": "BPI-2739",
+                "hidden": false,
+                "typeName": "Mejora",
+                "typeId": "10068",
+                "typeHierarchyLevel": 0,
+                "summary": "Ajustes visualización de otro si - Perfil Admin,TH, User",
+                "typeUrl": "https://bebolder.atlassian.net/rest/api/2/universal_avatar/view/type/issuetype/avatar/10310?size=medium",
+                "priorityUrl": "https://bebolder.atlassian.net/images/icons/priorities/medium.svg",
+                "priorityName": "Medium",
+                "priorityId": "3",
+                "done": false,
+                "assignee": "62f6aa8dc1b3a10ac3ad1cf4",
+                "assigneeKey": "62f6aa8dc1b3a10ac3ad1cf4",
+                "assigneeAccountId": "62f6aa8dc1b3a10ac3ad1cf4",
+                "assigneeName": "Diana Sepúlveda Mejía",
+                "avatarUrl": "https://secure.gravatar.com/avatar/5d6e584b00c4f015d008bcbc756aefe5?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FDM-4.png",
+                "hasCustomUserAvatar": false,
+                "color": "#da62ac",
+                "flagged": false,
+                "labels": [],
+                "columnStatistic": {
+                    "statFieldId": "issueCount",
+                    "statFieldValue": {
+                        "value": 1.0,
+                        "text": "1.0"
+                    }
+                },
+                "currentEstimateStatistic": {
+                    "statFieldId": "customfield_10033",
+                    "statFieldValue": {
+                        "value": 1.0
+                    }
+                },
+                "estimateStatisticRequired": false,
+                "estimateStatistic": {
+                    "statFieldId": "customfield_10033",
+                    "statFieldValue": {
+                        "value": 2.0
+                    }
+                },
+                "statusId": "10019",
+                "statusName": "HU en producción",
+                "statusUrl": "https://bebolder.atlassian.net/images/icons/statuses/generic.png",
+                "status": {
+                    "id": "10019",
+                    "name": "HU en producción",
+                    "description": "",
+                    "iconUrl": "https://bebolder.atlassian.net/images/icons/statuses/generic.png",
+                    "statusCategory": {
+                        "id": "3",
+                        "key": "done",
+                        "colorName": "green"
+                    }
+                },
+                "fixVersions": [
+                    10259
+                ],
+                "projectId": 10014,
+                "linkedPagesCount": 0,
+                "sprintIds": [
+                    809,
+                    1007
+                ],
+                "updatedAt": 1741895832173
+            },
+            {
+                "id": 19861,
+                "key": "BPI-2872",
+                "hidden": false,
+                "typeName": "Tarea",
+                "typeId": "10012",
+                "typeHierarchyLevel": 0,
+                "summary": "Cursos Javier Valencia",
+                "typeUrl": "https://bebolder.atlassian.net/rest/api/2/universal_avatar/view/type/issuetype/avatar/10318?size=medium",
+                "priorityUrl": "https://bebolder.atlassian.net/images/icons/priorities/medium.svg",
+                "priorityName": "Medium",
+                "priorityId": "3",
+                "done": false,
+                "assignee": "712020:08e07656-9db7-4ac5-98ca-8ce0b15229ef",
+                "assigneeKey": "712020:08e07656-9db7-4ac5-98ca-8ce0b15229ef",
+                "assigneeAccountId": "712020:08e07656-9db7-4ac5-98ca-8ce0b15229ef",
+                "assigneeName": "javier valencia",
+                "avatarUrl": "https://secure.gravatar.com/avatar/8359beb6d3f456042f28fddb017d5e42?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FJV-0.png",
+                "hasCustomUserAvatar": false,
+                "color": "#0055cc",
+                "flagged": false,
+                "labels": [],
+                "columnStatistic": {
+                    "statFieldId": "issueCount",
+                    "statFieldValue": {
+                        "value": 1.0,
+                        "text": "1.0"
+                    }
+                },
+                "currentEstimateStatistic": {
+                    "statFieldId": "customfield_10033",
+                    "statFieldValue": {
+                        "value": 3.0
+                    }
+                },
+                "estimateStatisticRequired": false,
+                "estimateStatistic": {
+                    "statFieldId": "customfield_10033",
+                    "statFieldValue": {
+                        "value": 3.0
+                    }
+                },
+                "statusId": "10095",
+                "statusName": "Finalizado",
+                "statusUrl": "https://bebolder.atlassian.net/images/icons/statuses/generic.png",
+                "status": {
+                    "id": "10095",
+                    "name": "Finalizado",
+                    "description": "",
+                    "iconUrl": "https://bebolder.atlassian.net/images/icons/statuses/generic.png",
+                    "statusCategory": {
+                        "id": "3",
+                        "key": "done",
+                        "colorName": "green"
+                    }
+                },
+                "fixVersions": [],
+                "projectId": 10014,
+                "linkedPagesCount": 0,
+                "sprintIds": [
+                    451,
+                    809,
+                    541,
+                    1007
+                ],
+                "updatedAt": 1742332088784
+            },
+            {
+                "id": 20012,
+                "key": "BPI-2944",
+                "hidden": false,
+                "typeName": "Tarea",
+                "typeId": "10012",
+                "typeHierarchyLevel": 0,
+                "summary": "Actividades posterior al paso a PDN (Perfiles de Seguridad)",
+                "typeUrl": "https://bebolder.atlassian.net/rest/api/2/universal_avatar/view/type/issuetype/avatar/10318?size=medium",
+                "priorityUrl": "https://bebolder.atlassian.net/images/icons/priorities/medium.svg",
+                "priorityName": "Medium",
+                "priorityId": "3",
+                "done": false,
+                "assignee": "62f6aa8dc1b3a10ac3ad1cf4",
+                "assigneeKey": "62f6aa8dc1b3a10ac3ad1cf4",
+                "assigneeAccountId": "62f6aa8dc1b3a10ac3ad1cf4",
+                "assigneeName": "Diana Sepúlveda Mejía",
+                "avatarUrl": "https://secure.gravatar.com/avatar/5d6e584b00c4f015d008bcbc756aefe5?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FDM-4.png",
+                "hasCustomUserAvatar": false,
+                "color": "#0055cc",
+                "flagged": false,
+                "labels": [],
+                "columnStatistic": {
+                    "statFieldId": "issueCount",
+                    "statFieldValue": {
+                        "value": 1.0,
+                        "text": "1.0"
+                    }
+                },
+                "currentEstimateStatistic": {
+                    "statFieldId": "customfield_10033",
+                    "statFieldValue": {
+                        "value": 1.0
+                    }
+                },
+                "estimateStatisticRequired": false,
+                "estimateStatistic": {
+                    "statFieldId": "customfield_10033",
+                    "statFieldValue": {
+                        "value": 1.0
+                    }
+                },
+                "statusId": "10019",
+                "statusName": "HU en producción",
+                "statusUrl": "https://bebolder.atlassian.net/images/icons/statuses/generic.png",
+                "status": {
+                    "id": "10019",
+                    "name": "HU en producción",
+                    "description": "",
+                    "iconUrl": "https://bebolder.atlassian.net/images/icons/statuses/generic.png",
+                    "statusCategory": {
+                        "id": "3",
+                        "key": "done",
+                        "colorName": "green"
+                    }
+                },
+                "fixVersions": [
+                    10259
+                ],
+                "projectId": 10014,
+                "linkedPagesCount": 0,
+                "sprintIds": [
+                    451,
+                    533,
+                    809,
+                    541,
+                    1007
+                ],
+                "updatedAt": 1741895862818
+            },
+            {
+                "id": 20116,
+                "key": "BPI-2971",
+                "hidden": false,
+                "typeName": "Tarea",
+                "typeId": "10012",
+                "typeHierarchyLevel": 0,
+                "summary": "Cursos Platzi Sebas",
+                "typeUrl": "https://bebolder.atlassian.net/rest/api/2/universal_avatar/view/type/issuetype/avatar/10318?size=medium",
+                "priorityUrl": "https://bebolder.atlassian.net/images/icons/priorities/medium.svg",
+                "priorityName": "Medium",
+                "priorityId": "3",
+                "done": false,
+                "assignee": "712020:cbcdd5a0-bbe0-4a37-af29-4375ea27e878",
+                "assigneeKey": "712020:cbcdd5a0-bbe0-4a37-af29-4375ea27e878",
+                "assigneeAccountId": "712020:cbcdd5a0-bbe0-4a37-af29-4375ea27e878",
+                "assigneeName": "Sebastián Presiga Patiño",
+                "avatarUrl": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/712020:cbcdd5a0-bbe0-4a37-af29-4375ea27e878/1a7f9c7a-bf62-4446-a581-8fd4f34ca02b/48",
+                "hasCustomUserAvatar": false,
+                "color": "#0055cc",
+                "flagged": false,
+                "labels": [],
+                "columnStatistic": {
+                    "statFieldId": "issueCount",
+                    "statFieldValue": {
+                        "value": 1.0,
+                        "text": "1.0"
+                    }
+                },
+                "currentEstimateStatistic": {
+                    "statFieldId": "customfield_10033",
+                    "statFieldValue": {
+                        "value": 7.0
+                    }
+                },
+                "estimateStatisticRequired": false,
+                "estimateStatistic": {
+                    "statFieldId": "customfield_10033",
+                    "statFieldValue": {
+                        "value": 7.0
+                    }
+                },
+                "statusId": "10095",
+                "statusName": "Finalizado",
+                "statusUrl": "https://bebolder.atlassian.net/images/icons/statuses/generic.png",
+                "status": {
+                    "id": "10095",
+                    "name": "Finalizado",
+                    "description": "",
+                    "iconUrl": "https://bebolder.atlassian.net/images/icons/statuses/generic.png",
+                    "statusCategory": {
+                        "id": "3",
+                        "key": "done",
+                        "colorName": "green"
+                    }
+                },
+                "fixVersions": [],
+                "projectId": 10014,
+                "linkedPagesCount": 0,
+                "sprintIds": [
+                    451,
+                    809,
+                    541,
+                    1007
+                ],
+                "updatedAt": 1742395274405
+            },
+            {
+                "id": 20314,
+                "key": "BPI-2997",
+                "hidden": false,
+                "typeName": "Historia",
+                "typeId": "10011",
+                "typeHierarchyLevel": 0,
+                "summary": "Opción notificaciones - Perfil Usuario",
+                "typeUrl": "https://bebolder.atlassian.net/rest/api/2/universal_avatar/view/type/issuetype/avatar/10315?size=medium",
+                "priorityUrl": "https://bebolder.atlassian.net/images/icons/priorities/medium.svg",
+                "priorityName": "Medium",
+                "priorityId": "3",
+                "done": false,
+                "assignee": "62f6aa8dc1b3a10ac3ad1cf4",
+                "assigneeKey": "62f6aa8dc1b3a10ac3ad1cf4",
+                "assigneeAccountId": "62f6aa8dc1b3a10ac3ad1cf4",
+                "assigneeName": "Diana Sepúlveda Mejía",
+                "avatarUrl": "https://secure.gravatar.com/avatar/5d6e584b00c4f015d008bcbc756aefe5?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FDM-4.png",
+                "hasCustomUserAvatar": false,
+                "color": "#22a06b",
+                "flagged": false,
+                "labels": [],
+                "columnStatistic": {
+                    "statFieldId": "issueCount",
+                    "statFieldValue": {
+                        "value": 1.0,
+                        "text": "1.0"
+                    }
+                },
+                "currentEstimateStatistic": {
+                    "statFieldId": "customfield_10033",
+                    "statFieldValue": {
+                        "value": 8.0
+                    }
+                },
+                "estimateStatisticRequired": false,
+                "estimateStatistic": {
+                    "statFieldId": "customfield_10033",
+                    "statFieldValue": {
+                        "value": 8.0
+                    }
+                },
+                "statusId": "10019",
+                "statusName": "HU en producción",
+                "statusUrl": "https://bebolder.atlassian.net/images/icons/statuses/generic.png",
+                "status": {
+                    "id": "10019",
+                    "name": "HU en producción",
+                    "description": "",
+                    "iconUrl": "https://bebolder.atlassian.net/images/icons/statuses/generic.png",
+                    "statusCategory": {
+                        "id": "3",
+                        "key": "done",
+                        "colorName": "green"
+                    }
+                },
+                "fixVersions": [
+                    10086
+                ],
+                "projectId": 10014,
+                "linkedPagesCount": 0,
+                "sprintIds": [
+                    809,
+                    1007
+                ],
+                "updatedAt": 1741895845959
+            },
+            {
+                "id": 20414,
+                "key": "BPI-3017",
+                "hidden": false,
+                "typeName": "Mejora",
+                "typeId": "10068",
+                "typeHierarchyLevel": 0,
+                "summary": "Eliminación de OtroSí del contrato.",
+                "typeUrl": "https://bebolder.atlassian.net/rest/api/2/universal_avatar/view/type/issuetype/avatar/10310?size=medium",
+                "priorityUrl": "https://bebolder.atlassian.net/images/icons/priorities/highest.svg",
+                "priorityName": "Highest",
+                "priorityId": "1",
+                "done": false,
+                "assignee": "62f6aa8dc1b3a10ac3ad1cf4",
+                "assigneeKey": "62f6aa8dc1b3a10ac3ad1cf4",
+                "assigneeAccountId": "62f6aa8dc1b3a10ac3ad1cf4",
+                "assigneeName": "Diana Sepúlveda Mejía",
+                "avatarUrl": "https://secure.gravatar.com/avatar/5d6e584b00c4f015d008bcbc756aefe5?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FDM-4.png",
+                "hasCustomUserAvatar": false,
+                "color": "#da62ac",
+                "flagged": false,
+                "labels": [],
+                "columnStatistic": {
+                    "statFieldId": "issueCount",
+                    "statFieldValue": {
+                        "value": 1.0,
+                        "text": "1.0"
+                    }
+                },
+                "currentEstimateStatistic": {
+                    "statFieldId": "customfield_10033",
+                    "statFieldValue": {
+                        "value": 2.0
+                    }
+                },
+                "estimateStatisticRequired": false,
+                "estimateStatistic": {
+                    "statFieldId": "customfield_10033",
+                    "statFieldValue": {
+                        "value": 5.0
+                    }
+                },
+                "statusId": "10019",
+                "statusName": "HU en producción",
+                "statusUrl": "https://bebolder.atlassian.net/images/icons/statuses/generic.png",
+                "status": {
+                    "id": "10019",
+                    "name": "HU en producción",
+                    "description": "",
+                    "iconUrl": "https://bebolder.atlassian.net/images/icons/statuses/generic.png",
+                    "statusCategory": {
+                        "id": "3",
+                        "key": "done",
+                        "colorName": "green"
+                    }
+                },
+                "fixVersions": [
+                    10259
+                ],
+                "projectId": 10014,
+                "linkedPagesCount": 0,
+                "sprintIds": [
+                    809,
+                    1007
+                ],
+                "updatedAt": 1741895851763
+            },
+            {
+                "id": 21231,
+                "key": "BPI-3070",
+                "hidden": false,
+                "typeName": "Tarea",
+                "typeId": "10012",
+                "typeHierarchyLevel": 0,
+                "summary": "Cursos platzi Juanca",
+                "typeUrl": "https://bebolder.atlassian.net/rest/api/2/universal_avatar/view/type/issuetype/avatar/10318?size=medium",
+                "priorityUrl": "https://bebolder.atlassian.net/images/icons/priorities/medium.svg",
+                "priorityName": "Medium",
+                "priorityId": "3",
+                "done": false,
+                "assignee": "712020:453ac8a3-a90f-4a0f-898e-c6f77551a3a9",
+                "assigneeKey": "712020:453ac8a3-a90f-4a0f-898e-c6f77551a3a9",
+                "assigneeAccountId": "712020:453ac8a3-a90f-4a0f-898e-c6f77551a3a9",
+                "assigneeName": "Juan Carlos Valencia Duque",
+                "avatarUrl": "https://secure.gravatar.com/avatar/b03134140b374d03b2738fe6e973e769?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FJD-2.png",
+                "hasCustomUserAvatar": false,
+                "color": "#0055cc",
+                "flagged": false,
+                "labels": [],
+                "columnStatistic": {
+                    "statFieldId": "issueCount",
+                    "statFieldValue": {
+                        "value": 1.0,
+                        "text": "1.0"
+                    }
+                },
+                "currentEstimateStatistic": {
+                    "statFieldId": "customfield_10033",
+                    "statFieldValue": {
+                        "value": 5.0
+                    }
+                },
+                "estimateStatisticRequired": false,
+                "estimateStatistic": {
+                    "statFieldId": "customfield_10033",
+                    "statFieldValue": {
+                        "value": 5.0
+                    }
+                },
+                "statusId": "10095",
+                "statusName": "Finalizado",
+                "statusUrl": "https://bebolder.atlassian.net/images/icons/statuses/generic.png",
+                "status": {
+                    "id": "10095",
+                    "name": "Finalizado",
+                    "description": "",
+                    "iconUrl": "https://bebolder.atlassian.net/images/icons/statuses/generic.png",
+                    "statusCategory": {
+                        "id": "3",
+                        "key": "done",
+                        "colorName": "green"
+                    }
+                },
+                "fixVersions": [],
+                "projectId": 10014,
+                "linkedPagesCount": 0,
+                "sprintIds": [
+                    451,
+                    809,
+                    1007
+                ],
+                "updatedAt": 1743437393153
+            },
+            {
+                "id": 21239,
+                "key": "BPI-3078",
+                "hidden": false,
+                "typeName": "Tarea",
+                "typeId": "10012",
+                "typeHierarchyLevel": 0,
+                "summary": "Cursos Platzi Juanjo",
+                "typeUrl": "https://bebolder.atlassian.net/rest/api/2/universal_avatar/view/type/issuetype/avatar/10318?size=medium",
+                "priorityUrl": "https://bebolder.atlassian.net/images/icons/priorities/medium.svg",
+                "priorityName": "Medium",
+                "priorityId": "3",
+                "done": false,
+                "assignee": "712020:60f0da67-c7a8-42e7-ba38-2aad526ecf4a",
+                "assigneeKey": "712020:60f0da67-c7a8-42e7-ba38-2aad526ecf4a",
+                "assigneeAccountId": "712020:60f0da67-c7a8-42e7-ba38-2aad526ecf4a",
+                "assigneeName": "juan jose vanegas osorio",
+                "avatarUrl": "https://secure.gravatar.com/avatar/ac2399a6564fa164436e29cd13bd9c8a?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FJO-5.png",
+                "hasCustomUserAvatar": false,
+                "color": "#0055cc",
+                "flagged": false,
+                "labels": [],
+                "columnStatistic": {
+                    "statFieldId": "issueCount",
+                    "statFieldValue": {
+                        "value": 1.0,
+                        "text": "1.0"
+                    }
+                },
+                "currentEstimateStatistic": {
+                    "statFieldId": "customfield_10033",
+                    "statFieldValue": {
+                        "value": 3.0
+                    }
+                },
+                "estimateStatisticRequired": false,
+                "estimateStatistic": {
+                    "statFieldId": "customfield_10033",
+                    "statFieldValue": {
+                        "value": 3.0
+                    }
+                },
+                "statusId": "10095",
+                "statusName": "Finalizado",
+                "statusUrl": "https://bebolder.atlassian.net/images/icons/statuses/generic.png",
+                "status": {
+                    "id": "10095",
+                    "name": "Finalizado",
+                    "description": "",
+                    "iconUrl": "https://bebolder.atlassian.net/images/icons/statuses/generic.png",
+                    "statusCategory": {
+                        "id": "3",
+                        "key": "done",
+                        "colorName": "green"
+                    }
+                },
+                "fixVersions": [],
+                "projectId": 10014,
+                "linkedPagesCount": 0,
+                "sprintIds": [
+                    451,
+                    809,
+                    1007
+                ],
+                "updatedAt": 1742500468428
+            },
+            {
+                "id": 21248,
+                "key": "BPI-3084",
+                "hidden": false,
+                "parentId": 19758,
+                "parentKey": "BPI-2838",
+                "typeName": "Historia",
+                "typeId": "10011",
+                "typeHierarchyLevel": 0,
+                "summary": "Parametrización de formulario datos personales agregar hijos",
+                "typeUrl": "https://bebolder.atlassian.net/rest/api/2/universal_avatar/view/type/issuetype/avatar/10315?size=medium",
+                "priorityUrl": "https://bebolder.atlassian.net/images/icons/priorities/medium.svg",
+                "priorityName": "Medium",
+                "priorityId": "3",
+                "done": false,
+                "assignee": "62969c2dd9eae9006f352f69",
+                "assigneeKey": "62969c2dd9eae9006f352f69",
+                "assigneeAccountId": "62969c2dd9eae9006f352f69",
+                "assigneeName": "Eliana Yazmín Torres Restrepo",
+                "avatarUrl": "https://secure.gravatar.com/avatar/2a73cc87db790cb287d85d765dd67a1e?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FER-2.png",
+                "hasCustomUserAvatar": false,
+                "color": "#22a06b",
+                "flagged": false,
+                "labels": [],
+                "epic": "BPI-2838",
+                "epicField": {
+                    "id": "customfield_10011",
+                    "label": "Epic",
+                    "editable": false,
+                    "renderer": "epiclink",
+                    "issueId": 19758,
+                    "summary": "Automatización de pruebas",
+                    "epicKey": "BPI-2838",
+                    "epicColor": "ghx-label-5",
+                    "color": "dark_teal",
+                    "issueTypeId": "10000",
+                    "issueTypeIconUrl": "/images/icons/issuetypes/epic.svg",
+                    "canRemoveEpic": false
+                },
+                "columnStatistic": {
+                    "statFieldId": "issueCount",
+                    "statFieldValue": {
+                        "value": 1.0,
+                        "text": "1.0"
+                    }
+                },
+                "currentEstimateStatistic": {
+                    "statFieldId": "customfield_10033",
+                    "statFieldValue": {
+                        "value": 1.0
+                    }
+                },
+                "estimateStatisticRequired": false,
+                "estimateStatistic": {
+                    "statFieldId": "customfield_10033",
+                    "statFieldValue": {
+                        "value": 1.0
+                    }
+                },
+                "statusId": "10095",
+                "statusName": "Finalizado",
+                "statusUrl": "https://bebolder.atlassian.net/images/icons/statuses/generic.png",
+                "status": {
+                    "id": "10095",
+                    "name": "Finalizado",
+                    "description": "",
+                    "iconUrl": "https://bebolder.atlassian.net/images/icons/statuses/generic.png",
+                    "statusCategory": {
+                        "id": "3",
+                        "key": "done",
+                        "colorName": "green"
+                    }
+                },
+                "fixVersions": [
+                    10273
+                ],
+                "projectId": 10014,
+                "linkedPagesCount": 0,
+                "sprintIds": [
+                    451,
+                    809,
+                    1007
+                ],
+                "updatedAt": 1741195384763
+            },
+            {
+                "id": 21252,
+                "key": "BPI-3088",
+                "hidden": false,
+                "parentId": 19758,
+                "parentKey": "BPI-2838",
+                "typeName": "Historia",
+                "typeId": "10011",
+                "typeHierarchyLevel": 0,
+                "summary": " Parametrización del formulario Datos contractuales Tipo de contrato",
+                "typeUrl": "https://bebolder.atlassian.net/rest/api/2/universal_avatar/view/type/issuetype/avatar/10315?size=medium",
+                "priorityUrl": "https://bebolder.atlassian.net/images/icons/priorities/medium.svg",
+                "priorityName": "Medium",
+                "priorityId": "3",
+                "done": false,
+                "assignee": "62969c2dd9eae9006f352f69",
+                "assigneeKey": "62969c2dd9eae9006f352f69",
+                "assigneeAccountId": "62969c2dd9eae9006f352f69",
+                "assigneeName": "Eliana Yazmín Torres Restrepo",
+                "avatarUrl": "https://secure.gravatar.com/avatar/2a73cc87db790cb287d85d765dd67a1e?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FER-2.png",
+                "hasCustomUserAvatar": false,
+                "color": "#22a06b",
+                "flagged": false,
+                "labels": [],
+                "epic": "BPI-2838",
+                "epicField": {
+                    "id": "customfield_10011",
+                    "label": "Epic",
+                    "editable": false,
+                    "renderer": "epiclink",
+                    "issueId": 19758,
+                    "summary": "Automatización de pruebas",
+                    "epicKey": "BPI-2838",
+                    "epicColor": "ghx-label-5",
+                    "color": "dark_teal",
+                    "issueTypeId": "10000",
+                    "issueTypeIconUrl": "/images/icons/issuetypes/epic.svg",
+                    "canRemoveEpic": false
+                },
+                "columnStatistic": {
+                    "statFieldId": "issueCount",
+                    "statFieldValue": {
+                        "value": 1.0,
+                        "text": "1.0"
+                    }
+                },
+                "currentEstimateStatistic": {
+                    "statFieldId": "customfield_10033",
+                    "statFieldValue": {
+                        "value": 0.5
+                    }
+                },
+                "estimateStatisticRequired": false,
+                "estimateStatistic": {
+                    "statFieldId": "customfield_10033",
+                    "statFieldValue": {
+                        "value": 0.5
+                    }
+                },
+                "statusId": "10095",
+                "statusName": "Finalizado",
+                "statusUrl": "https://bebolder.atlassian.net/images/icons/statuses/generic.png",
+                "status": {
+                    "id": "10095",
+                    "name": "Finalizado",
+                    "description": "",
+                    "iconUrl": "https://bebolder.atlassian.net/images/icons/statuses/generic.png",
+                    "statusCategory": {
+                        "id": "3",
+                        "key": "done",
+                        "colorName": "green"
+                    }
+                },
+                "fixVersions": [
+                    10273
+                ],
+                "projectId": 10014,
+                "linkedPagesCount": 0,
+                "sprintIds": [
+                    451,
+                    809,
+                    1007
+                ],
+                "updatedAt": 1741818359823
+            },
+            {
+                "id": 22830,
+                "key": "BPI-3170",
+                "hidden": false,
+                "typeName": "Tarea",
+                "typeId": "10012",
+                "typeHierarchyLevel": 0,
+                "summary": "Maquetación tablero para mensajes de cumpleaños",
+                "typeUrl": "https://bebolder.atlassian.net/rest/api/2/universal_avatar/view/type/issuetype/avatar/10318?size=medium",
+                "priorityUrl": "https://bebolder.atlassian.net/images/icons/priorities/medium.svg",
+                "priorityName": "Medium",
+                "priorityId": "3",
+                "done": false,
+                "assignee": "64234b652cee496759ed0750",
+                "assigneeKey": "64234b652cee496759ed0750",
+                "assigneeAccountId": "64234b652cee496759ed0750",
+                "assigneeName": "Carlos Alfredo Stagnaro Ramírez",
+                "avatarUrl": "https://secure.gravatar.com/avatar/6b200a0a8a1b56f711583f67fbe07e25?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FCR-1.png",
+                "hasCustomUserAvatar": false,
+                "color": "#0055cc",
+                "flagged": false,
+                "labels": [],
+                "columnStatistic": {
+                    "statFieldId": "issueCount",
+                    "statFieldValue": {
+                        "value": 1.0,
+                        "text": "1.0"
+                    }
+                },
+                "currentEstimateStatistic": {
+                    "statFieldId": "customfield_10033",
+                    "statFieldValue": {
+                        "value": 3.0
+                    }
+                },
+                "estimateStatisticRequired": false,
+                "estimateStatistic": {
+                    "statFieldId": "customfield_10033",
+                    "statFieldValue": {
+                        "value": 3.0
+                    }
+                },
+                "statusId": "10095",
+                "statusName": "Finalizado",
+                "statusUrl": "https://bebolder.atlassian.net/images/icons/statuses/generic.png",
+                "status": {
+                    "id": "10095",
+                    "name": "Finalizado",
+                    "description": "",
+                    "iconUrl": "https://bebolder.atlassian.net/images/icons/statuses/generic.png",
+                    "statusCategory": {
+                        "id": "3",
+                        "key": "done",
+                        "colorName": "green"
+                    }
+                },
+                "fixVersions": [
+                    10086
+                ],
+                "projectId": 10014,
+                "linkedPagesCount": 0,
+                "sprintIds": [
+                    809,
+                    1007
+                ],
+                "updatedAt": 1742593188087
+            },
+            {
+                "id": 23250,
+                "key": "BPI-3183",
+                "hidden": false,
+                "typeName": "Historia",
+                "typeId": "10011",
+                "typeHierarchyLevel": 0,
+                "summary": "Eliminar fecha fin de relación laboral de empleados ",
+                "typeUrl": "https://bebolder.atlassian.net/rest/api/2/universal_avatar/view/type/issuetype/avatar/10315?size=medium",
+                "priorityUrl": "https://bebolder.atlassian.net/images/icons/priorities/medium.svg",
+                "priorityName": "Medium",
+                "priorityId": "3",
+                "done": false,
+                "assignee": "712020:757518b9-c827-4a8c-8481-244e284ae377",
+                "assigneeKey": "712020:757518b9-c827-4a8c-8481-244e284ae377",
+                "assigneeAccountId": "712020:757518b9-c827-4a8c-8481-244e284ae377",
+                "assigneeName": "Sindy Alejandra Cifuentes Marulanda",
+                "avatarUrl": "https://secure.gravatar.com/avatar/60cd67d5def3adc8ab55da2f3e64e7c9?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FSM-3.png",
+                "hasCustomUserAvatar": false,
+                "color": "#22a06b",
+                "flagged": false,
+                "labels": [],
+                "columnStatistic": {
+                    "statFieldId": "issueCount",
+                    "statFieldValue": {
+                        "value": 1.0,
+                        "text": "1.0"
+                    }
+                },
+                "currentEstimateStatistic": {
+                    "statFieldId": "customfield_10033",
+                    "statFieldValue": {
+                        "value": 0.5
+                    }
+                },
+                "estimateStatisticRequired": false,
+                "estimateStatistic": {
+                    "statFieldId": "customfield_10033",
+                    "statFieldValue": {}
+                },
+                "statusId": "10095",
+                "statusName": "Finalizado",
+                "statusUrl": "https://bebolder.atlassian.net/images/icons/statuses/generic.png",
+                "status": {
+                    "id": "10095",
+                    "name": "Finalizado",
+                    "description": "",
+                    "iconUrl": "https://bebolder.atlassian.net/images/icons/statuses/generic.png",
+                    "statusCategory": {
+                        "id": "3",
+                        "key": "done",
+                        "colorName": "green"
+                    }
+                },
+                "fixVersions": [
+                    10259
+                ],
+                "projectId": 10014,
+                "linkedPagesCount": 0,
+                "sprintIds": [
+                    1007
+                ],
+                "updatedAt": 1741211645288
+            },
+            {
+                "id": 23384,
+                "key": "BPI-3186",
+                "hidden": false,
+                "typeName": "Historia",
+                "typeId": "10011",
+                "typeHierarchyLevel": 0,
+                "summary": "Ajustes en visualización de OtroSí en el historial de datos contractuales - Perfil Admin",
+                "typeUrl": "https://bebolder.atlassian.net/rest/api/2/universal_avatar/view/type/issuetype/avatar/10315?size=medium",
+                "priorityUrl": "https://bebolder.atlassian.net/images/icons/priorities/medium.svg",
+                "priorityName": "Medium",
+                "priorityId": "3",
+                "done": false,
+                "assignee": "62f6aa8dc1b3a10ac3ad1cf4",
+                "assigneeKey": "62f6aa8dc1b3a10ac3ad1cf4",
+                "assigneeAccountId": "62f6aa8dc1b3a10ac3ad1cf4",
+                "assigneeName": "Diana Sepúlveda Mejía",
+                "avatarUrl": "https://secure.gravatar.com/avatar/5d6e584b00c4f015d008bcbc756aefe5?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FDM-4.png",
+                "hasCustomUserAvatar": false,
+                "color": "#22a06b",
+                "flagged": false,
+                "labels": [],
+                "columnStatistic": {
+                    "statFieldId": "issueCount",
+                    "statFieldValue": {
+                        "value": 1.0,
+                        "text": "1.0"
+                    }
+                },
+                "currentEstimateStatistic": {
+                    "statFieldId": "customfield_10033",
+                    "statFieldValue": {
+                        "value": 0.5
+                    }
+                },
+                "estimateStatisticRequired": false,
+                "estimateStatistic": {
+                    "statFieldId": "customfield_10033",
+                    "statFieldValue": {
+                        "value": 0.5
+                    }
+                },
+                "statusId": "10019",
+                "statusName": "HU en producción",
+                "statusUrl": "https://bebolder.atlassian.net/images/icons/statuses/generic.png",
+                "status": {
+                    "id": "10019",
+                    "name": "HU en producción",
+                    "description": "",
+                    "iconUrl": "https://bebolder.atlassian.net/images/icons/statuses/generic.png",
+                    "statusCategory": {
+                        "id": "3",
+                        "key": "done",
+                        "colorName": "green"
+                    }
+                },
+                "fixVersions": [
+                    10259
+                ],
+                "projectId": 10014,
+                "linkedPagesCount": 0,
+                "sprintIds": [
+                    1007
+                ],
+                "updatedAt": 1741895857623
+            },
+            {
+                "id": 23385,
+                "key": "BPI-3187",
+                "hidden": false,
+                "typeName": "Historia",
+                "typeId": "10011",
+                "typeHierarchyLevel": 0,
+                "summary": "Ajustes en formulario de datos contractuales para agregar nuevos tipos de otrosí",
+                "typeUrl": "https://bebolder.atlassian.net/rest/api/2/universal_avatar/view/type/issuetype/avatar/10315?size=medium",
+                "priorityUrl": "https://bebolder.atlassian.net/images/icons/priorities/medium.svg",
+                "priorityName": "Medium",
+                "priorityId": "3",
+                "done": false,
+                "assignee": "62f6aa8dc1b3a10ac3ad1cf4",
+                "assigneeKey": "62f6aa8dc1b3a10ac3ad1cf4",
+                "assigneeAccountId": "62f6aa8dc1b3a10ac3ad1cf4",
+                "assigneeName": "Diana Sepúlveda Mejía",
+                "avatarUrl": "https://secure.gravatar.com/avatar/5d6e584b00c4f015d008bcbc756aefe5?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FDM-4.png",
+                "hasCustomUserAvatar": false,
+                "color": "#22a06b",
+                "flagged": false,
+                "labels": [],
+                "columnStatistic": {
+                    "statFieldId": "issueCount",
+                    "statFieldValue": {
+                        "value": 1.0,
+                        "text": "1.0"
+                    }
+                },
+                "currentEstimateStatistic": {
+                    "statFieldId": "customfield_10033",
+                    "statFieldValue": {
+                        "value": 2.0
+                    }
+                },
+                "estimateStatisticRequired": false,
+                "estimateStatistic": {
+                    "statFieldId": "customfield_10033",
+                    "statFieldValue": {
+                        "value": 2.0
+                    }
+                },
+                "statusId": "10019",
+                "statusName": "HU en producción",
+                "statusUrl": "https://bebolder.atlassian.net/images/icons/statuses/generic.png",
+                "status": {
+                    "id": "10019",
+                    "name": "HU en producción",
+                    "description": "",
+                    "iconUrl": "https://bebolder.atlassian.net/images/icons/statuses/generic.png",
+                    "statusCategory": {
+                        "id": "3",
+                        "key": "done",
+                        "colorName": "green"
+                    }
+                },
+                "fixVersions": [
+                    10259
+                ],
+                "projectId": 10014,
+                "linkedPagesCount": 0,
+                "sprintIds": [
+                    809,
+                    1007
+                ],
+                "updatedAt": 1741895826297
+            },
+            {
+                "id": 23386,
+                "key": "BPI-3188",
+                "hidden": false,
+                "typeName": "Historia",
+                "typeId": "10011",
+                "typeHierarchyLevel": 0,
+                "summary": "Ajustes en formulario de datos contractuales para tipo de otrosí cambio intensidad horaria - Perfil Admin",
+                "typeUrl": "https://bebolder.atlassian.net/rest/api/2/universal_avatar/view/type/issuetype/avatar/10315?size=medium",
+                "priorityUrl": "https://bebolder.atlassian.net/images/icons/priorities/medium.svg",
+                "priorityName": "Medium",
+                "priorityId": "3",
+                "done": false,
+                "assignee": "62f6aa8dc1b3a10ac3ad1cf4",
+                "assigneeKey": "62f6aa8dc1b3a10ac3ad1cf4",
+                "assigneeAccountId": "62f6aa8dc1b3a10ac3ad1cf4",
+                "assigneeName": "Diana Sepúlveda Mejía",
+                "avatarUrl": "https://secure.gravatar.com/avatar/5d6e584b00c4f015d008bcbc756aefe5?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FDM-4.png",
+                "hasCustomUserAvatar": false,
+                "color": "#22a06b",
+                "flagged": false,
+                "labels": [],
+                "columnStatistic": {
+                    "statFieldId": "issueCount",
+                    "statFieldValue": {
+                        "value": 1.0,
+                        "text": "1.0"
+                    }
+                },
+                "currentEstimateStatistic": {
+                    "statFieldId": "customfield_10033",
+                    "statFieldValue": {
+                        "value": 1.0
+                    }
+                },
+                "estimateStatisticRequired": false,
+                "estimateStatistic": {
+                    "statFieldId": "customfield_10033",
+                    "statFieldValue": {
+                        "value": 0.5
+                    }
+                },
+                "statusId": "10019",
+                "statusName": "HU en producción",
+                "statusUrl": "https://bebolder.atlassian.net/images/icons/statuses/generic.png",
+                "status": {
+                    "id": "10019",
+                    "name": "HU en producción",
+                    "description": "",
+                    "iconUrl": "https://bebolder.atlassian.net/images/icons/statuses/generic.png",
+                    "statusCategory": {
+                        "id": "3",
+                        "key": "done",
+                        "colorName": "green"
+                    }
+                },
+                "fixVersions": [
+                    10259
+                ],
+                "projectId": 10014,
+                "linkedPagesCount": 0,
+                "sprintIds": [
+                    809,
+                    1007
+                ],
+                "updatedAt": 1741895816481
+            },
+            {
+                "id": 24201,
+                "key": "BPI-3257",
+                "hidden": false,
+                "typeName": "Tarea",
+                "typeId": "10012",
+                "typeHierarchyLevel": 0,
+                "summary": "Diseño - Divulgación de eventos corporativos",
+                "typeUrl": "https://bebolder.atlassian.net/rest/api/2/universal_avatar/view/type/issuetype/avatar/10318?size=medium",
+                "priorityUrl": "https://bebolder.atlassian.net/images/icons/priorities/medium.svg",
+                "priorityName": "Medium",
+                "priorityId": "3",
+                "done": false,
+                "assignee": "64234b652cee496759ed0750",
+                "assigneeKey": "64234b652cee496759ed0750",
+                "assigneeAccountId": "64234b652cee496759ed0750",
+                "assigneeName": "Carlos Alfredo Stagnaro Ramírez",
+                "avatarUrl": "https://secure.gravatar.com/avatar/6b200a0a8a1b56f711583f67fbe07e25?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FCR-1.png",
+                "hasCustomUserAvatar": false,
+                "color": "#0055cc",
+                "flagged": false,
+                "labels": [],
+                "columnStatistic": {
+                    "statFieldId": "issueCount",
+                    "statFieldValue": {
+                        "value": 1.0,
+                        "text": "1.0"
+                    }
+                },
+                "currentEstimateStatistic": {
+                    "statFieldId": "customfield_10033",
+                    "statFieldValue": {
+                        "value": 1.0
+                    }
+                },
+                "estimateStatisticRequired": false,
+                "estimateStatistic": {
+                    "statFieldId": "customfield_10033",
+                    "statFieldValue": {
+                        "value": 1.0
+                    }
+                },
+                "statusId": "10095",
+                "statusName": "Finalizado",
+                "statusUrl": "https://bebolder.atlassian.net/images/icons/statuses/generic.png",
+                "status": {
+                    "id": "10095",
+                    "name": "Finalizado",
+                    "description": "",
+                    "iconUrl": "https://bebolder.atlassian.net/images/icons/statuses/generic.png",
+                    "statusCategory": {
+                        "id": "3",
+                        "key": "done",
+                        "colorName": "green"
+                    }
+                },
+                "fixVersions": [
+                    10086
+                ],
+                "projectId": 10014,
+                "linkedPagesCount": 0,
+                "sprintIds": [
+                    1007
+                ],
+                "updatedAt": 1741967944560
+            },
+            {
+                "id": 24251,
+                "key": "BPI-3259",
+                "hidden": false,
+                "typeName": "Historia",
+                "typeId": "10011",
+                "typeHierarchyLevel": 0,
+                "summary": "Eliminación de restricción y validación en los contratos a termino fijo",
+                "typeUrl": "https://bebolder.atlassian.net/rest/api/2/universal_avatar/view/type/issuetype/avatar/10315?size=medium",
+                "priorityUrl": "https://bebolder.atlassian.net/images/icons/priorities/medium.svg",
+                "priorityName": "Medium",
+                "priorityId": "3",
+                "done": false,
+                "assignee": "62f6aa8dc1b3a10ac3ad1cf4",
+                "assigneeKey": "62f6aa8dc1b3a10ac3ad1cf4",
+                "assigneeAccountId": "62f6aa8dc1b3a10ac3ad1cf4",
+                "assigneeName": "Diana Sepúlveda Mejía",
+                "avatarUrl": "https://secure.gravatar.com/avatar/5d6e584b00c4f015d008bcbc756aefe5?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FDM-4.png",
+                "hasCustomUserAvatar": false,
+                "color": "#22a06b",
+                "flagged": false,
+                "labels": [],
+                "columnStatistic": {
+                    "statFieldId": "issueCount",
+                    "statFieldValue": {
+                        "value": 1.0,
+                        "text": "1.0"
+                    }
+                },
+                "currentEstimateStatistic": {
+                    "statFieldId": "customfield_10033",
+                    "statFieldValue": {
+                        "value": 1.0
+                    }
+                },
+                "estimateStatisticRequired": false,
+                "estimateStatistic": {
+                    "statFieldId": "customfield_10033",
+                    "statFieldValue": {
+                        "value": 1.0
+                    }
+                },
+                "statusId": "10019",
+                "statusName": "HU en producción",
+                "statusUrl": "https://bebolder.atlassian.net/images/icons/statuses/generic.png",
+                "status": {
+                    "id": "10019",
+                    "name": "HU en producción",
+                    "description": "",
+                    "iconUrl": "https://bebolder.atlassian.net/images/icons/statuses/generic.png",
+                    "statusCategory": {
+                        "id": "3",
+                        "key": "done",
+                        "colorName": "green"
+                    }
+                },
+                "fixVersions": [
+                    10259
+                ],
+                "projectId": 10014,
+                "linkedPagesCount": 0,
+                "sprintIds": [
+                    1007
+                ],
+                "updatedAt": 1743004709085
+            },
+            {
+                "id": 24298,
+                "key": "BPI-3275",
+                "hidden": false,
+                "typeName": "Historia",
+                "typeId": "10011",
+                "typeHierarchyLevel": 0,
+                "summary": "Modificar fecha fin ",
+                "typeUrl": "https://bebolder.atlassian.net/rest/api/2/universal_avatar/view/type/issuetype/avatar/10315?size=medium",
+                "priorityUrl": "https://bebolder.atlassian.net/images/icons/priorities/medium.svg",
+                "priorityName": "Medium",
+                "priorityId": "3",
+                "done": false,
+                "assignee": "712020:757518b9-c827-4a8c-8481-244e284ae377",
+                "assigneeKey": "712020:757518b9-c827-4a8c-8481-244e284ae377",
+                "assigneeAccountId": "712020:757518b9-c827-4a8c-8481-244e284ae377",
+                "assigneeName": "Sindy Alejandra Cifuentes Marulanda",
+                "avatarUrl": "https://secure.gravatar.com/avatar/60cd67d5def3adc8ab55da2f3e64e7c9?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FSM-3.png",
+                "hasCustomUserAvatar": false,
+                "color": "#22a06b",
+                "flagged": false,
+                "labels": [],
+                "columnStatistic": {
+                    "statFieldId": "issueCount",
+                    "statFieldValue": {
+                        "value": 1.0,
+                        "text": "1.0"
+                    }
+                },
+                "currentEstimateStatistic": {
+                    "statFieldId": "customfield_10033",
+                    "statFieldValue": {
+                        "value": 0.5
+                    }
+                },
+                "estimateStatisticRequired": false,
+                "estimateStatistic": {
+                    "statFieldId": "customfield_10033",
+                    "statFieldValue": {
+                        "value": 0.5
+                    }
+                },
+                "statusId": "10095",
+                "statusName": "Finalizado",
+                "statusUrl": "https://bebolder.atlassian.net/images/icons/statuses/generic.png",
+                "status": {
+                    "id": "10095",
+                    "name": "Finalizado",
+                    "description": "",
+                    "iconUrl": "https://bebolder.atlassian.net/images/icons/statuses/generic.png",
+                    "statusCategory": {
+                        "id": "3",
+                        "key": "done",
+                        "colorName": "green"
+                    }
+                },
+                "fixVersions": [
+                    10259
+                ],
+                "projectId": 10014,
+                "linkedPagesCount": 0,
+                "sprintIds": [
+                    1007
+                ],
+                "updatedAt": 1741700057977
+            },
+            {
+                "id": 24300,
+                "key": "BPI-3277",
+                "hidden": false,
+                "typeName": "Tarea",
+                "typeId": "10012",
+                "typeHierarchyLevel": 0,
+                "summary": "Re-diseño del botón \"Eliminar otrosí\"",
+                "typeUrl": "https://bebolder.atlassian.net/rest/api/2/universal_avatar/view/type/issuetype/avatar/10318?size=medium",
+                "priorityUrl": "https://bebolder.atlassian.net/images/icons/priorities/medium.svg",
+                "priorityName": "Medium",
+                "priorityId": "3",
+                "done": false,
+                "assignee": "62f6aa8dc1b3a10ac3ad1cf4",
+                "assigneeKey": "62f6aa8dc1b3a10ac3ad1cf4",
+                "assigneeAccountId": "62f6aa8dc1b3a10ac3ad1cf4",
+                "assigneeName": "Diana Sepúlveda Mejía",
+                "avatarUrl": "https://secure.gravatar.com/avatar/5d6e584b00c4f015d008bcbc756aefe5?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FDM-4.png",
+                "hasCustomUserAvatar": false,
+                "color": "#0055cc",
+                "flagged": false,
+                "labels": [],
+                "columnStatistic": {
+                    "statFieldId": "issueCount",
+                    "statFieldValue": {
+                        "value": 1.0,
+                        "text": "1.0"
+                    }
+                },
+                "currentEstimateStatistic": {
+                    "statFieldId": "customfield_10033",
+                    "statFieldValue": {
+                        "value": 1.0
+                    }
+                },
+                "estimateStatisticRequired": false,
+                "estimateStatistic": {
+                    "statFieldId": "customfield_10033",
+                    "statFieldValue": {}
+                },
+                "statusId": "10019",
+                "statusName": "HU en producción",
+                "statusUrl": "https://bebolder.atlassian.net/images/icons/statuses/generic.png",
+                "status": {
+                    "id": "10019",
+                    "name": "HU en producción",
+                    "description": "",
+                    "iconUrl": "https://bebolder.atlassian.net/images/icons/statuses/generic.png",
+                    "statusCategory": {
+                        "id": "3",
+                        "key": "done",
+                        "colorName": "green"
+                    }
+                },
+                "fixVersions": [
+                    10259
+                ],
+                "projectId": 10014,
+                "linkedPagesCount": 0,
+                "sprintIds": [
+                    1007
+                ],
+                "updatedAt": 1741895868963
+            },
+            {
+                "id": 24631,
+                "key": "BPI-3302",
+                "hidden": false,
+                "parentId": 19758,
+                "parentKey": "BPI-2838",
+                "typeName": "Historia",
+                "typeId": "10011",
+                "typeHierarchyLevel": 0,
+                "summary": "Automatización - Adición de otro si al crear usuario",
+                "typeUrl": "https://bebolder.atlassian.net/rest/api/2/universal_avatar/view/type/issuetype/avatar/10315?size=medium",
+                "priorityUrl": "https://bebolder.atlassian.net/images/icons/priorities/medium.svg",
+                "priorityName": "Medium",
+                "priorityId": "3",
+                "done": false,
+                "assignee": "712020:08e07656-9db7-4ac5-98ca-8ce0b15229ef",
+                "assigneeKey": "712020:08e07656-9db7-4ac5-98ca-8ce0b15229ef",
+                "assigneeAccountId": "712020:08e07656-9db7-4ac5-98ca-8ce0b15229ef",
+                "assigneeName": "javier valencia",
+                "avatarUrl": "https://secure.gravatar.com/avatar/8359beb6d3f456042f28fddb017d5e42?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FJV-0.png",
+                "hasCustomUserAvatar": false,
+                "color": "#22a06b",
+                "flagged": false,
+                "labels": [],
+                "epic": "BPI-2838",
+                "epicField": {
+                    "id": "customfield_10011",
+                    "label": "Epic",
+                    "editable": false,
+                    "renderer": "epiclink",
+                    "issueId": 19758,
+                    "summary": "Automatización de pruebas",
+                    "epicKey": "BPI-2838",
+                    "epicColor": "ghx-label-5",
+                    "color": "dark_teal",
+                    "issueTypeId": "10000",
+                    "issueTypeIconUrl": "/images/icons/issuetypes/epic.svg",
+                    "canRemoveEpic": false
+                },
+                "columnStatistic": {
+                    "statFieldId": "issueCount",
+                    "statFieldValue": {
+                        "value": 1.0,
+                        "text": "1.0"
+                    }
+                },
+                "currentEstimateStatistic": {
+                    "statFieldId": "customfield_10033",
+                    "statFieldValue": {
+                        "value": 5.0
+                    }
+                },
+                "estimateStatisticRequired": false,
+                "estimateStatistic": {
+                    "statFieldId": "customfield_10033",
+                    "statFieldValue": {}
+                },
+                "statusId": "10095",
+                "statusName": "Finalizado",
+                "statusUrl": "https://bebolder.atlassian.net/images/icons/statuses/generic.png",
+                "status": {
+                    "id": "10095",
+                    "name": "Finalizado",
+                    "description": "",
+                    "iconUrl": "https://bebolder.atlassian.net/images/icons/statuses/generic.png",
+                    "statusCategory": {
+                        "id": "3",
+                        "key": "done",
+                        "colorName": "green"
+                    }
+                },
+                "fixVersions": [
+                    10273
+                ],
+                "projectId": 10014,
+                "linkedPagesCount": 0,
+                "sprintIds": [
+                    1007
+                ],
+                "updatedAt": 1742595957062
+            },
+            {
+                "id": 25323,
+                "key": "BPI-3365",
+                "hidden": false,
+                "typeName": "Tarea",
+                "typeId": "10012",
+                "typeHierarchyLevel": 0,
+                "summary": "Definición de modelo de datos para solicitud retiro cesantías",
+                "typeUrl": "https://bebolder.atlassian.net/rest/api/2/universal_avatar/view/type/issuetype/avatar/10318?size=medium",
+                "priorityUrl": "https://bebolder.atlassian.net/images/icons/priorities/medium.svg",
+                "priorityName": "Medium",
+                "priorityId": "3",
+                "done": false,
+                "assignee": "712020:9d6a79fb-dacb-4612-85bb-96a7129d105c",
+                "assigneeKey": "712020:9d6a79fb-dacb-4612-85bb-96a7129d105c",
+                "assigneeAccountId": "712020:9d6a79fb-dacb-4612-85bb-96a7129d105c",
+                "assigneeName": "Samuel Ramírez Cadavid",
+                "avatarUrl": "https://secure.gravatar.com/avatar/581d640b70e2fd6823b8f77a4a4a7bb3?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FSC-0.png",
+                "hasCustomUserAvatar": false,
+                "color": "#0055cc",
+                "flagged": false,
+                "labels": [],
+                "columnStatistic": {
+                    "statFieldId": "issueCount",
+                    "statFieldValue": {
+                        "value": 1.0,
+                        "text": "1.0"
+                    }
+                },
+                "currentEstimateStatistic": {
+                    "statFieldId": "customfield_10033",
+                    "statFieldValue": {
+                        "value": 1.0
+                    }
+                },
+                "estimateStatisticRequired": false,
+                "estimateStatistic": {
+                    "statFieldId": "customfield_10033",
+                    "statFieldValue": {}
+                },
+                "statusId": "10095",
+                "statusName": "Finalizado",
+                "statusUrl": "https://bebolder.atlassian.net/images/icons/statuses/generic.png",
+                "status": {
+                    "id": "10095",
+                    "name": "Finalizado",
+                    "description": "",
+                    "iconUrl": "https://bebolder.atlassian.net/images/icons/statuses/generic.png",
+                    "statusCategory": {
+                        "id": "3",
+                        "key": "done",
+                        "colorName": "green"
+                    }
+                },
+                "fixVersions": [
+                    10086
+                ],
+                "projectId": 10014,
+                "linkedPagesCount": 0,
+                "sprintIds": [
+                    1007
+                ],
+                "updatedAt": 1742496364834
+            },
+            {
+                "id": 25522,
+                "key": "BPI-3371",
+                "hidden": false,
+                "typeName": "Tarea",
+                "typeId": "10012",
+                "typeHierarchyLevel": 0,
+                "summary": "Diseñar formulario de solicitud de retiro de cesantías",
+                "typeUrl": "https://bebolder.atlassian.net/rest/api/2/universal_avatar/view/type/issuetype/avatar/10318?size=medium",
+                "priorityUrl": "https://bebolder.atlassian.net/images/icons/priorities/medium.svg",
+                "priorityName": "Medium",
+                "priorityId": "3",
+                "done": false,
+                "assignee": "64234b652cee496759ed0750",
+                "assigneeKey": "64234b652cee496759ed0750",
+                "assigneeAccountId": "64234b652cee496759ed0750",
+                "assigneeName": "Carlos Alfredo Stagnaro Ramírez",
+                "avatarUrl": "https://secure.gravatar.com/avatar/6b200a0a8a1b56f711583f67fbe07e25?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FCR-1.png",
+                "hasCustomUserAvatar": false,
+                "color": "#0055cc",
+                "flagged": false,
+                "labels": [],
+                "columnStatistic": {
+                    "statFieldId": "issueCount",
+                    "statFieldValue": {
+                        "value": 1.0,
+                        "text": "1.0"
+                    }
+                },
+                "currentEstimateStatistic": {
+                    "statFieldId": "customfield_10033",
+                    "statFieldValue": {
+                        "value": 2.0
+                    }
+                },
+                "estimateStatisticRequired": false,
+                "estimateStatistic": {
+                    "statFieldId": "customfield_10033",
+                    "statFieldValue": {}
+                },
+                "statusId": "10095",
+                "statusName": "Finalizado",
+                "statusUrl": "https://bebolder.atlassian.net/images/icons/statuses/generic.png",
+                "status": {
+                    "id": "10095",
+                    "name": "Finalizado",
+                    "description": "",
+                    "iconUrl": "https://bebolder.atlassian.net/images/icons/statuses/generic.png",
+                    "statusCategory": {
+                        "id": "3",
+                        "key": "done",
+                        "colorName": "green"
+                    }
+                },
+                "fixVersions": [
+                    10086
+                ],
+                "projectId": 10014,
+                "linkedPagesCount": 0,
+                "sprintIds": [
+                    1007
+                ],
+                "updatedAt": 1743107913532
+            },
+            {
+                "id": 25523,
+                "key": "BPI-3372",
+                "hidden": false,
+                "typeName": "Tarea",
+                "typeId": "10012",
+                "typeHierarchyLevel": 0,
+                "summary": "Crear modelo de BD para solicitud de cesantías ",
+                "typeUrl": "https://bebolder.atlassian.net/rest/api/2/universal_avatar/view/type/issuetype/avatar/10318?size=medium",
+                "priorityUrl": "https://bebolder.atlassian.net/images/icons/priorities/medium.svg",
+                "priorityName": "Medium",
+                "priorityId": "3",
+                "done": false,
+                "assignee": "712020:9d6a79fb-dacb-4612-85bb-96a7129d105c",
+                "assigneeKey": "712020:9d6a79fb-dacb-4612-85bb-96a7129d105c",
+                "assigneeAccountId": "712020:9d6a79fb-dacb-4612-85bb-96a7129d105c",
+                "assigneeName": "Samuel Ramírez Cadavid",
+                "avatarUrl": "https://secure.gravatar.com/avatar/581d640b70e2fd6823b8f77a4a4a7bb3?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FSC-0.png",
+                "hasCustomUserAvatar": false,
+                "color": "#0055cc",
+                "flagged": false,
+                "labels": [],
+                "columnStatistic": {
+                    "statFieldId": "issueCount",
+                    "statFieldValue": {
+                        "value": 1.0,
+                        "text": "1.0"
+                    }
+                },
+                "currentEstimateStatistic": {
+                    "statFieldId": "customfield_10033",
+                    "statFieldValue": {
+                        "value": 1.0
+                    }
+                },
+                "estimateStatisticRequired": false,
+                "estimateStatistic": {
+                    "statFieldId": "customfield_10033",
+                    "statFieldValue": {
+                        "value": 1.0
+                    }
+                },
+                "statusId": "10095",
+                "statusName": "Finalizado",
+                "statusUrl": "https://bebolder.atlassian.net/images/icons/statuses/generic.png",
+                "status": {
+                    "id": "10095",
+                    "name": "Finalizado",
+                    "description": "",
+                    "iconUrl": "https://bebolder.atlassian.net/images/icons/statuses/generic.png",
+                    "statusCategory": {
+                        "id": "3",
+                        "key": "done",
+                        "colorName": "green"
+                    }
+                },
+                "fixVersions": [
+                    10086
+                ],
+                "projectId": 10014,
+                "linkedPagesCount": 0,
+                "sprintIds": [
+                    1007
+                ],
+                "updatedAt": 1742506661836
+            }
+        ],
+        "issuesNotCompletedInCurrentSprint": [
+            {
+                "id": 17670,
+                "key": "BPI-1950",
+                "hidden": false,
+                "typeName": "Gestión",
+                "typeId": "10017",
+                "typeHierarchyLevel": 0,
+                "summary": "Daily",
+                "typeUrl": "https://bebolder.atlassian.net/rest/api/2/universal_avatar/view/type/issuetype/avatar/10300?size=medium",
+                "priorityUrl": "https://bebolder.atlassian.net/images/icons/priorities/medium.svg",
+                "priorityName": "Medium",
+                "priorityId": "3",
+                "done": false,
+                "hasCustomUserAvatar": false,
+                "color": "#8590a2",
+                "flagged": false,
+                "labels": [],
+                "columnStatistic": {
+                    "statFieldId": "issueCount",
+                    "statFieldValue": {
+                        "value": 1.0,
+                        "text": "1.0"
+                    }
+                },
+                "estimateStatisticRequired": false,
+                "statusId": "1",
+                "statusName": "Alcance Definido",
+                "statusUrl": "https://bebolder.atlassian.net/images/icons/statuses/open.png",
+                "status": {
+                    "id": "1",
+                    "name": "Alcance Definido",
+                    "description": "",
+                    "iconUrl": "https://bebolder.atlassian.net/images/icons/statuses/open.png",
+                    "statusCategory": {
+                        "id": "2",
+                        "key": "new",
+                        "colorName": "blue-gray"
+                    }
+                },
+                "fixVersions": [],
+                "projectId": 10014,
+                "linkedPagesCount": 0,
+                "sprintIds": [
+                    513,
+                    451,
+                    485,
+                    455,
+                    488,
+                    520,
+                    809,
+                    1007,
+                    496,
+                    530,
+                    533,
+                    503,
+                    443,
+                    541
+                ],
+                "updatedAt": 1743461757988
+            },
+            {
+                "id": 17671,
+                "key": "BPI-1951",
+                "hidden": false,
+                "typeName": "Gestión",
+                "typeId": "10017",
+                "typeHierarchyLevel": 0,
+                "summary": "Refinamientos",
+                "typeUrl": "https://bebolder.atlassian.net/rest/api/2/universal_avatar/view/type/issuetype/avatar/10300?size=medium",
+                "priorityUrl": "https://bebolder.atlassian.net/images/icons/priorities/medium.svg",
+                "priorityName": "Medium",
+                "priorityId": "3",
+                "done": false,
+                "hasCustomUserAvatar": false,
+                "color": "#8590a2",
+                "flagged": false,
+                "labels": [],
+                "columnStatistic": {
+                    "statFieldId": "issueCount",
+                    "statFieldValue": {
+                        "value": 1.0,
+                        "text": "1.0"
+                    }
+                },
+                "estimateStatisticRequired": false,
+                "statusId": "1",
+                "statusName": "Alcance Definido",
+                "statusUrl": "https://bebolder.atlassian.net/images/icons/statuses/open.png",
+                "status": {
+                    "id": "1",
+                    "name": "Alcance Definido",
+                    "description": "",
+                    "iconUrl": "https://bebolder.atlassian.net/images/icons/statuses/open.png",
+                    "statusCategory": {
+                        "id": "2",
+                        "key": "new",
+                        "colorName": "blue-gray"
+                    }
+                },
+                "fixVersions": [],
+                "projectId": 10014,
+                "linkedPagesCount": 0,
+                "sprintIds": [
+                    513,
+                    451,
+                    485,
+                    455,
+                    488,
+                    520,
+                    809,
+                    1007,
+                    496,
+                    530,
+                    533,
+                    503,
+                    443,
+                    541
+                ],
+                "updatedAt": 1743462191969
+            },
+            {
+                "id": 17672,
+                "key": "BPI-1952",
+                "hidden": false,
+                "typeName": "Gestión",
+                "typeId": "10017",
+                "typeHierarchyLevel": 0,
+                "summary": "Gestión proyectos internos",
+                "typeUrl": "https://bebolder.atlassian.net/rest/api/2/universal_avatar/view/type/issuetype/avatar/10300?size=medium",
+                "priorityUrl": "https://bebolder.atlassian.net/images/icons/priorities/medium.svg",
+                "priorityName": "Medium",
+                "priorityId": "3",
+                "done": false,
+                "hasCustomUserAvatar": false,
+                "color": "#8590a2",
+                "flagged": false,
+                "labels": [],
+                "columnStatistic": {
+                    "statFieldId": "issueCount",
+                    "statFieldValue": {
+                        "value": 1.0,
+                        "text": "1.0"
+                    }
+                },
+                "estimateStatisticRequired": false,
+                "statusId": "1",
+                "statusName": "Alcance Definido",
+                "statusUrl": "https://bebolder.atlassian.net/images/icons/statuses/open.png",
+                "status": {
+                    "id": "1",
+                    "name": "Alcance Definido",
+                    "description": "",
+                    "iconUrl": "https://bebolder.atlassian.net/images/icons/statuses/open.png",
+                    "statusCategory": {
+                        "id": "2",
+                        "key": "new",
+                        "colorName": "blue-gray"
+                    }
+                },
+                "fixVersions": [],
+                "projectId": 10014,
+                "linkedPagesCount": 0,
+                "sprintIds": [
+                    513,
+                    451,
+                    485,
+                    455,
+                    488,
+                    520,
+                    809,
+                    1007,
+                    496,
+                    530,
+                    533,
+                    503,
+                    443,
+                    541
+                ],
+                "updatedAt": 1743457083194
+            },
+            {
+                "id": 17673,
+                "key": "BPI-1953",
+                "hidden": false,
+                "typeName": "Gestión",
+                "typeId": "10017",
+                "typeHierarchyLevel": 0,
+                "summary": "Reuniones asociadas a temas de la célula",
+                "typeUrl": "https://bebolder.atlassian.net/rest/api/2/universal_avatar/view/type/issuetype/avatar/10300?size=medium",
+                "priorityUrl": "https://bebolder.atlassian.net/images/icons/priorities/medium.svg",
+                "priorityName": "Medium",
+                "priorityId": "3",
+                "done": false,
+                "hasCustomUserAvatar": false,
+                "color": "#8590a2",
+                "flagged": false,
+                "labels": [],
+                "columnStatistic": {
+                    "statFieldId": "issueCount",
+                    "statFieldValue": {
+                        "value": 1.0,
+                        "text": "1.0"
+                    }
+                },
+                "estimateStatisticRequired": false,
+                "statusId": "1",
+                "statusName": "Alcance Definido",
+                "statusUrl": "https://bebolder.atlassian.net/images/icons/statuses/open.png",
+                "status": {
+                    "id": "1",
+                    "name": "Alcance Definido",
+                    "description": "",
+                    "iconUrl": "https://bebolder.atlassian.net/images/icons/statuses/open.png",
+                    "statusCategory": {
+                        "id": "2",
+                        "key": "new",
+                        "colorName": "blue-gray"
+                    }
+                },
+                "fixVersions": [],
+                "projectId": 10014,
+                "linkedPagesCount": 0,
+                "sprintIds": [
+                    513,
+                    451,
+                    485,
+                    455,
+                    488,
+                    520,
+                    809,
+                    1007,
+                    496,
+                    530,
+                    533,
+                    503,
+                    443,
+                    541
+                ],
+                "updatedAt": 1743460353018
+            },
+            {
+                "id": 17674,
+                "key": "BPI-1954",
+                "hidden": false,
+                "typeName": "Gestión",
+                "typeId": "10017",
+                "typeHierarchyLevel": 0,
+                "summary": "Planning",
+                "typeUrl": "https://bebolder.atlassian.net/rest/api/2/universal_avatar/view/type/issuetype/avatar/10300?size=medium",
+                "priorityUrl": "https://bebolder.atlassian.net/images/icons/priorities/medium.svg",
+                "priorityName": "Medium",
+                "priorityId": "3",
+                "done": false,
+                "hasCustomUserAvatar": false,
+                "color": "#8590a2",
+                "flagged": false,
+                "labels": [],
+                "columnStatistic": {
+                    "statFieldId": "issueCount",
+                    "statFieldValue": {
+                        "value": 1.0,
+                        "text": "1.0"
+                    }
+                },
+                "estimateStatisticRequired": false,
+                "statusId": "1",
+                "statusName": "Alcance Definido",
+                "statusUrl": "https://bebolder.atlassian.net/images/icons/statuses/open.png",
+                "status": {
+                    "id": "1",
+                    "name": "Alcance Definido",
+                    "description": "",
+                    "iconUrl": "https://bebolder.atlassian.net/images/icons/statuses/open.png",
+                    "statusCategory": {
+                        "id": "2",
+                        "key": "new",
+                        "colorName": "blue-gray"
+                    }
+                },
+                "fixVersions": [],
+                "projectId": 10014,
+                "linkedPagesCount": 0,
+                "sprintIds": [
+                    513,
+                    451,
+                    485,
+                    455,
+                    488,
+                    520,
+                    809,
+                    1007,
+                    496,
+                    530,
+                    533,
+                    503,
+                    443,
+                    541
+                ],
+                "updatedAt": 1741774881416
+            },
+            {
+                "id": 17675,
+                "key": "BPI-1955",
+                "hidden": false,
+                "typeName": "Gestión",
+                "typeId": "10017",
+                "typeHierarchyLevel": 0,
+                "summary": "Review",
+                "typeUrl": "https://bebolder.atlassian.net/rest/api/2/universal_avatar/view/type/issuetype/avatar/10300?size=medium",
+                "priorityUrl": "https://bebolder.atlassian.net/images/icons/priorities/medium.svg",
+                "priorityName": "Medium",
+                "priorityId": "3",
+                "done": false,
+                "hasCustomUserAvatar": false,
+                "color": "#8590a2",
+                "flagged": false,
+                "labels": [],
+                "columnStatistic": {
+                    "statFieldId": "issueCount",
+                    "statFieldValue": {
+                        "value": 1.0,
+                        "text": "1.0"
+                    }
+                },
+                "estimateStatisticRequired": false,
+                "statusId": "1",
+                "statusName": "Alcance Definido",
+                "statusUrl": "https://bebolder.atlassian.net/images/icons/statuses/open.png",
+                "status": {
+                    "id": "1",
+                    "name": "Alcance Definido",
+                    "description": "",
+                    "iconUrl": "https://bebolder.atlassian.net/images/icons/statuses/open.png",
+                    "statusCategory": {
+                        "id": "2",
+                        "key": "new",
+                        "colorName": "blue-gray"
+                    }
+                },
+                "fixVersions": [],
+                "projectId": 10014,
+                "linkedPagesCount": 0,
+                "sprintIds": [
+                    513,
+                    451,
+                    485,
+                    455,
+                    488,
+                    520,
+                    809,
+                    1007,
+                    496,
+                    530,
+                    533,
+                    503,
+                    443,
+                    541
+                ],
+                "updatedAt": 1741180296422
+            },
+            {
+                "id": 17676,
+                "key": "BPI-1956",
+                "hidden": false,
+                "typeName": "Gestión",
+                "typeId": "10017",
+                "typeHierarchyLevel": 0,
+                "summary": "Retrospectiva",
+                "typeUrl": "https://bebolder.atlassian.net/rest/api/2/universal_avatar/view/type/issuetype/avatar/10300?size=medium",
+                "priorityUrl": "https://bebolder.atlassian.net/images/icons/priorities/medium.svg",
+                "priorityName": "Medium",
+                "priorityId": "3",
+                "done": false,
+                "hasCustomUserAvatar": false,
+                "color": "#8590a2",
+                "flagged": false,
+                "labels": [],
+                "columnStatistic": {
+                    "statFieldId": "issueCount",
+                    "statFieldValue": {
+                        "value": 1.0,
+                        "text": "1.0"
+                    }
+                },
+                "estimateStatisticRequired": false,
+                "statusId": "1",
+                "statusName": "Alcance Definido",
+                "statusUrl": "https://bebolder.atlassian.net/images/icons/statuses/open.png",
+                "status": {
+                    "id": "1",
+                    "name": "Alcance Definido",
+                    "description": "",
+                    "iconUrl": "https://bebolder.atlassian.net/images/icons/statuses/open.png",
+                    "statusCategory": {
+                        "id": "2",
+                        "key": "new",
+                        "colorName": "blue-gray"
+                    }
+                },
+                "fixVersions": [],
+                "projectId": 10014,
+                "linkedPagesCount": 0,
+                "sprintIds": [
+                    513,
+                    451,
+                    485,
+                    455,
+                    488,
+                    520,
+                    809,
+                    1007,
+                    496,
+                    530,
+                    533,
+                    503,
+                    443,
+                    541
+                ],
+                "updatedAt": 1741180296577
+            },
+            {
+                "id": 19199,
+                "key": "BPI-2504",
+                "hidden": false,
+                "typeName": "Tarea",
+                "typeId": "10012",
+                "typeHierarchyLevel": 0,
+                "summary": "Crear HUs Trámites ",
+                "typeUrl": "https://bebolder.atlassian.net/rest/api/2/universal_avatar/view/type/issuetype/avatar/10318?size=medium",
+                "priorityUrl": "https://bebolder.atlassian.net/images/icons/priorities/medium.svg",
+                "priorityName": "Medium",
+                "priorityId": "3",
+                "done": false,
+                "hasCustomUserAvatar": false,
+                "color": "#0055cc",
+                "flagged": false,
+                "labels": [],
+                "columnStatistic": {
+                    "statFieldId": "issueCount",
+                    "statFieldValue": {
+                        "value": 1.0,
+                        "text": "1.0"
+                    }
+                },
+                "currentEstimateStatistic": {
+                    "statFieldId": "customfield_10033",
+                    "statFieldValue": {
+                        "value": 5.0
+                    }
+                },
+                "estimateStatisticRequired": false,
+                "estimateStatistic": {
+                    "statFieldId": "customfield_10033",
+                    "statFieldValue": {
+                        "value": 5.0
+                    }
+                },
+                "statusId": "10010",
+                "statusName": "En implementación",
+                "statusUrl": "https://bebolder.atlassian.net/images/icons/statuses/generic.png",
+                "status": {
+                    "id": "10010",
+                    "name": "En implementación",
+                    "description": "",
+                    "iconUrl": "https://bebolder.atlassian.net/images/icons/statuses/generic.png",
+                    "statusCategory": {
+                        "id": "4",
+                        "key": "indeterminate",
+                        "colorName": "yellow"
+                    }
+                },
+                "fixVersions": [
+                    10086
+                ],
+                "projectId": 10014,
+                "linkedPagesCount": 0,
+                "sprintIds": [
+                    513,
+                    530,
+                    451,
+                    533,
+                    520,
+                    809,
+                    541,
+                    1007
+                ],
+                "updatedAt": 1743427322786
+            },
+            {
+                "id": 19513,
+                "key": "BPI-2699",
+                "hidden": false,
+                "typeName": "Historia",
+                "typeId": "10011",
+                "typeHierarchyLevel": 0,
+                "summary": "Trámite - Divulgación de eventos corporativos",
+                "typeUrl": "https://bebolder.atlassian.net/rest/api/2/universal_avatar/view/type/issuetype/avatar/10315?size=medium",
+                "priorityUrl": "https://bebolder.atlassian.net/images/icons/priorities/medium.svg",
+                "priorityName": "Medium",
+                "priorityId": "3",
+                "done": false,
+                "assignee": "64234b652cee496759ed0750",
+                "assigneeKey": "64234b652cee496759ed0750",
+                "assigneeAccountId": "64234b652cee496759ed0750",
+                "assigneeName": "Carlos Alfredo Stagnaro Ramírez",
+                "avatarUrl": "https://secure.gravatar.com/avatar/6b200a0a8a1b56f711583f67fbe07e25?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FCR-1.png",
+                "hasCustomUserAvatar": false,
+                "color": "#22a06b",
+                "flagged": false,
+                "labels": [],
+                "columnStatistic": {
+                    "statFieldId": "issueCount",
+                    "statFieldValue": {
+                        "value": 1.0,
+                        "text": "1.0"
+                    }
+                },
+                "currentEstimateStatistic": {
+                    "statFieldId": "customfield_10033",
+                    "statFieldValue": {
+                        "value": 2.0
+                    }
+                },
+                "estimateStatisticRequired": false,
+                "estimateStatistic": {
+                    "statFieldId": "customfield_10033",
+                    "statFieldValue": {}
+                },
+                "statusId": "10044",
+                "statusName": "Suspendida",
+                "statusUrl": "https://bebolder.atlassian.net/images/icons/statuses/generic.png",
+                "status": {
+                    "id": "10044",
+                    "name": "Suspendida",
+                    "description": "",
+                    "iconUrl": "https://bebolder.atlassian.net/images/icons/statuses/generic.png",
+                    "statusCategory": {
+                        "id": "2",
+                        "key": "new",
+                        "colorName": "blue-gray"
+                    }
+                },
+                "fixVersions": [
+                    10086
+                ],
+                "projectId": 10014,
+                "linkedPagesCount": 0,
+                "sprintIds": [
+                    1007
+                ],
+                "updatedAt": 1742395123450
+            },
+            {
+                "id": 19706,
+                "key": "BPI-2805",
+                "hidden": false,
+                "typeName": "Mejora",
+                "typeId": "10068",
+                "typeHierarchyLevel": 0,
+                "summary": "Modificar orden de campos Fecha de Nacimiento y Fecha de Expedición del documento",
+                "typeUrl": "https://bebolder.atlassian.net/rest/api/2/universal_avatar/view/type/issuetype/avatar/10310?size=medium",
+                "priorityUrl": "https://bebolder.atlassian.net/images/icons/priorities/medium.svg",
+                "priorityName": "Medium",
+                "priorityId": "3",
+                "done": false,
+                "assignee": "712020:9d6a79fb-dacb-4612-85bb-96a7129d105c",
+                "assigneeKey": "712020:9d6a79fb-dacb-4612-85bb-96a7129d105c",
+                "assigneeAccountId": "712020:9d6a79fb-dacb-4612-85bb-96a7129d105c",
+                "assigneeName": "Samuel Ramírez Cadavid",
+                "avatarUrl": "https://secure.gravatar.com/avatar/581d640b70e2fd6823b8f77a4a4a7bb3?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FSC-0.png",
+                "hasCustomUserAvatar": false,
+                "color": "#da62ac",
+                "flagged": false,
+                "labels": [],
+                "columnStatistic": {
+                    "statFieldId": "issueCount",
+                    "statFieldValue": {
+                        "value": 1.0,
+                        "text": "1.0"
+                    }
+                },
+                "currentEstimateStatistic": {
+                    "statFieldId": "customfield_10033",
+                    "statFieldValue": {
+                        "value": 0.5
+                    }
+                },
+                "estimateStatisticRequired": false,
+                "estimateStatistic": {
+                    "statFieldId": "customfield_10033",
+                    "statFieldValue": {
+                        "value": 0.5
+                    }
+                },
+                "statusId": "10012",
+                "statusName": "paso QA pendiente",
+                "statusUrl": "https://bebolder.atlassian.net/images/icons/statuses/generic.png",
+                "status": {
+                    "id": "10012",
+                    "name": "paso QA pendiente",
+                    "description": "",
+                    "iconUrl": "https://bebolder.atlassian.net/images/icons/statuses/generic.png",
+                    "statusCategory": {
+                        "id": "4",
+                        "key": "indeterminate",
+                        "colorName": "yellow"
+                    }
+                },
+                "fixVersions": [
+                    10259
+                ],
+                "projectId": 10014,
+                "linkedPagesCount": 0,
+                "sprintIds": [
+                    1007
+                ],
+                "updatedAt": 1742914148862
+            },
+            {
+                "id": 19942,
+                "key": "BPI-2907",
+                "hidden": false,
+                "typeName": "Mejora",
+                "typeId": "10068",
+                "typeHierarchyLevel": 0,
+                "summary": "Intranet - Adicionar filtros en \"datos contractuales\"",
+                "typeUrl": "https://bebolder.atlassian.net/rest/api/2/universal_avatar/view/type/issuetype/avatar/10310?size=medium",
+                "priorityUrl": "https://bebolder.atlassian.net/images/icons/priorities/high.svg",
+                "priorityName": "High",
+                "priorityId": "2",
+                "done": false,
+                "assignee": "712020:9d6a79fb-dacb-4612-85bb-96a7129d105c",
+                "assigneeKey": "712020:9d6a79fb-dacb-4612-85bb-96a7129d105c",
+                "assigneeAccountId": "712020:9d6a79fb-dacb-4612-85bb-96a7129d105c",
+                "assigneeName": "Samuel Ramírez Cadavid",
+                "avatarUrl": "https://secure.gravatar.com/avatar/581d640b70e2fd6823b8f77a4a4a7bb3?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FSC-0.png",
+                "hasCustomUserAvatar": false,
+                "color": "#da62ac",
+                "flagged": false,
+                "labels": [],
+                "columnStatistic": {
+                    "statFieldId": "issueCount",
+                    "statFieldValue": {
+                        "value": 1.0,
+                        "text": "1.0"
+                    }
+                },
+                "currentEstimateStatistic": {
+                    "statFieldId": "customfield_10033",
+                    "statFieldValue": {
+                        "value": 3.0
+                    }
+                },
+                "estimateStatisticRequired": false,
+                "estimateStatistic": {
+                    "statFieldId": "customfield_10033",
+                    "statFieldValue": {}
+                },
+                "statusId": "10012",
+                "statusName": "paso QA pendiente",
+                "statusUrl": "https://bebolder.atlassian.net/images/icons/statuses/generic.png",
+                "status": {
+                    "id": "10012",
+                    "name": "paso QA pendiente",
+                    "description": "",
+                    "iconUrl": "https://bebolder.atlassian.net/images/icons/statuses/generic.png",
+                    "statusCategory": {
+                        "id": "4",
+                        "key": "indeterminate",
+                        "colorName": "yellow"
+                    }
+                },
+                "fixVersions": [
+                    10259
+                ],
+                "projectId": 10014,
+                "linkedPagesCount": 0,
+                "sprintIds": [
+                    1007
+                ],
+                "updatedAt": 1742584255136
+            },
+            {
+                "id": 20311,
+                "key": "BPI-2994",
+                "hidden": false,
+                "typeName": "Historia",
+                "typeId": "10011",
+                "typeHierarchyLevel": 0,
+                "summary": "Trámites - Tablero de mensajes de cumpleaños o aniversario (Enviar mensaje).",
+                "typeUrl": "https://bebolder.atlassian.net/rest/api/2/universal_avatar/view/type/issuetype/avatar/10315?size=medium",
+                "priorityUrl": "https://bebolder.atlassian.net/images/icons/priorities/medium.svg",
+                "priorityName": "Medium",
+                "priorityId": "3",
+                "done": false,
+                "assignee": "63e4f6e086a66a7cc7aae0fb",
+                "assigneeKey": "63e4f6e086a66a7cc7aae0fb",
+                "assigneeAccountId": "63e4f6e086a66a7cc7aae0fb",
+                "assigneeName": "Janeth Cristina Aguirre Metaute",
+                "avatarUrl": "https://secure.gravatar.com/avatar/aa835dc858273d223f0c49d6101341a4?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FJM-6.png",
+                "hasCustomUserAvatar": false,
+                "color": "#22a06b",
+                "flagged": false,
+                "labels": [],
+                "columnStatistic": {
+                    "statFieldId": "issueCount",
+                    "statFieldValue": {
+                        "value": 1.0,
+                        "text": "1.0"
+                    }
+                },
+                "currentEstimateStatistic": {
+                    "statFieldId": "customfield_10033",
+                    "statFieldValue": {
+                        "value": 3.0
+                    }
+                },
+                "estimateStatisticRequired": false,
+                "estimateStatistic": {
+                    "statFieldId": "customfield_10033",
+                    "statFieldValue": {}
+                },
+                "statusId": "10057",
+                "statusName": "Validar PO",
+                "statusUrl": "https://bebolder.atlassian.net/",
+                "status": {
+                    "id": "10057",
+                    "name": "Validar PO",
+                    "description": "Este estado es administrado internamente por Jira Software",
+                    "iconUrl": "https://bebolder.atlassian.net/",
+                    "statusCategory": {
+                        "id": "4",
+                        "key": "indeterminate",
+                        "colorName": "yellow"
+                    }
+                },
+                "fixVersions": [
+                    10086
+                ],
+                "projectId": 10014,
+                "linkedPagesCount": 0,
+                "sprintIds": [
+                    1007
+                ],
+                "updatedAt": 1743452881705
+            },
+            {
+                "id": 20424,
+                "key": "BPI-3020",
+                "hidden": false,
+                "typeName": "Historia",
+                "typeId": "10011",
+                "typeHierarchyLevel": 0,
+                "summary": "Trámites - Tablero de mensajes de cumpleaños o aniversario (User).",
+                "typeUrl": "https://bebolder.atlassian.net/rest/api/2/universal_avatar/view/type/issuetype/avatar/10315?size=medium",
+                "priorityUrl": "https://bebolder.atlassian.net/images/icons/priorities/medium.svg",
+                "priorityName": "Medium",
+                "priorityId": "3",
+                "done": false,
+                "assignee": "629e305f4e1a640070c27b11",
+                "assigneeKey": "629e305f4e1a640070c27b11",
+                "assigneeAccountId": "629e305f4e1a640070c27b11",
+                "assigneeName": "María Paulina Marín Ramírez",
+                "avatarUrl": "https://secure.gravatar.com/avatar/4a22ad1c8940282ae1ba32077be1ebbe?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FMR-3.png",
+                "hasCustomUserAvatar": false,
+                "color": "#22a06b",
+                "flagged": false,
+                "labels": [],
+                "columnStatistic": {
+                    "statFieldId": "issueCount",
+                    "statFieldValue": {
+                        "value": 1.0,
+                        "text": "1.0"
+                    }
+                },
+                "currentEstimateStatistic": {
+                    "statFieldId": "customfield_10033",
+                    "statFieldValue": {
+                        "value": 3.0
+                    }
+                },
+                "estimateStatisticRequired": false,
+                "estimateStatistic": {
+                    "statFieldId": "customfield_10033",
+                    "statFieldValue": {
+                        "value": 3.0
+                    }
+                },
+                "statusId": "10057",
+                "statusName": "Validar PO",
+                "statusUrl": "https://bebolder.atlassian.net/",
+                "status": {
+                    "id": "10057",
+                    "name": "Validar PO",
+                    "description": "Este estado es administrado internamente por Jira Software",
+                    "iconUrl": "https://bebolder.atlassian.net/",
+                    "statusCategory": {
+                        "id": "4",
+                        "key": "indeterminate",
+                        "colorName": "yellow"
+                    }
+                },
+                "fixVersions": [
+                    10086
+                ],
+                "projectId": 10014,
+                "linkedPagesCount": 0,
+                "sprintIds": [
+                    1007
+                ],
+                "updatedAt": 1743450762414
+            },
+            {
+                "id": 20506,
+                "key": "BPI-3030",
+                "hidden": false,
+                "typeName": "Historia",
+                "typeId": "10011",
+                "typeHierarchyLevel": 0,
+                "summary": "Tramites - Editar mensajes de cumpleaños o aniversario (User).",
+                "typeUrl": "https://bebolder.atlassian.net/rest/api/2/universal_avatar/view/type/issuetype/avatar/10315?size=medium",
+                "priorityUrl": "https://bebolder.atlassian.net/images/icons/priorities/medium.svg",
+                "priorityName": "Medium",
+                "priorityId": "3",
+                "done": false,
+                "assignee": "62f6aa8dc1b3a10ac3ad1cf4",
+                "assigneeKey": "62f6aa8dc1b3a10ac3ad1cf4",
+                "assigneeAccountId": "62f6aa8dc1b3a10ac3ad1cf4",
+                "assigneeName": "Diana Sepúlveda Mejía",
+                "avatarUrl": "https://secure.gravatar.com/avatar/5d6e584b00c4f015d008bcbc756aefe5?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FDM-4.png",
+                "hasCustomUserAvatar": false,
+                "color": "#22a06b",
+                "flagged": false,
+                "labels": [],
+                "columnStatistic": {
+                    "statFieldId": "issueCount",
+                    "statFieldValue": {
+                        "value": 1.0,
+                        "text": "1.0"
+                    }
+                },
+                "currentEstimateStatistic": {
+                    "statFieldId": "customfield_10033",
+                    "statFieldValue": {
+                        "value": 3.0
+                    }
+                },
+                "estimateStatisticRequired": false,
+                "estimateStatistic": {
+                    "statFieldId": "customfield_10033",
+                    "statFieldValue": {}
+                },
+                "statusId": "10018",
+                "statusName": "Pendiente de despliegue a PDN (Paso pdn pendiente)",
+                "statusUrl": "https://bebolder.atlassian.net/images/icons/statuses/generic.png",
+                "status": {
+                    "id": "10018",
+                    "name": "Pendiente de despliegue a PDN (Paso pdn pendiente)",
+                    "description": "",
+                    "iconUrl": "https://bebolder.atlassian.net/images/icons/statuses/generic.png",
+                    "statusCategory": {
+                        "id": "3",
+                        "key": "done",
+                        "colorName": "green"
+                    }
+                },
+                "fixVersions": [
+                    10086
+                ],
+                "projectId": 10014,
+                "linkedPagesCount": 0,
+                "sprintIds": [
+                    1007
+                ],
+                "updatedAt": 1743450271602
+            },
+            {
+                "id": 21465,
+                "key": "BPI-3119",
+                "hidden": false,
+                "typeName": "Tarea",
+                "typeId": "10012",
+                "typeHierarchyLevel": 0,
+                "summary": "Trámite - Generar plantilla para divulgación de eventos en wordpress",
+                "typeUrl": "https://bebolder.atlassian.net/rest/api/2/universal_avatar/view/type/issuetype/avatar/10318?size=medium",
+                "priorityUrl": "https://bebolder.atlassian.net/images/icons/priorities/medium.svg",
+                "priorityName": "Medium",
+                "priorityId": "3",
+                "done": false,
+                "assignee": "64234b652cee496759ed0750",
+                "assigneeKey": "64234b652cee496759ed0750",
+                "assigneeAccountId": "64234b652cee496759ed0750",
+                "assigneeName": "Carlos Alfredo Stagnaro Ramírez",
+                "avatarUrl": "https://secure.gravatar.com/avatar/6b200a0a8a1b56f711583f67fbe07e25?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FCR-1.png",
+                "hasCustomUserAvatar": false,
+                "color": "#0055cc",
+                "flagged": false,
+                "labels": [],
+                "columnStatistic": {
+                    "statFieldId": "issueCount",
+                    "statFieldValue": {
+                        "value": 1.0,
+                        "text": "1.0"
+                    }
+                },
+                "currentEstimateStatistic": {
+                    "statFieldId": "customfield_10033",
+                    "statFieldValue": {
+                        "value": 2.0
+                    }
+                },
+                "estimateStatisticRequired": false,
+                "estimateStatistic": {
+                    "statFieldId": "customfield_10033",
+                    "statFieldValue": {
+                        "value": 1.0
+                    }
+                },
+                "statusId": "10044",
+                "statusName": "Suspendida",
+                "statusUrl": "https://bebolder.atlassian.net/images/icons/statuses/generic.png",
+                "status": {
+                    "id": "10044",
+                    "name": "Suspendida",
+                    "description": "",
+                    "iconUrl": "https://bebolder.atlassian.net/images/icons/statuses/generic.png",
+                    "statusCategory": {
+                        "id": "2",
+                        "key": "new",
+                        "colorName": "blue-gray"
+                    }
+                },
+                "fixVersions": [
+                    10086
+                ],
+                "projectId": 10014,
+                "linkedPagesCount": 0,
+                "sprintIds": [
+                    1007
+                ],
+                "updatedAt": 1742394695356
+            },
+            {
+                "id": 23393,
+                "key": "BPI-3192",
+                "hidden": false,
+                "typeName": "Historia",
+                "typeId": "10011",
+                "typeHierarchyLevel": 0,
+                "summary": "Tramites - Redirección notificación a tablero de celebraciones - Perfil User",
+                "typeUrl": "https://bebolder.atlassian.net/rest/api/2/universal_avatar/view/type/issuetype/avatar/10315?size=medium",
+                "priorityUrl": "https://bebolder.atlassian.net/images/icons/priorities/medium.svg",
+                "priorityName": "Medium",
+                "priorityId": "3",
+                "done": false,
+                "assignee": "62f6aa8dc1b3a10ac3ad1cf4",
+                "assigneeKey": "62f6aa8dc1b3a10ac3ad1cf4",
+                "assigneeAccountId": "62f6aa8dc1b3a10ac3ad1cf4",
+                "assigneeName": "Diana Sepúlveda Mejía",
+                "avatarUrl": "https://secure.gravatar.com/avatar/5d6e584b00c4f015d008bcbc756aefe5?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FDM-4.png",
+                "hasCustomUserAvatar": false,
+                "color": "#22a06b",
+                "flagged": false,
+                "labels": [],
+                "columnStatistic": {
+                    "statFieldId": "issueCount",
+                    "statFieldValue": {
+                        "value": 1.0,
+                        "text": "1.0"
+                    }
+                },
+                "currentEstimateStatistic": {
+                    "statFieldId": "customfield_10033",
+                    "statFieldValue": {
+                        "value": 0.5
+                    }
+                },
+                "estimateStatisticRequired": false,
+                "estimateStatistic": {
+                    "statFieldId": "customfield_10033",
+                    "statFieldValue": {}
+                },
+                "statusId": "10018",
+                "statusName": "Pendiente de despliegue a PDN (Paso pdn pendiente)",
+                "statusUrl": "https://bebolder.atlassian.net/images/icons/statuses/generic.png",
+                "status": {
+                    "id": "10018",
+                    "name": "Pendiente de despliegue a PDN (Paso pdn pendiente)",
+                    "description": "",
+                    "iconUrl": "https://bebolder.atlassian.net/images/icons/statuses/generic.png",
+                    "statusCategory": {
+                        "id": "3",
+                        "key": "done",
+                        "colorName": "green"
+                    }
+                },
+                "fixVersions": [
+                    10086
+                ],
+                "projectId": 10014,
+                "linkedPagesCount": 0,
+                "sprintIds": [
+                    1007
+                ],
+                "updatedAt": 1743450317643
+            },
+            {
+                "id": 23394,
+                "key": "BPI-3193",
+                "hidden": false,
+                "typeName": "Historia",
+                "typeId": "10011",
+                "typeHierarchyLevel": 0,
+                "summary": "Trámites - Carousel de celebraciones (fecha actual)",
+                "typeUrl": "https://bebolder.atlassian.net/rest/api/2/universal_avatar/view/type/issuetype/avatar/10315?size=medium",
+                "priorityUrl": "https://bebolder.atlassian.net/images/icons/priorities/medium.svg",
+                "priorityName": "Medium",
+                "priorityId": "3",
+                "done": false,
+                "assignee": "62f6aa8dc1b3a10ac3ad1cf4",
+                "assigneeKey": "62f6aa8dc1b3a10ac3ad1cf4",
+                "assigneeAccountId": "62f6aa8dc1b3a10ac3ad1cf4",
+                "assigneeName": "Diana Sepúlveda Mejía",
+                "avatarUrl": "https://secure.gravatar.com/avatar/5d6e584b00c4f015d008bcbc756aefe5?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FDM-4.png",
+                "hasCustomUserAvatar": false,
+                "color": "#22a06b",
+                "flagged": false,
+                "labels": [],
+                "columnStatistic": {
+                    "statFieldId": "issueCount",
+                    "statFieldValue": {
+                        "value": 1.0,
+                        "text": "1.0"
+                    }
+                },
+                "currentEstimateStatistic": {
+                    "statFieldId": "customfield_10033",
+                    "statFieldValue": {
+                        "value": 1.5
+                    }
+                },
+                "estimateStatisticRequired": false,
+                "estimateStatistic": {
+                    "statFieldId": "customfield_10033",
+                    "statFieldValue": {}
+                },
+                "statusId": "10018",
+                "statusName": "Pendiente de despliegue a PDN (Paso pdn pendiente)",
+                "statusUrl": "https://bebolder.atlassian.net/images/icons/statuses/generic.png",
+                "status": {
+                    "id": "10018",
+                    "name": "Pendiente de despliegue a PDN (Paso pdn pendiente)",
+                    "description": "",
+                    "iconUrl": "https://bebolder.atlassian.net/images/icons/statuses/generic.png",
+                    "statusCategory": {
+                        "id": "3",
+                        "key": "done",
+                        "colorName": "green"
+                    }
+                },
+                "fixVersions": [
+                    10086
+                ],
+                "projectId": 10014,
+                "linkedPagesCount": 0,
+                "sprintIds": [
+                    1007
+                ],
+                "updatedAt": 1743450344705
+            },
+            {
+                "id": 23395,
+                "key": "BPI-3194",
+                "hidden": false,
+                "typeName": "Historia",
+                "typeId": "10011",
+                "typeHierarchyLevel": 0,
+                "summary": "Tramites - Carousel de celebraciones del mes actual",
+                "typeUrl": "https://bebolder.atlassian.net/rest/api/2/universal_avatar/view/type/issuetype/avatar/10315?size=medium",
+                "priorityUrl": "https://bebolder.atlassian.net/images/icons/priorities/medium.svg",
+                "priorityName": "Medium",
+                "priorityId": "3",
+                "done": false,
+                "assignee": "62f6aa8dc1b3a10ac3ad1cf4",
+                "assigneeKey": "62f6aa8dc1b3a10ac3ad1cf4",
+                "assigneeAccountId": "62f6aa8dc1b3a10ac3ad1cf4",
+                "assigneeName": "Diana Sepúlveda Mejía",
+                "avatarUrl": "https://secure.gravatar.com/avatar/5d6e584b00c4f015d008bcbc756aefe5?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FDM-4.png",
+                "hasCustomUserAvatar": false,
+                "color": "#22a06b",
+                "flagged": false,
+                "labels": [],
+                "columnStatistic": {
+                    "statFieldId": "issueCount",
+                    "statFieldValue": {
+                        "value": 1.0,
+                        "text": "1.0"
+                    }
+                },
+                "currentEstimateStatistic": {
+                    "statFieldId": "customfield_10033",
+                    "statFieldValue": {
+                        "value": 2.0
+                    }
+                },
+                "estimateStatisticRequired": false,
+                "estimateStatistic": {
+                    "statFieldId": "customfield_10033",
+                    "statFieldValue": {}
+                },
+                "statusId": "10018",
+                "statusName": "Pendiente de despliegue a PDN (Paso pdn pendiente)",
+                "statusUrl": "https://bebolder.atlassian.net/images/icons/statuses/generic.png",
+                "status": {
+                    "id": "10018",
+                    "name": "Pendiente de despliegue a PDN (Paso pdn pendiente)",
+                    "description": "",
+                    "iconUrl": "https://bebolder.atlassian.net/images/icons/statuses/generic.png",
+                    "statusCategory": {
+                        "id": "3",
+                        "key": "done",
+                        "colorName": "green"
+                    }
+                },
+                "fixVersions": [
+                    10086
+                ],
+                "projectId": 10014,
+                "linkedPagesCount": 0,
+                "sprintIds": [
+                    1007
+                ],
+                "updatedAt": 1743450385796
+            },
+            {
+                "id": 23443,
+                "key": "BPI-3196",
+                "hidden": false,
+                "typeName": "Historia",
+                "typeId": "10011",
+                "typeHierarchyLevel": 0,
+                "summary": "Mensaje de celebración por defecto",
+                "typeUrl": "https://bebolder.atlassian.net/rest/api/2/universal_avatar/view/type/issuetype/avatar/10315?size=medium",
+                "priorityUrl": "https://bebolder.atlassian.net/images/icons/priorities/medium.svg",
+                "priorityName": "Medium",
+                "priorityId": "3",
+                "done": false,
+                "assignee": "62f6aa8dc1b3a10ac3ad1cf4",
+                "assigneeKey": "62f6aa8dc1b3a10ac3ad1cf4",
+                "assigneeAccountId": "62f6aa8dc1b3a10ac3ad1cf4",
+                "assigneeName": "Diana Sepúlveda Mejía",
+                "avatarUrl": "https://secure.gravatar.com/avatar/5d6e584b00c4f015d008bcbc756aefe5?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FDM-4.png",
+                "hasCustomUserAvatar": false,
+                "color": "#22a06b",
+                "flagged": false,
+                "labels": [],
+                "columnStatistic": {
+                    "statFieldId": "issueCount",
+                    "statFieldValue": {
+                        "value": 1.0,
+                        "text": "1.0"
+                    }
+                },
+                "currentEstimateStatistic": {
+                    "statFieldId": "customfield_10033",
+                    "statFieldValue": {
+                        "value": 3.0
+                    }
+                },
+                "estimateStatisticRequired": false,
+                "estimateStatistic": {
+                    "statFieldId": "customfield_10033",
+                    "statFieldValue": {}
+                },
+                "statusId": "10018",
+                "statusName": "Pendiente de despliegue a PDN (Paso pdn pendiente)",
+                "statusUrl": "https://bebolder.atlassian.net/images/icons/statuses/generic.png",
+                "status": {
+                    "id": "10018",
+                    "name": "Pendiente de despliegue a PDN (Paso pdn pendiente)",
+                    "description": "",
+                    "iconUrl": "https://bebolder.atlassian.net/images/icons/statuses/generic.png",
+                    "statusCategory": {
+                        "id": "3",
+                        "key": "done",
+                        "colorName": "green"
+                    }
+                },
+                "fixVersions": [
+                    10086
+                ],
+                "projectId": 10014,
+                "linkedPagesCount": 0,
+                "sprintIds": [
+                    1007
+                ],
+                "updatedAt": 1743450364740
+            },
+            {
+                "id": 25423,
+                "key": "BPI-3369",
+                "hidden": false,
+                "typeName": "Error",
+                "typeId": "10014",
+                "typeHierarchyLevel": 0,
+                "summary": "Error en Pignus ",
+                "typeUrl": "https://bebolder.atlassian.net/rest/api/2/universal_avatar/view/type/issuetype/avatar/10303?size=medium",
+                "priorityUrl": "https://bebolder.atlassian.net/images/icons/priorities/medium.svg",
+                "priorityName": "Medium",
+                "priorityId": "3",
+                "done": false,
+                "assignee": "712020:5d150255-64b5-4c9f-8287-8df732d86bd9",
+                "assigneeKey": "712020:5d150255-64b5-4c9f-8287-8df732d86bd9",
+                "assigneeAccountId": "712020:5d150255-64b5-4c9f-8287-8df732d86bd9",
+                "assigneeName": "Samara Manco Acevedo",
+                "avatarUrl": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/712020:5d150255-64b5-4c9f-8287-8df732d86bd9/2a372ec2-19b7-4a1c-9945-c3728106b95e/48",
+                "hasCustomUserAvatar": false,
+                "color": "#ae2e24",
+                "flagged": false,
+                "labels": [],
+                "columnStatistic": {
+                    "statFieldId": "issueCount",
+                    "statFieldValue": {
+                        "value": 1.0,
+                        "text": "1.0"
+                    }
+                },
+                "currentEstimateStatistic": {
+                    "statFieldId": "customfield_10033",
+                    "statFieldValue": {}
+                },
+                "estimateStatisticRequired": false,
+                "estimateStatistic": {
+                    "statFieldId": "customfield_10033",
+                    "statFieldValue": {}
+                },
+                "statusId": "10011",
+                "statusName": "Se necesitan Más datos",
+                "statusUrl": "https://bebolder.atlassian.net/images/icons/statuses/generic.png",
+                "status": {
+                    "id": "10011",
+                    "name": "Se necesitan Más datos",
+                    "description": "",
+                    "iconUrl": "https://bebolder.atlassian.net/images/icons/statuses/generic.png",
+                    "statusCategory": {
+                        "id": "2",
+                        "key": "new",
+                        "colorName": "blue-gray"
+                    }
+                },
+                "fixVersions": [
+                    10266
+                ],
+                "projectId": 10014,
+                "linkedPagesCount": 0,
+                "sprintIds": [
+                    1007
+                ],
+                "updatedAt": 1743108305739
+            },
+            {
+                "id": 25524,
+                "key": "BPI-3373",
+                "hidden": false,
+                "typeName": "Tarea",
+                "typeId": "10012",
+                "typeHierarchyLevel": 0,
+                "summary": "Consulta de tipo de documentos de acuerdo al tipo de solicitud y tipo de documento",
+                "typeUrl": "https://bebolder.atlassian.net/rest/api/2/universal_avatar/view/type/issuetype/avatar/10318?size=medium",
+                "priorityUrl": "https://bebolder.atlassian.net/images/icons/priorities/medium.svg",
+                "priorityName": "Medium",
+                "priorityId": "3",
+                "done": false,
+                "assignee": "712020:2bf4c0e6-4f7b-4c48-9258-49df7ced6b56",
+                "assigneeKey": "712020:2bf4c0e6-4f7b-4c48-9258-49df7ced6b56",
+                "assigneeAccountId": "712020:2bf4c0e6-4f7b-4c48-9258-49df7ced6b56",
+                "assigneeName": "Carlos Duván Labrador Hernández",
+                "avatarUrl": "https://secure.gravatar.com/avatar/14d00d6f049f1ceabb24f436014244ae?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FCH-2.png",
+                "hasCustomUserAvatar": false,
+                "color": "#0055cc",
+                "flagged": false,
+                "labels": [],
+                "columnStatistic": {
+                    "statFieldId": "issueCount",
+                    "statFieldValue": {
+                        "value": 1.0,
+                        "text": "1.0"
+                    }
+                },
+                "currentEstimateStatistic": {
+                    "statFieldId": "customfield_10033",
+                    "statFieldValue": {
+                        "value": 2.0
+                    }
+                },
+                "estimateStatisticRequired": false,
+                "estimateStatistic": {
+                    "statFieldId": "customfield_10033",
+                    "statFieldValue": {
+                        "value": 1.0
+                    }
+                },
+                "statusId": "10012",
+                "statusName": "paso QA pendiente",
+                "statusUrl": "https://bebolder.atlassian.net/images/icons/statuses/generic.png",
+                "status": {
+                    "id": "10012",
+                    "name": "paso QA pendiente",
+                    "description": "",
+                    "iconUrl": "https://bebolder.atlassian.net/images/icons/statuses/generic.png",
+                    "statusCategory": {
+                        "id": "4",
+                        "key": "indeterminate",
+                        "colorName": "yellow"
+                    }
+                },
+                "fixVersions": [
+                    10086
+                ],
+                "projectId": 10014,
+                "linkedPagesCount": 0,
+                "sprintIds": [
+                    1007
+                ],
+                "updatedAt": 1742591663225
+            },
+            {
+                "id": 25525,
+                "key": "BPI-3374",
+                "hidden": false,
+                "typeName": "Tarea",
+                "typeId": "10012",
+                "typeHierarchyLevel": 0,
+                "summary": "Consulta de tipos de solicitud",
+                "typeUrl": "https://bebolder.atlassian.net/rest/api/2/universal_avatar/view/type/issuetype/avatar/10318?size=medium",
+                "priorityUrl": "https://bebolder.atlassian.net/images/icons/priorities/medium.svg",
+                "priorityName": "Medium",
+                "priorityId": "3",
+                "done": false,
+                "assignee": "712020:453ac8a3-a90f-4a0f-898e-c6f77551a3a9",
+                "assigneeKey": "712020:453ac8a3-a90f-4a0f-898e-c6f77551a3a9",
+                "assigneeAccountId": "712020:453ac8a3-a90f-4a0f-898e-c6f77551a3a9",
+                "assigneeName": "Juan Carlos Valencia Duque",
+                "avatarUrl": "https://secure.gravatar.com/avatar/b03134140b374d03b2738fe6e973e769?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FJD-2.png",
+                "hasCustomUserAvatar": false,
+                "color": "#0055cc",
+                "flagged": false,
+                "labels": [],
+                "columnStatistic": {
+                    "statFieldId": "issueCount",
+                    "statFieldValue": {
+                        "value": 1.0,
+                        "text": "1.0"
+                    }
+                },
+                "currentEstimateStatistic": {
+                    "statFieldId": "customfield_10033",
+                    "statFieldValue": {
+                        "value": 1.5
+                    }
+                },
+                "estimateStatisticRequired": false,
+                "estimateStatistic": {
+                    "statFieldId": "customfield_10033",
+                    "statFieldValue": {
+                        "value": 1.5
+                    }
+                },
+                "statusId": "10012",
+                "statusName": "paso QA pendiente",
+                "statusUrl": "https://bebolder.atlassian.net/images/icons/statuses/generic.png",
+                "status": {
+                    "id": "10012",
+                    "name": "paso QA pendiente",
+                    "description": "",
+                    "iconUrl": "https://bebolder.atlassian.net/images/icons/statuses/generic.png",
+                    "statusCategory": {
+                        "id": "4",
+                        "key": "indeterminate",
+                        "colorName": "yellow"
+                    }
+                },
+                "fixVersions": [
+                    10086
+                ],
+                "projectId": 10014,
+                "linkedPagesCount": 0,
+                "sprintIds": [
+                    1007
+                ],
+                "updatedAt": 1742573830224
+            },
+            {
+                "id": 25526,
+                "key": "BPI-3375",
+                "hidden": false,
+                "typeName": "Tarea",
+                "typeId": "10012",
+                "typeHierarchyLevel": 0,
+                "summary": "Consulta de AFC por usuario",
+                "typeUrl": "https://bebolder.atlassian.net/rest/api/2/universal_avatar/view/type/issuetype/avatar/10318?size=medium",
+                "priorityUrl": "https://bebolder.atlassian.net/images/icons/priorities/medium.svg",
+                "priorityName": "Medium",
+                "priorityId": "3",
+                "done": false,
+                "assignee": "712020:e5e7d391-53a3-452c-a8b4-e6735e15623c",
+                "assigneeKey": "712020:e5e7d391-53a3-452c-a8b4-e6735e15623c",
+                "assigneeAccountId": "712020:e5e7d391-53a3-452c-a8b4-e6735e15623c",
+                "assigneeName": "Sergio Andrés Varón Fonseca",
+                "avatarUrl": "https://secure.gravatar.com/avatar/00a18752a9154751b0c715c5a4b58a1c?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FSF-4.png",
+                "hasCustomUserAvatar": false,
+                "color": "#0055cc",
+                "flagged": false,
+                "labels": [],
+                "columnStatistic": {
+                    "statFieldId": "issueCount",
+                    "statFieldValue": {
+                        "value": 1.0,
+                        "text": "1.0"
+                    }
+                },
+                "currentEstimateStatistic": {
+                    "statFieldId": "customfield_10033",
+                    "statFieldValue": {
+                        "value": 1.5
+                    }
+                },
+                "estimateStatisticRequired": false,
+                "estimateStatistic": {
+                    "statFieldId": "customfield_10033",
+                    "statFieldValue": {
+                        "value": 1.5
+                    }
+                },
+                "statusId": "10012",
+                "statusName": "paso QA pendiente",
+                "statusUrl": "https://bebolder.atlassian.net/images/icons/statuses/generic.png",
+                "status": {
+                    "id": "10012",
+                    "name": "paso QA pendiente",
+                    "description": "",
+                    "iconUrl": "https://bebolder.atlassian.net/images/icons/statuses/generic.png",
+                    "statusCategory": {
+                        "id": "4",
+                        "key": "indeterminate",
+                        "colorName": "yellow"
+                    }
+                },
+                "fixVersions": [
+                    10086
+                ],
+                "projectId": 10014,
+                "linkedPagesCount": 0,
+                "sprintIds": [
+                    1007
+                ],
+                "updatedAt": 1742494342760
+            },
+            {
+                "id": 25527,
+                "key": "BPI-3376",
+                "hidden": false,
+                "typeName": "Tarea",
+                "typeId": "10012",
+                "typeHierarchyLevel": 0,
+                "summary": "Consulta de transición de estados",
+                "typeUrl": "https://bebolder.atlassian.net/rest/api/2/universal_avatar/view/type/issuetype/avatar/10318?size=medium",
+                "priorityUrl": "https://bebolder.atlassian.net/images/icons/priorities/medium.svg",
+                "priorityName": "Medium",
+                "priorityId": "3",
+                "done": false,
+                "assignee": "712020:e5e7d391-53a3-452c-a8b4-e6735e15623c",
+                "assigneeKey": "712020:e5e7d391-53a3-452c-a8b4-e6735e15623c",
+                "assigneeAccountId": "712020:e5e7d391-53a3-452c-a8b4-e6735e15623c",
+                "assigneeName": "Sergio Andrés Varón Fonseca",
+                "avatarUrl": "https://secure.gravatar.com/avatar/00a18752a9154751b0c715c5a4b58a1c?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FSF-4.png",
+                "hasCustomUserAvatar": false,
+                "color": "#0055cc",
+                "flagged": false,
+                "labels": [],
+                "columnStatistic": {
+                    "statFieldId": "issueCount",
+                    "statFieldValue": {
+                        "value": 1.0,
+                        "text": "1.0"
+                    }
+                },
+                "currentEstimateStatistic": {
+                    "statFieldId": "customfield_10033",
+                    "statFieldValue": {
+                        "value": 1.0
+                    }
+                },
+                "estimateStatisticRequired": false,
+                "estimateStatistic": {
+                    "statFieldId": "customfield_10033",
+                    "statFieldValue": {}
+                },
+                "statusId": "10012",
+                "statusName": "paso QA pendiente",
+                "statusUrl": "https://bebolder.atlassian.net/images/icons/statuses/generic.png",
+                "status": {
+                    "id": "10012",
+                    "name": "paso QA pendiente",
+                    "description": "",
+                    "iconUrl": "https://bebolder.atlassian.net/images/icons/statuses/generic.png",
+                    "statusCategory": {
+                        "id": "4",
+                        "key": "indeterminate",
+                        "colorName": "yellow"
+                    }
+                },
+                "fixVersions": [
+                    10086
+                ],
+                "projectId": 10014,
+                "linkedPagesCount": 0,
+                "sprintIds": [
+                    1007
+                ],
+                "updatedAt": 1742579083303
+            },
+            {
+                "id": 25530,
+                "key": "BPI-3379",
+                "hidden": false,
+                "typeName": "Tarea",
+                "typeId": "10012",
+                "typeHierarchyLevel": 0,
+                "summary": "Endpoint para creación de solicitud",
+                "typeUrl": "https://bebolder.atlassian.net/rest/api/2/universal_avatar/view/type/issuetype/avatar/10318?size=medium",
+                "priorityUrl": "https://bebolder.atlassian.net/images/icons/priorities/medium.svg",
+                "priorityName": "Medium",
+                "priorityId": "3",
+                "done": false,
+                "assignee": "712020:e5e7d391-53a3-452c-a8b4-e6735e15623c",
+                "assigneeKey": "712020:e5e7d391-53a3-452c-a8b4-e6735e15623c",
+                "assigneeAccountId": "712020:e5e7d391-53a3-452c-a8b4-e6735e15623c",
+                "assigneeName": "Sergio Andrés Varón Fonseca",
+                "avatarUrl": "https://secure.gravatar.com/avatar/00a18752a9154751b0c715c5a4b58a1c?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FSF-4.png",
+                "hasCustomUserAvatar": false,
+                "color": "#0055cc",
+                "flagged": false,
+                "labels": [],
+                "columnStatistic": {
+                    "statFieldId": "issueCount",
+                    "statFieldValue": {
+                        "value": 1.0,
+                        "text": "1.0"
+                    }
+                },
+                "currentEstimateStatistic": {
+                    "statFieldId": "customfield_10033",
+                    "statFieldValue": {
+                        "value": 4.0
+                    }
+                },
+                "estimateStatisticRequired": false,
+                "estimateStatistic": {
+                    "statFieldId": "customfield_10033",
+                    "statFieldValue": {}
+                },
+                "statusId": "10010",
+                "statusName": "En implementación",
+                "statusUrl": "https://bebolder.atlassian.net/images/icons/statuses/generic.png",
+                "status": {
+                    "id": "10010",
+                    "name": "En implementación",
+                    "description": "",
+                    "iconUrl": "https://bebolder.atlassian.net/images/icons/statuses/generic.png",
+                    "statusCategory": {
+                        "id": "4",
+                        "key": "indeterminate",
+                        "colorName": "yellow"
+                    }
+                },
+                "fixVersions": [],
+                "projectId": 10014,
+                "linkedPagesCount": 0,
+                "sprintIds": [
+                    1007
+                ],
+                "updatedAt": 1742942104971
+            },
+            {
+                "id": 26021,
+                "key": "BPI-3431",
+                "hidden": false,
+                "typeName": "Tarea",
+                "typeId": "10012",
+                "typeHierarchyLevel": 0,
+                "summary": "Endpoint para generar carta de solicitud de retiro de cesantías",
+                "typeUrl": "https://bebolder.atlassian.net/rest/api/2/universal_avatar/view/type/issuetype/avatar/10318?size=medium",
+                "priorityUrl": "https://bebolder.atlassian.net/images/icons/priorities/medium.svg",
+                "priorityName": "Medium",
+                "priorityId": "3",
+                "done": false,
+                "assignee": "712020:2bf4c0e6-4f7b-4c48-9258-49df7ced6b56",
+                "assigneeKey": "712020:2bf4c0e6-4f7b-4c48-9258-49df7ced6b56",
+                "assigneeAccountId": "712020:2bf4c0e6-4f7b-4c48-9258-49df7ced6b56",
+                "assigneeName": "Carlos Duván Labrador Hernández",
+                "avatarUrl": "https://secure.gravatar.com/avatar/14d00d6f049f1ceabb24f436014244ae?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FCH-2.png",
+                "hasCustomUserAvatar": false,
+                "color": "#0055cc",
+                "flagged": false,
+                "labels": [],
+                "columnStatistic": {
+                    "statFieldId": "issueCount",
+                    "statFieldValue": {
+                        "value": 1.0,
+                        "text": "1.0"
+                    }
+                },
+                "currentEstimateStatistic": {
+                    "statFieldId": "customfield_10033",
+                    "statFieldValue": {
+                        "value": 2.0
+                    }
+                },
+                "estimateStatisticRequired": false,
+                "estimateStatistic": {
+                    "statFieldId": "customfield_10033",
+                    "statFieldValue": {}
+                },
+                "statusId": "10010",
+                "statusName": "En implementación",
+                "statusUrl": "https://bebolder.atlassian.net/images/icons/statuses/generic.png",
+                "status": {
+                    "id": "10010",
+                    "name": "En implementación",
+                    "description": "",
+                    "iconUrl": "https://bebolder.atlassian.net/images/icons/statuses/generic.png",
+                    "statusCategory": {
+                        "id": "4",
+                        "key": "indeterminate",
+                        "colorName": "yellow"
+                    }
+                },
+                "fixVersions": [
+                    10086
+                ],
+                "projectId": 10014,
+                "linkedPagesCount": 0,
+                "sprintIds": [
+                    1007
+                ],
+                "updatedAt": 1743460412200
+            },
+            {
+                "id": 26054,
+                "key": "BPI-3436",
+                "hidden": false,
+                "typeName": "Tarea",
+                "typeId": "10012",
+                "typeHierarchyLevel": 0,
+                "summary": "Maquetación formulario de solicitud de retiro de cesantías",
+                "typeUrl": "https://bebolder.atlassian.net/rest/api/2/universal_avatar/view/type/issuetype/avatar/10318?size=medium",
+                "priorityUrl": "https://bebolder.atlassian.net/images/icons/priorities/medium.svg",
+                "priorityName": "Medium",
+                "priorityId": "3",
+                "done": false,
+                "assignee": "64234b652cee496759ed0750",
+                "assigneeKey": "64234b652cee496759ed0750",
+                "assigneeAccountId": "64234b652cee496759ed0750",
+                "assigneeName": "Carlos Alfredo Stagnaro Ramírez",
+                "avatarUrl": "https://secure.gravatar.com/avatar/6b200a0a8a1b56f711583f67fbe07e25?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FCR-1.png",
+                "hasCustomUserAvatar": false,
+                "color": "#0055cc",
+                "flagged": false,
+                "labels": [],
+                "columnStatistic": {
+                    "statFieldId": "issueCount",
+                    "statFieldValue": {
+                        "value": 1.0,
+                        "text": "1.0"
+                    }
+                },
+                "currentEstimateStatistic": {
+                    "statFieldId": "customfield_10033",
+                    "statFieldValue": {
+                        "value": 2.0
+                    }
+                },
+                "estimateStatisticRequired": false,
+                "estimateStatistic": {
+                    "statFieldId": "customfield_10033",
+                    "statFieldValue": {
+                        "value": 2.0
+                    }
+                },
+                "statusId": "10010",
+                "statusName": "En implementación",
+                "statusUrl": "https://bebolder.atlassian.net/images/icons/statuses/generic.png",
+                "status": {
+                    "id": "10010",
+                    "name": "En implementación",
+                    "description": "",
+                    "iconUrl": "https://bebolder.atlassian.net/images/icons/statuses/generic.png",
+                    "statusCategory": {
+                        "id": "4",
+                        "key": "indeterminate",
+                        "colorName": "yellow"
+                    }
+                },
+                "fixVersions": [
+                    10086
+                ],
+                "projectId": 10014,
+                "linkedPagesCount": 0,
+                "sprintIds": [
+                    1007
+                ],
+                "updatedAt": 1743427343500
+            },
+            {
+                "id": 26132,
+                "key": "BPI-3437",
+                "hidden": false,
+                "typeName": "Mejora",
+                "typeId": "10068",
+                "typeHierarchyLevel": 0,
+                "summary": "Ordenar alfabéticamente listado de empleados",
+                "typeUrl": "https://bebolder.atlassian.net/rest/api/2/universal_avatar/view/type/issuetype/avatar/10310?size=medium",
+                "priorityUrl": "https://bebolder.atlassian.net/images/icons/priorities/medium.svg",
+                "priorityName": "Medium",
+                "priorityId": "3",
+                "done": false,
+                "assignee": "712020:453ac8a3-a90f-4a0f-898e-c6f77551a3a9",
+                "assigneeKey": "712020:453ac8a3-a90f-4a0f-898e-c6f77551a3a9",
+                "assigneeAccountId": "712020:453ac8a3-a90f-4a0f-898e-c6f77551a3a9",
+                "assigneeName": "Juan Carlos Valencia Duque",
+                "avatarUrl": "https://secure.gravatar.com/avatar/b03134140b374d03b2738fe6e973e769?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FJD-2.png",
+                "hasCustomUserAvatar": false,
+                "color": "#da62ac",
+                "flagged": false,
+                "labels": [],
+                "columnStatistic": {
+                    "statFieldId": "issueCount",
+                    "statFieldValue": {
+                        "value": 1.0,
+                        "text": "1.0"
+                    }
+                },
+                "currentEstimateStatistic": {
+                    "statFieldId": "customfield_10033",
+                    "statFieldValue": {
+                        "value": 2.0
+                    }
+                },
+                "estimateStatisticRequired": false,
+                "estimateStatistic": {
+                    "statFieldId": "customfield_10033",
+                    "statFieldValue": {}
+                },
+                "statusId": "10010",
+                "statusName": "En implementación",
+                "statusUrl": "https://bebolder.atlassian.net/images/icons/statuses/generic.png",
+                "status": {
+                    "id": "10010",
+                    "name": "En implementación",
+                    "description": "",
+                    "iconUrl": "https://bebolder.atlassian.net/images/icons/statuses/generic.png",
+                    "statusCategory": {
+                        "id": "4",
+                        "key": "indeterminate",
+                        "colorName": "yellow"
+                    }
+                },
+                "fixVersions": [
+                    10259
+                ],
+                "projectId": 10014,
+                "linkedPagesCount": 0,
+                "sprintIds": [
+                    1007
+                ],
+                "updatedAt": 1743455465067
+            },
+            {
+                "id": 26136,
+                "key": "BPI-3439",
+                "hidden": false,
+                "typeName": "Historia",
+                "typeId": "10011",
+                "typeHierarchyLevel": 0,
+                "summary": "Notificaciones de usuarios inactivos",
+                "typeUrl": "https://bebolder.atlassian.net/rest/api/2/universal_avatar/view/type/issuetype/avatar/10315?size=medium",
+                "priorityUrl": "https://bebolder.atlassian.net/images/icons/priorities/medium.svg",
+                "priorityName": "Medium",
+                "priorityId": "3",
+                "done": false,
+                "assignee": "712020:9d6a79fb-dacb-4612-85bb-96a7129d105c",
+                "assigneeKey": "712020:9d6a79fb-dacb-4612-85bb-96a7129d105c",
+                "assigneeAccountId": "712020:9d6a79fb-dacb-4612-85bb-96a7129d105c",
+                "assigneeName": "Samuel Ramírez Cadavid",
+                "avatarUrl": "https://secure.gravatar.com/avatar/581d640b70e2fd6823b8f77a4a4a7bb3?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FSC-0.png",
+                "hasCustomUserAvatar": false,
+                "color": "#22a06b",
+                "flagged": false,
+                "labels": [],
+                "columnStatistic": {
+                    "statFieldId": "issueCount",
+                    "statFieldValue": {
+                        "value": 1.0,
+                        "text": "1.0"
+                    }
+                },
+                "currentEstimateStatistic": {
+                    "statFieldId": "customfield_10033",
+                    "statFieldValue": {
+                        "value": 1.25
+                    }
+                },
+                "estimateStatisticRequired": false,
+                "estimateStatistic": {
+                    "statFieldId": "customfield_10033",
+                    "statFieldValue": {
+                        "value": 1.0
+                    }
+                },
+                "statusId": "10010",
+                "statusName": "En implementación",
+                "statusUrl": "https://bebolder.atlassian.net/images/icons/statuses/generic.png",
+                "status": {
+                    "id": "10010",
+                    "name": "En implementación",
+                    "description": "",
+                    "iconUrl": "https://bebolder.atlassian.net/images/icons/statuses/generic.png",
+                    "statusCategory": {
+                        "id": "4",
+                        "key": "indeterminate",
+                        "colorName": "yellow"
+                    }
+                },
+                "fixVersions": [],
+                "projectId": 10014,
+                "linkedPagesCount": 0,
+                "sprintIds": [
+                    1007
+                ],
+                "updatedAt": 1743455990512
+            }
+        ],
+        "puntedIssues": [
+            {
+                "id": 19562,
+                "key": "BPI-2723",
+                "hidden": false,
+                "typeName": "Historia",
+                "typeId": "10011",
+                "typeHierarchyLevel": 0,
+                "summary": "Trámite - Información solicitud retiro de cesantías",
+                "typeUrl": "https://bebolder.atlassian.net/rest/api/2/universal_avatar/view/type/issuetype/avatar/10315?size=medium",
+                "priorityUrl": "https://bebolder.atlassian.net/images/icons/priorities/medium.svg",
+                "priorityName": "Medium",
+                "priorityId": "3",
+                "done": false,
+                "assignee": "64234b652cee496759ed0750",
+                "assigneeKey": "64234b652cee496759ed0750",
+                "assigneeAccountId": "64234b652cee496759ed0750",
+                "assigneeName": "Carlos Alfredo Stagnaro Ramírez",
+                "avatarUrl": "https://secure.gravatar.com/avatar/6b200a0a8a1b56f711583f67fbe07e25?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FCR-1.png",
+                "hasCustomUserAvatar": false,
+                "color": "#22a06b",
+                "flagged": false,
+                "labels": [],
+                "columnStatistic": {
+                    "statFieldId": "issueCount",
+                    "statFieldValue": {
+                        "value": 1.0,
+                        "text": "1.0"
+                    }
+                },
+                "currentEstimateStatistic": {
+                    "statFieldId": "customfield_10033",
+                    "statFieldValue": {}
+                },
+                "estimateStatisticRequired": false,
+                "estimateStatistic": {
+                    "statFieldId": "customfield_10033",
+                    "statFieldValue": {}
+                },
+                "statusId": "10106",
+                "statusName": "HU Refinada con negocio",
+                "statusUrl": "https://bebolder.atlassian.net/images/icons/statuses/generic.png",
+                "status": {
+                    "id": "10106",
+                    "name": "HU Refinada con negocio",
+                    "description": "",
+                    "iconUrl": "https://bebolder.atlassian.net/images/icons/statuses/generic.png",
+                    "statusCategory": {
+                        "id": "2",
+                        "key": "new",
+                        "colorName": "blue-gray"
+                    }
+                },
+                "fixVersions": [
+                    10086
+                ],
+                "projectId": 10014,
+                "linkedPagesCount": 0,
+                "sprintIds": [
+                    1205
+                ],
+                "updatedAt": 1741180374066
+            }
+        ],
+        "issuesCompletedInAnotherSprint": [],
+        "completedIssuesInitialEstimateSum": {
+            "value": 48.0,
+            "text": "48.0"
+        },
+        "completedIssuesEstimateSum": {
+            "value": 54.0,
+            "text": "54.0"
+        },
+        "issuesNotCompletedInitialEstimateSum": {
+            "value": 16.5,
+            "text": "16.5"
+        },
+        "issuesNotCompletedEstimateSum": {
+            "value": 45.75,
+            "text": "45.75"
+        },
+        "allIssuesEstimateSum": {
+            "value": 187.0,
+            "text": "187.0"
+        },
+        "puntedIssuesInitialEstimateSum": {
+            "text": "null"
+        },
+        "puntedIssuesEstimateSum": {
+            "text": "null"
+        },
+        "issuesCompletedInAnotherSprintInitialEstimateSum": {
+            "text": "null"
+        },
+        "issuesCompletedInAnotherSprintEstimateSum": {
+            "text": "null"
+        },
+        "issueKeysAddedDuringSprint": {
+            "BPI-2907": true,
+            "BPI-3084": true,
+            "BPI-3183": true,
+            "BPI-3088": true,
+            "BPI-3187": true,
+            "BPI-2392": true,
+            "BPI-2872": true,
+            "BPI-2971": true,
+            "BPI-3365": true,
+            "BPI-3188": true,
+            "BPI-2997": true,
+            "BPI-3369": true,
+            "BPI-2994": true,
+            "BPI-3302": true,
+            "BPI-2739": true,
+            "BPI-3170": true,
+            "BPI-3070": true,
+            "BPI-3275": true,
+            "BPI-3374": true,
+            "BPI-3373": true,
+            "BPI-3196": true,
+            "BPI-3372": true,
+            "BPI-3371": true,
+            "BPI-3257": true,
+            "BPI-3277": true,
+            "BPI-3376": true,
+            "BPI-3431": true,
+            "BPI-3078": true,
+            "BPI-3375": true,
+            "BPI-1952": true,
+            "BPI-3437": true,
+            "BPI-1951": true,
+            "BPI-3436": true,
+            "BPI-1950": true,
+            "BPI-3017": true,
+            "BPI-3259": true,
+            "BPI-3379": true,
+            "BPI-1956": true,
+            "BPI-1955": true,
+            "BPI-1954": true,
+            "BPI-2504": true,
+            "BPI-2944": true,
+            "BPI-3439": true,
+            "BPI-1953": true,
+            "BPI-3119": true,
+            "BPI-2805": true
+        }
+    },
+    "sprint": {
+        "id": 1007,
+        "sequence": 1040,
+        "name": "Sprint Mar 4/2025 (1)-Trámites",
+        "state": "ACTIVE",
+        "linkedPagesCount": 0,
+        "goal": "",
+        "sprintVersion": 4,
+        "startDate": "04/mar/25 12:10 PM",
+        "endDate": "25/mar/25 4:00 PM",
+        "isoStartDate": "2025-03-04T12:10:51-0500",
+        "isoEndDate": "2025-03-25T16:00:00-0500",
+        "completeDate": "None",
+        "isoCompleteDate": "None",
+        "canUpdateSprint": false,
+        "remoteLinks": [],
+        "daysRemaining": 0
+    },
+    "supportsPages": false
+}

@@ -8,35 +8,28 @@ from config import Config
 app = Flask(__name__)
 app.config.from_object(Config)
 
-# Ruta para servir el archivo JSON desde la carpeta 'data'
 @app.route('/data/<filename>')
 def download_file(filename):
     return send_from_directory(os.path.join(app.root_path, 'data'), filename)
 
-# Ruta para la página principal
 @app.route('/')
 def index():
-    # Obtenemos los proyectos solo si no han sido obtenidos aún
     if not os.path.exists('data/projects.json'):
-        obtener_proyectos()  # Obtener los proyectos desde Jira
+        obtener_proyectos() 
 
-    # Cargar los proyectos desde el archivo JSON
     with open('data/projects.json', 'r') as file:
         proyectos = json.load(file)
 
     return render_template('index.html', proyectos=proyectos)
 
-# Llamamos a la función generar_reporte_route para registrar la ruta
 generar_reporte_route(app)
 
-# Ruta para obtener los HUs del Sprint (recibe los parámetros proyecto_id y sprint_id)
 @app.route('/obtener_hus', methods=['POST'])
 def obtener_hus():
-    data = request.get_json()  # Recibir datos JSON de la solicitud
+    data = request.get_json() 
     proyecto_id = data.get('proyecto_id')
     sprint_id = data.get('sprint_id')
 
-    # Llamar a la función obtener_hus_de_sprint con los valores dinámicos
     return obtener_hus_de_sprint(proyecto_id, sprint_id)
 
 if __name__ == '__main__':
