@@ -8,7 +8,6 @@ from datetime import datetime
 import csv
 from requests.auth import HTTPBasicAuth
 
-# Función para obtener los sprints de Jira
 def obtener_sprints_jira(proyecto_id):
     url = f"https://bebolder.atlassian.net/rest/greenhopper/1.0/sprintquery/{proyecto_id}?includeFutureSprints=false&_=1743513788133"
 
@@ -91,12 +90,11 @@ def obtener_hus_de_sprint(proyecto_id, sprint_id):
                 issue.get("typeName"),
                 issue.get("summary"),
                 issue.get("priorityName"),
-                issue.get("done"),
                 issue.get("assigneeName"),
                 issue.get("statusName"),
                 issue.get("projectId"),
                 updated_at,
-                "completedIssues", 
+                "Issue completado en el sprint actual", 
                 added_during_sprint_value 
             ])
 
@@ -109,12 +107,11 @@ def obtener_hus_de_sprint(proyecto_id, sprint_id):
                 issue.get("typeName"),
                 issue.get("summary"),
                 issue.get("priorityName"),
-                issue.get("done"),
                 issue.get("assigneeName"),
                 issue.get("statusName"),
                 issue.get("projectId"),
                 updated_at,
-                "issuesNotCompletedInCurrentSprint",
+                "Issue NO completado en el sprint actual",
                 added_during_sprint_value 
             ])
 
@@ -127,23 +124,22 @@ def obtener_hus_de_sprint(proyecto_id, sprint_id):
                 issue.get("typeName"),
                 issue.get("summary"),
                 issue.get("priorityName"),
-                issue.get("done"),
                 issue.get("assigneeName"),
                 issue.get("statusName"),
                 issue.get("projectId"),
                 updated_at,
-                "puntedIssues",
+                "Issue postergado",
                 added_during_sprint_value 
             ])
-    
+
     file_path = f'data/issues_sprint_{proyecto_id}_{sprint_id}.csv'
 
     if rows:
         with open(file_path, 'w', newline='', encoding='utf-8') as csv_file:
             csv_writer = csv.writer(csv_file)
             csv_writer.writerow([ 
-                "key", "typeName", "summary", "priorityName", "done", "assigneeName", 
-                "statusName", "projectId", "updatedAt", "Category", "AddedDuringSprint"
+                "key", "Tipo issue", "Titulo", "Prioridad", "Assignado", 
+                "Estado", "ID Proyecto", "Actualizada", "Categoria", "Añadido durante el sprint"
             ])
             csv_writer.writerows(rows)
 
