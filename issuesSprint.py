@@ -99,7 +99,7 @@ def obtener_hus_de_sprint(proyecto_id, sprint_id):
                     added_during_sprint_value  # Aquí se marca 'True' o 'False' dependiendo de si la key está en 'issueKeysAddedDuringSprint'
                 ])
 
-    file_path = f'issues_sprint_{proyecto_id}_{sprint_id}.csv'
+    file_path = f'data/issues_sprint_{proyecto_id}_{sprint_id}.csv'
     
     if not os.path.exists('data'):
         os.makedirs('data')
@@ -115,4 +115,4 @@ def obtener_hus_de_sprint(proyecto_id, sprint_id):
     end_time = time.time()
     execution_time = end_time - start_time  
 
-    return {"archivo": f"https://testjira.onrender.com/data/{file_path}", "tiempo": execution_time}
+    return {"archivo": f"https://testjira.onrender.com/{file_path}", "tiempo": execution_time}
