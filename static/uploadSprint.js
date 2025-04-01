@@ -1,7 +1,5 @@
-// Global variable to store the sprint data
 let sprintsData = [];
 
-// Función para obtener el archivo JSON y cargar los datos
 async function cargarSprints() {
     try {
         const response = await fetch('/data/data_sprint.json');
@@ -15,9 +13,6 @@ async function cargarSprints() {
     }
 }
 
-
-
-// Función para llenar el select con los nombres de los sprints
 function llenarSelect(sprints) {
     const select = document.getElementById('sprintSelect');
     select.innerHTML = '<option value="">Seleccione un sprint</option>';
@@ -30,30 +25,28 @@ function llenarSelect(sprints) {
     });
 }
 
-// Función para consultar y actualizar los sprints desde Jira
 async function consultarSprint() {
-    const proyectoId = document.getElementById('proyecto2').value;  // ID del proyecto corregido
+    const proyectoId = document.getElementById('proyecto2').value; 
 
     if (!proyectoId) {
         alert('Por favor, ingrese el ID del proyecto.');
         return;
     }
 
-    // Realizamos una solicitud POST para actualizar los sprints
     try {
         const response = await fetch('/actualizar_sprints', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
             },
-            body: JSON.stringify({ proyecto_id: proyectoId })  // Enviamos el ID del proyecto
+            body: JSON.stringify({ proyecto_id: proyectoId }) 
         });
 
         const result = await response.json();
 
         if (response.ok) {
             console.log('Sprints actualizados correctamente');
-            cargarSprints();  // Recargamos los sprints del archivo JSON actualizado
+            cargarSprints();
         } else {
             console.error('Error al actualizar los sprints:', result.error);
             alert('Error al actualizar los sprints. Intente nuevamente.');
@@ -63,7 +56,6 @@ async function consultarSprint() {
     }
 }
 
-// Función para actualizar los campos cuando se selecciona un sprint del select
 function actualizarCamposSprint() {
     const sprintId = document.getElementById('sprintSelect').value;
     const sprint = sprintsData.find(s => s.id == sprintId);
@@ -80,6 +72,3 @@ function actualizarCamposSprint() {
         document.getElementById('sprintGoal').value = '';
     }
 }
-
-// // Llamada a la función cuando la página cargue
-// window.onload = cargarSprints;

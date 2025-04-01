@@ -1,9 +1,10 @@
+import os, json
+from config import Config
 from flask import Flask, render_template, send_from_directory, jsonify, request
 from generate_report import generar_reporte_route
 from project import obtener_proyectos
-from issuesSprint import obtener_hus_de_sprint, obtener_sprints_jira  # Asegúrate de importar ambas funciones
-import os, json
-from config import Config
+from issuesSprint import obtener_hus_de_sprint, obtener_sprints_jira  
+from navigationProject import fetch_all_boards
 
 app = Flask(__name__)
 app.config.from_object(Config)
@@ -20,7 +21,13 @@ def index():
     with open('data/projects.json', 'r') as file:
         proyectos = json.load(file)
 
-    return render_template('index.html', proyectos=proyectos)
+    if not os.path.exists('data/boards.json'):
+        fetch_all_boards()
+
+    with open('data/boards.json', 'r') as file:
+        boards = json.load(file)
+
+    return render_template('index.html', proyectos=proyectos, boards=boards)
 
 generar_reporte_route(app)
 
@@ -47,6 +54,14 @@ def obtener_hus():
             return jsonify({"error": "Faltan parámetros requeridos: proyecto_id o sprint_id"}), 400
 
         return obtener_hus_de_sprint(proyecto_id, sprint_id)
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+
+@app.route('/obtener_tableros', methods=['GET'])
+def obtener_tableros():
+    try:
+        fetch_all_boards() 
+        return jsonify({"message": "Tableros obtenidos y guardados correctamente."}), 200
     except Exception as e:
         return jsonify({"error": str(e)}), 500
 

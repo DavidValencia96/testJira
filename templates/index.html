@@ -21,6 +21,7 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     <script src="{{ url_for('static', filename='logic.js') }}"></script>
     <script src="{{ url_for('static', filename='change.js') }}"></script>
+    <script src="{{ url_for('static', filename='generate_report.js') }}"></script>
     <script src="{{ url_for('static', filename='uploadSprint.js') }}"></script>
     <script src="{{ url_for('static', filename='reportIssue.js') }}"></script>
     <script src="{{ url_for('static', filename='img.js') }}"></script>
@@ -74,8 +75,10 @@
                 <!-- Sección Proyecto -->
                 <div class="form-group">
                     <label for="proyecto2" class="form-label">Seleccione el proyecto:</label>
-                    <input type="number" id="proyecto2" name="proyecto2" class="form-input" placeholder="Digita aquí el ID del proyecto" required>
-                    <a href="#" class="guide-link" onclick="mostrarImagen('proyecto')">Imagen de guía del proyecto</a>
+                    <select id="proyecto2" name="proyecto2" class="form-select" required>
+                        <option value="">Seleccione un proyecto</option>
+                        <!-- Las opciones se cargarán aquí mediante JavaScript -->
+                    </select>
                 </div>
 
                 <!-- Botón para consultar el sprint por ID -->
