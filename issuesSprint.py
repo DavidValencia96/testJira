@@ -6,7 +6,7 @@ import os
 import csv
 
 def obtener_hus_de_sprint(proyecto_id, sprint_id):
-    EMAIL = "pablo.munoz@bebolder.co"  # Tu correo de Jira
+    EMAIL = "laura.posada@bebolder.co"
     API_TOKEN = "ATATT3xFfGF0UrsshZ9JZEMG-0eZQbBJ_GgT5-mSghYU8ustURw07LprkdngoC1iO8Y198B4b8nIePIekKQNhL4uQAQsVeIXhpWRY3GjtN_O-j9zOS_ZixxwZPdzcqdVsw_SKfox8okJwcj_57XIu3ZM0C7iwDFD3E-vnkLo6TQpfL-i_3mV6jM=07B92C26";  
     PROYECTO_ID = proyecto_id
     SPRINT_ID = sprint_id
