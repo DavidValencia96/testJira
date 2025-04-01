@@ -48,7 +48,7 @@ def obtener_proyectos():
             break
 
         params['startAt'] += params['maxResults']
-        time.sleep(2)
+        time.sleep(1)
     print(f"Total de proyectos obtenidos: {len(proyectos)} de {total_proyectos}")
 
     with open(json_file_path, 'w') as json_file:
