@@ -8,9 +8,13 @@ import unicodedata
 from datetime import datetime
 from flask import jsonify, request, send_from_directory
 
+user_email = "pablo.munoz@bebolder.co"
+token_user = "ATATT3xFfGF0UrsshZ9JZEMG-0eZQbBJ_GgT5-mSghYU8ustURw07LprkdngoC1iO8Y198B4b8nIePIekKQNhL4uQAQsVeIXhpWRY3GjtN_O-j9zOS_ZixxwZPdzcqdVsw_SKfox8okJwcj_57XIu3ZM0C7iwDFD3E-vnkLo6TQpfL-i_3mV6jM=07B92C26"
+
+
 def generar_reporte(proyecto, issue_types=None):
-    email = "pablo.munoz@bebolder.co"
-    api_token = "ATATT3xFfGF0UrsshZ9JZEMG-0eZQbBJ_GgT5-mSghYU8ustURw07LprkdngoC1iO8Y198B4b8nIePIekKQNhL4uQAQsVeIXhpWRY3GjtN_O-j9zOS_ZixxwZPdzcqdVsw_SKfox8okJwcj_57XIu3ZM0C7iwDFD3E-vnkLo6TQpfL-i_3mV6jM=07B92C26"
+    email = user_email
+    api_token = token_user
     jira_domain = "https://bebolder.atlassian.net"
 
     auth_string = f"{email}:{api_token}"

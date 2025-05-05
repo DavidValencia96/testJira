@@ -12,13 +12,15 @@ import openpyxl
 from openpyxl.chart import BarChart, Reference
 from openpyxl.styles import Border, Side, PatternFill
 
+user_email = "pablo.munoz@bebolder.co"
+token_user = "ATATT3xFfGF0UrsshZ9JZEMG-0eZQbBJ_GgT5-mSghYU8ustURw07LprkdngoC1iO8Y198B4b8nIePIekKQNhL4uQAQsVeIXhpWRY3GjtN_O-j9zOS_ZixxwZPdzcqdVsw_SKfox8okJwcj_57XIu3ZM0C7iwDFD3E-vnkLo6TQpfL-i_3mV6jM=07B92C26"
+
 
 def obtener_sprints_jira(proyecto_id):
     url = f"https://bebolder.atlassian.net/rest/greenhopper/1.0/sprintquery/{proyecto_id}?includeFutureSprints=false&_=1743513788133"
 
-    EMAIL = "pablo.munoz@bebolder.co"
-    API_TOKEN = "ATATT3xFfGF0UrsshZ9JZEMG-0eZQbBJ_GgT5-mSghYU8ustURw07LprkdngoC1iO8Y198B4b8nIePIekKQNhL4uQAQsVeIXhpWRY3GjtN_O-j9zOS_ZixxwZPdzcqdVsw_SKfox8okJwcj_57XIu3ZM0C7iwDFD3E-vnkLo6TQpfL-i_3mV6jM=07B92C26"
-
+    EMAIL = user_email
+    API_TOKEN = token_user
     auth = HTTPBasicAuth(EMAIL, API_TOKEN)
     headers = {"Accept": "application/json"}
 
@@ -56,8 +58,8 @@ def obtener_sprints_jira(proyecto_id):
 
 def obtener_hus_de_sprint(proyecto_id, sprint_id):
     start_time = time.time() 
-    EMAIL = "pablo.munoz@bebolder.co"
-    API_TOKEN = "ATATT3xFfGF0UrsshZ9JZEMG-0eZQbBJ_GgT5-mSghYU8ustURw07LprkdngoC1iO8Y198B4b8nIePIekKQNhL4uQAQsVeIXhpWRY3GjtN_O-j9zOS_ZixxwZPdzcqdVsw_SKfox8okJwcj_57XIu3ZM0C7iwDFD3E-vnkLo6TQpfL-i_3mV6jM=07B92C26"
+    EMAIL = user_email
+    API_TOKEN = token_user
     PROYECTO_ID = proyecto_id
     SPRINT_ID = sprint_id
 
