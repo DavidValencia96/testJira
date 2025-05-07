@@ -1,6 +1,9 @@
 function generarReporte2() {
-    var proyecto = document.getElementById("proyecto2").value;
-    var sprint = document.getElementById("sprintId").value; 
+    const select = document.getElementById("proyecto2");
+    const selectedOption = select.options[select.selectedIndex];
+    const proyecto = selectedOption.value;
+    const projectKey = selectedOption.dataset.projectKey;
+    const sprint = document.getElementById("sprintId").value;
 
     if (!proyecto || !sprint) {
         alert("Por favor, ingresa tanto el ID del proyecto como el del sprint.");
@@ -16,8 +19,9 @@ function generarReporte2() {
             'Content-Type': 'application/json'
         },
         body: JSON.stringify({
-            proyecto_id: proyecto,  
-            sprint_id: sprint      
+            proyecto_id: proyecto,
+            projectKey: projectKey,
+            sprint_id: sprint
         })
     })
     .then(response => {
@@ -34,9 +38,9 @@ function generarReporte2() {
         document.getElementById("execution-time").textContent = "Tiempo de ejecución: " + data.tiempo.toFixed(2) + " segundos.";
         document.getElementById("execution-time").style.display = "block";
 
-        var fileLink = document.getElementById("file-link");
+        const fileLink = document.getElementById("file-link");
         fileLink.innerHTML = `Tus datos están listos, puedes revisarlos dando clic <a href="${data.archivo}" target="_blank">aquí</a>.`;
-        fileLink.style.display = "block"; 
+        fileLink.style.display = "block";
     })
     .catch(error => {
         document.getElementById("loader").style.display = "none";

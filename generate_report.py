@@ -10,12 +10,11 @@ from flask import jsonify, request, send_from_directory
 
 user_email = "pablo.munoz@bebolder.co"
 token_user = "ATATT3xFfGF0UrsshZ9JZEMG-0eZQbBJ_GgT5-mSghYU8ustURw07LprkdngoC1iO8Y198B4b8nIePIekKQNhL4uQAQsVeIXhpWRY3GjtN_O-j9zOS_ZixxwZPdzcqdVsw_SKfox8okJwcj_57XIu3ZM0C7iwDFD3E-vnkLo6TQpfL-i_3mV6jM=07B92C26"
-
+domain = "https://bebolder.atlassian.net"
 
 def generar_reporte(proyecto, issue_types=None):
     email = user_email
     api_token = token_user
-    jira_domain = "https://bebolder.atlassian.net"
 
     auth_string = f"{email}:{api_token}"
     encoded_auth = base64.b64encode(auth_string.encode()).decode()
@@ -38,12 +37,12 @@ def generar_reporte(proyecto, issue_types=None):
     def obtener_issues_jira():
         nonlocal start_at, total
         while start_at < total or total == 0:
-            url = f"{jira_domain}/rest/api/3/search?jql={jql_query}&startAt={start_at}&maxResults={max_results}"
+            url = f"{domain}/rest/api/3/search?jql={jql_query}&startAt={start_at}&maxResults={max_results}"
             headers = {
                 "Authorization": f"Basic {encoded_auth}",
                 "Accept": "application/json"
             }
-            
+
             try:
                 response = requests.get(url, headers=headers, timeout=130)
                 response.raise_for_status()

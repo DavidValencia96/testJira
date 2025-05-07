@@ -1,12 +1,11 @@
 import requests
-import base64
 import json
 import os
-import time  # Importamos la librería time para hacer pausas
+import time
+import base64
 
 user_email = "pablo.munoz@bebolder.co"
 token_user = "ATATT3xFfGF0UrsshZ9JZEMG-0eZQbBJ_GgT5-mSghYU8ustURw07LprkdngoC1iO8Y198B4b8nIePIekKQNhL4uQAQsVeIXhpWRY3GjtN_O-j9zOS_ZixxwZPdzcqdVsw_SKfox8okJwcj_57XIu3ZM0C7iwDFD3E-vnkLo6TQpfL-i_3mV6jM=07B92C26"
-
 
 def fetch_all_boards():
     base_url = "https://bebolder.atlassian.net/rest/agile/1.0/board"
@@ -15,9 +14,9 @@ def fetch_all_boards():
     is_last = False
     email = user_email
     api_token = token_user
-    
+
     auth_value = base64.b64encode(f"{email}:{api_token}".encode()).decode()
-    
+
     headers = {
         "Authorization": f"Basic {auth_value}",
         "Accept": "application/json"
@@ -42,7 +41,7 @@ def fetch_all_boards():
             except json.JSONDecodeError as error:
                 print("Error al procesar JSON:", error)
                 return
-            
+
             if "values" in data and len(data["values"]) > 0:
                 for board in data["values"]:
                     board_data = {

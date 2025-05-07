@@ -2,6 +2,7 @@ import requests
 import json
 from flask import jsonify, current_app
 from base64 import b64encode
+import base64
 import os
 import time
 from datetime import datetime
@@ -14,14 +15,11 @@ from openpyxl.styles import Border, Side, PatternFill
 
 user_email = "pablo.munoz@bebolder.co"
 token_user = "ATATT3xFfGF0UrsshZ9JZEMG-0eZQbBJ_GgT5-mSghYU8ustURw07LprkdngoC1iO8Y198B4b8nIePIekKQNhL4uQAQsVeIXhpWRY3GjtN_O-j9zOS_ZixxwZPdzcqdVsw_SKfox8okJwcj_57XIu3ZM0C7iwDFD3E-vnkLo6TQpfL-i_3mV6jM=07B92C26"
-
+domain = "https://bebolder.atlassian.net"
 
 def obtener_sprints_jira(proyecto_id):
-    url = f"https://bebolder.atlassian.net/rest/greenhopper/1.0/sprintquery/{proyecto_id}?includeFutureSprints=false&_=1743513788133"
-
-    EMAIL = user_email
-    API_TOKEN = token_user
-    auth = HTTPBasicAuth(EMAIL, API_TOKEN)
+    url = f"{domain}/rest/greenhopper/1.0/sprintquery/{proyecto_id}?includeFutureSprints=false&_=1743513788133"
+    auth = HTTPBasicAuth(user_email, token_user)
     headers = {"Accept": "application/json"}
 
     response = requests.get(url, headers=headers, auth=auth)
@@ -46,7 +44,7 @@ def obtener_sprints_jira(proyecto_id):
                     "name": sprint["name"],
                     "state": sprint["state"],
                     "goal": sprint.get("goal", ""),
-                    "sprintVersion": sprint["sprintVersion"]
+                    "sprintVersion": sprint.get("sprintVersion", "")
                 })
             with open(json_data_sprint, 'w', encoding='utf-8') as json_file:
                 json.dump(sprint_data, json_file, ensure_ascii=False, indent=4)
@@ -57,31 +55,51 @@ def obtener_sprints_jira(proyecto_id):
         raise Exception(f"Error al obtener datos de Jira: {response.status_code}")
 
 def obtener_hus_de_sprint(proyecto_id, sprint_id):
-    start_time = time.time() 
-    EMAIL = user_email
-    API_TOKEN = token_user
-    PROYECTO_ID = proyecto_id
-    SPRINT_ID = sprint_id
+    start_time = time.time()
 
-    url = f"https://bebolder.atlassian.net/rest/greenhopper/1.0/rapid/charts/sprintreport?rapidViewId={PROYECTO_ID}&sprintId={SPRINT_ID}&_=1743432986996"
-    auth_value = b64encode(f"{EMAIL}:{API_TOKEN}".encode()).decode()
+    print(f"Iniciando la generación del reporte para el sprint {sprint_id} del proyecto {proyecto_id}")
+    
+    try:
+        # Cargar el archivo JSON con los datos de issues
+        with open("data/issues_all_sprint.json", "r", encoding="utf-8") as file:
+            issues_json = json.load(file)
+        print("Archivo JSON cargado exitosamente")
+    except FileNotFoundError as e:
+        print(f"Error al cargar el archivo: {e}")
+        return {"error": "Archivo no encontrado."}, 500
+    except json.JSONDecodeError as e:
+        print(f"Error en el formato del JSON: {e}")
+        return {"error": "Error al decodificar el JSON."}, 500
+
+    issues_dict = {issue["key"]: issue for issue in issues_json}    
+    print(f"Diccionario de issues creado con {len(issues_dict)} elementos.")
+
+    url = f"{domain}/rest/greenhopper/1.0/rapid/charts/sprintreport?rapidViewId={proyecto_id}&sprintId={sprint_id}&_=1743432986996"
+    auth_value = b64encode(f"{user_email}:{token_user}".encode()).decode()
     headers = {
         "Authorization": f"Basic {auth_value}",
         "Accept": "application/json"
     }
 
-    response = requests.get(url, headers=headers)
+    try:
+        response = requests.get(url, headers=headers)
+        response.raise_for_status()
+        print("Respuesta recibida de Jira.")
+    except requests.exceptions.RequestException as e:
+        print(f"Error en la solicitud a Jira: {e}")
+        return {"error": f"Error al hacer la solicitud a Jira: {e}"}, 500
 
     if response.status_code == 403:
+        print("Error 403: No tienes acceso a la API de Jira.")
         return {"error": "Error 403: No tienes acceso a la API de Jira. Revisa tu correo, token o permisos."}, 403
     elif response.status_code != 200:
+        print(f"Error en la petición: Código {response.status_code}")
         return {"error": f"Error en la petición: Código {response.status_code}", "details": response.text}, response.status_code
 
     data = response.json()
     excel_file_path = f'data/issues_sprint_{proyecto_id}_{sprint_id}.xlsx'
-    rows = [] 
+    rows = []
     added_during_sprint = data["contents"].get("issueKeysAddedDuringSprint", {})
-
     total_planeado = 0
     total_ejecutado = 0
 
@@ -91,24 +109,66 @@ def obtener_hus_de_sprint(proyecto_id, sprint_id):
             updated_at = datetime.utcfromtimestamp(issue.get("updatedAt", 0) / 1000).strftime('%Y-%m-%d %H:%M:%S')
             categoria = "Issue completado en el sprint actual"
             total_ejecutado += 1
-            rows.append([
-                issue.get("key"), issue.get("typeName"), issue.get("summary"),
-                issue.get("priorityName"), issue.get("assigneeName"),
-                issue.get("statusName"), issue.get("projectId"), updated_at,
-                categoria, added_during_sprint_value
-            ])
-            total_planeado += 1
+
+            json_issue = issues_dict.get(issue.get("key"))
+            
+            if json_issue:
+                customfield = json_issue["fields"].get("customfield_10048")
+                definitionOfFact = customfield.get("value") if isinstance(customfield, dict) else ""
+                storyPoint = json_issue["fields"].get("customfield_10033", 0.0)
+                storyPointEstimated = json_issue["fields"].get("customfield_10016", 0.0)
+                storyPointExecuted = json_issue["fields"].get("customfield_10046", 0.0)
+
+                rows.append([
+                    issue.get("key"), 
+                    issue.get("typeName"), 
+                    issue.get("summary"),
+                    issue.get("priorityName"),
+                    issue.get("assigneeName"),
+                    issue.get("statusName"), 
+                    definitionOfFact,
+                    issue.get("projectId"), 
+                    updated_at,
+                    categoria, 
+                    added_during_sprint_value,
+                    storyPoint,
+                    storyPointEstimated,
+                    storyPointExecuted
+                ])
+                total_planeado += 1
+            else:
+                print(f"Warning: No se encontró el issue con key {issue.get('key')} en el archivo JSON.")
 
     for issue in data["contents"].get("issuesNotCompletedInCurrentSprint", []):
         if issue.get("typeName") in ["Historia", "Error"]:
             added_during_sprint_value = added_during_sprint.get(issue.get("key"), False)
             updated_at = datetime.utcfromtimestamp(issue.get("updatedAt", 0) / 1000).strftime('%Y-%m-%d %H:%M:%S')
             categoria = "Issue NO completado en el sprint actual"
+
+            json_issue = issues_dict.get(issue.get("key"))
+
+            if json_issue:
+                customfield = json_issue["fields"].get("customfield_10048")
+                definitionOfFact = customfield.get("value") if isinstance(customfield, dict) else ""
+                storyPoint = json_issue["fields"].get("customfield_10033", 0.0)
+                storyPointEstimated = json_issue["fields"].get("customfield_10016", 0.0)
+                storyPointExecuted = json_issue["fields"].get("customfield_10046", 0.0)
+
             rows.append([
-                issue.get("key"), issue.get("typeName"), issue.get("summary"),
-                issue.get("priorityName"), issue.get("assigneeName"),
-                issue.get("statusName"), issue.get("projectId"), updated_at,
-                categoria, added_during_sprint_value
+                issue.get("key"), 
+                issue.get("typeName"), 
+                issue.get("summary"),
+                issue.get("priorityName"), 
+                issue.get("assigneeName"),
+                issue.get("statusName"), 
+                definitionOfFact,
+                issue.get("projectId"), 
+                updated_at,
+                categoria, 
+                added_during_sprint_value,
+                storyPoint,
+                storyPointEstimated,
+                storyPointExecuted
             ])
             total_planeado += 1
 
@@ -117,11 +177,31 @@ def obtener_hus_de_sprint(proyecto_id, sprint_id):
             added_during_sprint_value = added_during_sprint.get(issue.get("key"), False)
             updated_at = datetime.utcfromtimestamp(issue.get("updatedAt", 0) / 1000).strftime('%Y-%m-%d %H:%M:%S')
             categoria = "Issue postergado del sprint actual"
+
+            json_issue = issues_dict.get(issue.get("key"))
+
+            if json_issue:
+                customfield = json_issue["fields"].get("customfield_10048")
+                definitionOfFact = customfield.get("value") if isinstance(customfield, dict) else ""
+                storyPoint = json_issue["fields"].get("customfield_10033", 0.0)
+                storyPointEstimated = json_issue["fields"].get("customfield_10016", 0.0)
+                storyPointExecuted = json_issue["fields"].get("customfield_10046", 0.0)
+
             rows.append([
-                issue.get("key"), issue.get("typeName"), issue.get("summary"),
-                issue.get("priorityName"), issue.get("assigneeName"),
-                issue.get("statusName"), issue.get("projectId"), updated_at,
-                categoria, added_during_sprint_value
+                issue.get("key"), 
+                issue.get("typeName"), 
+                issue.get("summary"),
+                issue.get("priorityName"), 
+                issue.get("assigneeName"),
+                issue.get("statusName"),
+                definitionOfFact,
+                issue.get("projectId"), 
+                updated_at,
+                categoria,
+                added_during_sprint_value,
+                storyPoint,
+                storyPointEstimated,
+                storyPointExecuted
             ])
             total_planeado += 1
 
@@ -130,9 +210,11 @@ def obtener_hus_de_sprint(proyecto_id, sprint_id):
     if rows:
         df = pd.DataFrame(rows, columns=[
             "key", "Tipo issue", "Titulo", "Prioridad", "Assignado", 
-            "Estado", "ID Proyecto", "Actualizada", "Categoria", "Añadido durante el sprint"
+            "Estado", "Definicion de hecho", "ID Proyecto", "Actualizada", "Categoria", "Añadido durante el sprint",
+            "Puntos de historia", "Puntos estimados", "Puntos ejecutados"
         ])
         df.to_excel(excel_file_path, index=False, sheet_name="Reporte Sprint")
+        print(f"Archivo Excel generado en {excel_file_path}")
         wb = openpyxl.load_workbook(excel_file_path)
         summary_sheet = wb.create_sheet("Resumen Sprint")
 
@@ -160,7 +242,7 @@ def obtener_hus_de_sprint(proyecto_id, sprint_id):
         summary_sheet["B10"] = historias_ejecutadas
         summary_sheet["A11"] = "% Cumplimiento"
         summary_sheet["B11"] = f"{porcentaje_historias:.2f}%"
-        
+
         # ----- Resumen exclusivo de errores -----
         errores_df = df[df["Tipo issue"] == "Error"]
         total_errores = len(errores_df)
@@ -210,13 +292,102 @@ def obtener_hus_de_sprint(proyecto_id, sprint_id):
         summary_sheet["A19"].fill = relleno_cabecera
 
         wb.save(excel_file_path)
+        print("Archivo Excel guardado exitosamente.")
+    else:
+        print("No se encontraron issues para incluir en el reporte.")
 
     if not os.path.exists('data'):
         os.makedirs('data')
 
     end_time = time.time()
-    execution_time = end_time - start_time  
-
-    print(f"Archivo Excel generado: {excel_file_path}")
+    execution_time = end_time - start_time
+    print(f"Tiempo de ejecución: {execution_time} segundos")
 
     return {"archivo": f"https://testjira.onrender.com/{excel_file_path}", "tiempo": execution_time}
+
+def generar_json_issues(proyecto_key):
+    issue_types = ["Bug", "Story"]
+
+    auth_string = f"{user_email}:{token_user}"
+    encoded_auth = base64.b64encode(auth_string.encode()).decode()
+
+    jql_query = f"project={proyecto_key}"
+    if issue_types:
+        tipos = ', '.join([f'"{tipo}"' for tipo in issue_types])
+        jql_query += f" AND type IN ({tipos})"
+
+    archivo_json = "data/issues_all_sprint.json"
+
+    if os.path.exists(archivo_json):
+        os.remove(archivo_json)
+        print(f"Archivo {archivo_json} eliminado.")
+
+    with open(archivo_json, "w", encoding="utf-8") as json_file:
+        json.dump([], json_file, indent=4, ensure_ascii=False)
+
+    start_at = 0
+    max_results = 100
+    total = 0
+
+    start_time = time.time()
+    success = False
+
+    try:
+        with open(archivo_json, "r+", encoding="utf-8") as json_file:
+            while True:
+                url = f"{domain}/rest/api/3/search?jql={jql_query}&startAt={start_at}&maxResults={max_results}"
+                headers = {
+                    "Authorization": f"Basic {encoded_auth}",
+                    "Accept": "application/json"
+                }
+
+                try:
+                    response = requests.get(url, headers=headers, timeout=130)
+                    response.raise_for_status()
+                    json_response = response.json()
+
+                    if total == 0:
+                        total = json_response['total']
+
+                    json_file.seek(0)
+                    try:
+                        current_data = json.load(json_file)
+                    except json.JSONDecodeError:
+                        current_data = []
+
+                    if isinstance(json_response.get('issues', []), list):
+                        current_data.extend(json_response['issues'])
+                    else:
+                        print(f"Error: Los issues no están en el formato esperado. Tipo de datos: {type(json_response.get('issues'))}")
+
+                    json_file.seek(0)
+                    json.dump(current_data, json_file, indent=4, ensure_ascii=False)
+                    print(f"Datos guardados exitosamente para el rango de startAt {start_at}")
+
+                    start_at += max_results
+
+                    if start_at >= total:
+                        success = True
+                        break
+
+                except requests.exceptions.Timeout:
+                    print("La solicitud ha excedido el tiempo de espera.")
+                    return jsonify({"error": "La solicitud a Jira ha excedido el tiempo de espera."}), 408
+
+                except requests.exceptions.RequestException as e:
+                    print(f"Ocurrió un error en la solicitud: {e}")
+                    return jsonify({"error": f"Error en la extracción de datos: {e}"}), 500
+
+    except Exception as e:
+        print(f"Ocurrió un error al intentar abrir o escribir en el archivo: {e}")
+        return jsonify({"error": "Error al manejar el archivo JSON."}), 500
+
+    end_time = time.time()
+    execution_time = round(end_time - start_time, 2)
+
+    if success:
+        return {
+            "archivo": f"https://testjira.onrender.com/{archivo_json}", "tiempo": execution_time
+        }
+    else:
+        return jsonify({"error": "Hubo un problema al procesar los issues."}), 500

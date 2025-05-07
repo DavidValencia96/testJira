@@ -31,10 +31,13 @@ function cargarTableros() {
         .then(response => response.json())
         .then(data => {
             const select = document.getElementById('proyecto2');
+            if (!select) return;
+            select.innerHTML = '<option value="">Seleccione un proyecto</option>';
             data.forEach(board => {
                 const option = document.createElement('option');
                 option.value = board.id; 
                 option.textContent = board.location.name || board.name;  
+                option.dataset.projectKey = board.location.projectKey;
                 select.appendChild(option);
             });
         })
